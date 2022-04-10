@@ -1,0 +1,84 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+    overflow-x: hidden;
+    background-color: rgb(80, 78, 78);
+}
+
+@font-face {
+    font-family: "TechFitFont";
+    src: url(../fonts/Azonix.otf) format("truetype");
+}
+
+.flex-menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.logo-menu {
+    width: 30%;
+    padding: 1% 1% 1% 1%;
+    text-align: center;
+    /*border: 1px solid black;*/
+}
+
+.logo-pic-home {
+    width: 90%;
+}
+
+.elem-menu {
+    width: 25%;
+    padding: 2.5% 1% 1% 1%;
+    font-family: 'TechFitFont';
+    text-align: center;
+    color: rgb(37, 189, 37);
+    /*border: 1px solid black;*/
+}
+
+.elem-menu:hover {
+    transition: 0.1s;
+    transform: scale(150%);
+}
+
+.elem {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: rgb(37, 189, 37);
+}
+
+.elem:hover {
+    transition: 0.1s;
+    color: rgb(8, 51, 4);
+}
+
+.button-menu {
+    padding: 2.5% 1% 1% 1%;
+    text-align: center;
+    width: 40%;
+    /*border: 1px solid black;*/
+}
+
+.login-button {
+    background-color: rgb(37, 189, 37);
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-family: 'TechFitFont';
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.18);
+    transition: 0.3s;
+    padding: 5% 15% 5% 15%;
+}
+
+.login-button:hover {
+    background-color: rgb(72, 232, 13);
+    cursor: pointer;
+}
