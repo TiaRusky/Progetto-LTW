@@ -1,11 +1,19 @@
+/*Colori:
+
+- black: #222222
+- steal: #d7d7d7
+- gold: #eedf69
+*/
+
+
 html {
-    font-size: 16px;
+    font-size: 20px !important;
 }
 
 body {
     width: 100%;
     margin: 0px;
-    background-color: rgb(80, 78, 78);
+    background-color: gold;
 }
 
 @font-face {
@@ -13,3 +21,40 @@ body {
     src: url(../fonts/Azonix.otf) format("truetype");
 }
 
+.navbar-toggler{
+    width: 35px;
+    height: 35px;
+    border:none;
+}
+
+
+.active{
+    text-decoration: underline !important;
+}
+
+.navbar-nav{
+    text-align: center !important;
+}
+
+/* effect-shine */
+.nav-link:hover{
+    animation-name:colorfulLink !important;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorfulLink {
+    0% {
+        font-size: 1rem;
+        letter-spacing: normal;
+      }
+
+    50%{
+        letter-spacing: 2.5px;
+    }
+    
+    100% {
+        font-size: 1.5rem;
+        letter-spacing: 4.5px;
+      }
+}
