@@ -1,0 +1,125 @@
+html {
+    font-size: 20px !important;
+
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+    background-color: #d7d7d7;
+}
+
+@font-face {
+    font-family: "TechFitFont";
+    src: url(../fonts/Azonix.otf) format("truetype");
+}
+
+.navbar-toggler{
+    width: 35px;
+    height: 35px;
+    border:none;
+}
+
+
+.active{
+    text-decoration: underline !important;
+}
+
+.navbar-nav{
+    text-align: center !important;
+}
+
+/* effect-shine */
+.nav-link:hover{
+    animation-name:colorfulLink !important;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorfulLink {
+    0% {
+        font-size: 1rem;
+        letter-spacing: normal;
+      }
+
+    50%{
+        letter-spacing: 2.5px;
+    }
+    
+    100% {
+        font-size: 1.5rem;
+        letter-spacing: 4.5px;
+      }
+}
+
+.grid-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 'nav nav nav'
+                   'top top top'
+                   'form form form'
+                   'form form form'
+                   'sign sign sign'
+                   'foot foot foot';
+    grid-gap: 5px;
+    justify-content: center;
+    height: 100vh;
+}
+
+.navbar{
+    grid-area: nav;
+}
+
+.top-container{
+    grid-area: top;
+    border: 2px solid yellow;
+    text-align:center;
+}
+
+.left-container{
+    display: none;
+}
+
+.form-container{
+    grid-area:form;
+    border: 2px solid green;
+}
+
+.sign-container{
+    grid-area: sign;
+    border: 2px solid grey;
+}
+
+.footer{
+    grid-area: foot;
+    border: 2px solid black;
+}
+
+.flex-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    margin: 20px;
+}
+
+.input-form{
+    width: 50%;
+    margin: 0.45em;
+    max-width: 300px;
+}
+
+@media (min-width: 475px){
+    .grid-container{
+        grid-template-areas: 'nav nav nav'
+                             'top top top'
+                             'left form sign'
+                             'left form sign'
+                             'foot foot foot';
+    }
+    .left-container{
+        display:block;
+    }
+}
