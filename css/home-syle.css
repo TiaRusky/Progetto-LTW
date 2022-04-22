@@ -16,14 +16,8 @@ body {
 }
 
 @font-face {
-    font-family: "TechFitFont";
+    font-family: "TechFitFont-Azonix";
     src: url(../fonts/Azonix.otf) format("truetype");
-}
-
-.navbar-toggler {
-    width: 35px;
-    height: 35px;
-    border: none;
 }
 
 .active {
@@ -34,8 +28,33 @@ body {
     text-align: center !important;
 }
 
-.logo-pic {
-    width: 40%;
+.nav-item {
+    font-family: "TechFitFont-Azonix" !important;
+}
+
+.home-logo {
+    width: 50%;
+}
+
+.login-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 0.45em;
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    background-color: rgb(240, 240, 48);
+    transition: 0.5s ease-in-out;
+}
+
+.login-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
 }
 
 
@@ -43,21 +62,21 @@ body {
 
 .nav-link:hover {
     animation-name: colorfulLink !important;
-    animation-duration: 0.7s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 
 @keyframes colorfulLink {
     0% {
         font-size: 1rem;
-        letter-spacing: normal;
     }
     50% {
-        letter-spacing: 2.5px;
+        font-size: 1.1rem;
+        color: rgb(215, 221, 151);
     }
     100% {
-        font-size: 1.5rem;
-        letter-spacing: 4.5px;
+        font-size: 1.2rem;
+        color: rgb(214, 228, 53);
     }
 }
 

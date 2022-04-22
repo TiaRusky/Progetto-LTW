@@ -5,12 +5,13 @@ html {
 body {
     width: 100%;
     margin: 0px;
-    /*background: radial-gradient(rgb(255, 255, 255), #00ff00) !important;*/
-    background: #33CCCC;
-    /* Fallback */
+    background-color: #d7d7d7;
+    /* Fallback 
+    background: radial-gradient(rgb(255, 255, 255), #00ff00) !important;
     animation: color 9s infinite linear;
     text-align: center;
     padding: 2em;
+    */
 }
 
 @keyframes color {
