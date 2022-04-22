@@ -53,11 +53,20 @@
             </div>
 
             <div class="form-container">
+                <h2>Login</h2>
                 <form action="" method="POST">
                     <div class="flex-form">
-                        <input class="input-form" type="email" name="inputEmail" placeholder="email">
-                        <input class="input-form" type="password" name="inputPassword" placeholder="password">
-                        <input class="input-form" type="submit" value="Invia" name="inputSubmit">
+                        <div class="form-item">
+                            <label>Email</label>
+                            <input class="input-form" type="email" name="inputEmail" required>
+                        </div>
+                        
+                        <div class="form-item">
+                           <label>Password</label>
+                           <input class="input-form" type="password" name="inputPassword" required>
+                        </div>
+                        
+                        <input class="submit-form" type="submit" value="Submit" name="inputSubmit">
                     </div>
                 </form>
             </div>
