@@ -113,7 +113,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
 }
 
 
@@ -121,6 +120,12 @@ body {
     font-weight: 500;
     color: #eedf69;
     text-align: center;
+}
+
+.form-item{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4em;
 }
 
 .form-container .form-item input {
@@ -137,7 +142,6 @@ body {
 }
 
 .form-container .form-item label {
-    font-size: 16px;
     color: #eedf69;
     pointer-events: none;
     transition: .5s;
@@ -153,7 +157,24 @@ body {
     text-transform: uppercase;
     border: 2px solid #eedf69;
     border-radius: 15px;
+    font-weight: 900;
 }
+
+.submit-form:hover{
+    animation-name: colorfullbutton;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorfullbutton{
+
+    100%{
+        background-color: #eedf69;
+        color:#222222;
+        font-weight: 900;
+    }
+}
+
 
 @media (min-width: 575px){
     .grid-container{
