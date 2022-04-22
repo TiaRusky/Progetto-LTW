@@ -26,13 +26,13 @@
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">About</a>
+                            <a class="nav-link" href="">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Team</a>
+                            <a class="nav-link" href="">Team</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Gallery</a>
+                            <a class="nav-link" href="">Gallery</a>
                         </li>
                     </ul>
                 </div>
@@ -41,7 +41,7 @@
     </header>
     <div class="grid-container">
         <div class="top-container">
-            <h1>Accedi alle funzionalità del mondo TechFit!</h1>
+            <h1 class="top-text">Accedi alle funzionalità del mondo TechFit!</h1>
         </div>
 
         <div class="left-container">
@@ -53,8 +53,8 @@
             <div class="signin">
                 <div class="form-signin" id="fsi">
                     <form action="" method="POST">
+                        <label for="login" class="login-title">Login</label>
                         <div class="flex-form">
-                            <label for="login" class="login-title">Login</label>
                             <div class="form-item">
                                 <input class="input-form" type="email" name="inputEmail" placeholder=" " required>
                                 <label>Email</label>
@@ -69,10 +69,10 @@
                 </div>
                 <div class="form-signup" id="fsu">
                     <form action="" method="POST">
+                        <label for="signup" class="login-title">Sign up</label>
                         <div class="flex-form">
-                            <label for="signup" class="login-title">Sign up</label>
                             <div class="form-item">
-                                <input class="input-form" type="email" name="inputEmail" placeholder=" " required>
+                                <input class="input-form" type="text" name="inputName" placeholder=" " required>
                                 <label>Name</label>
                             </div>
                             <div class="form-item">
@@ -80,7 +80,7 @@
                                 <label>Email</label>
                             </div>
                             <div class="form-item">
-                                <input class="input-form" type="password" name="inputPassword" placeholder=" " required>
+                                <input class="input-form" type="email" name="inputPassword" placeholder=" " required>
                                 <label>Password</label>
                             </div>
                             <input class="input-button" type="submit" value="Invia" name="inputSubmit">

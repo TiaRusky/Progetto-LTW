@@ -5,34 +5,7 @@ html {
 body {
     width: 100%;
     margin: 0px;
-    background-color: #d7d7d7;
-    /* Fallback 
-    background: radial-gradient(rgb(255, 255, 255), #00ff00) !important;
-    animation: color 9s infinite linear;
-    text-align: center;
-    padding: 2em;
-    */
-}
-
-@keyframes color {
-    0% {
-        background: #33CCCC;
-    }
-    20% {
-        background: #33CC36;
-    }
-    40% {
-        background: #B8CC33;
-    }
-    60% {
-        background: #FCCA00;
-    }
-    80% {
-        background: #33CC36;
-    }
-    100% {
-        background: #33CCCC;
-    }
+    background-image: linear-gradient(to right, #ffff1d, #d7d7d7, #5e5e5e, #d7d7d7, #ffff1d);
 }
 
 @font-face {
@@ -43,26 +16,6 @@ body {
 @font-face {
     font-family: "TechFitFont-Monserrat";
     src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
-}
-
-.home-pic {
-    width: 20%;
-    height: auto;
-    border: #FCCA00 2px solid;
-}
-
-.navbar-toggler {
-    width: 35px;
-    height: 35px;
-    border: none;
-}
-
-.active {
-    text-decoration: underline !important;
-}
-
-.navbar-nav {
-    text-align: center !important;
 }
 
 
@@ -98,10 +51,6 @@ body {
     height: 100vh;
 }
 
-.navbar {
-    grid-area: nav;
-}
-
 .top-container {
     grid-area: top;
     padding-top: 2%;
@@ -126,6 +75,7 @@ body {
 }
 
 .sign-container {
+    display: none;
     grid-area: sign;
     justify-content: center;
 }
@@ -155,6 +105,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 7%;
 }
 
 .input-form {
@@ -178,20 +129,20 @@ body {
     border-radius: 9px;
     padding: 0.2em;
     text-align: center;
-    background-color: #00ff1e;
+    background-color: #d6d620;
     transition: 0.5s ease-in-out;
 }
 
 .input-button:hover {
     color: rgba(255, 255, 255, 1);
-    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     transition: 0.3s;
 }
 
 .signin {
     text-align: center;
     background-color: rgb(255, 255, 255);
-    height: 50%;
+    height: 60%;
     border: 15px;
     padding-top: 2%;
     border-top-left-radius: 15px;
@@ -205,8 +156,8 @@ body {
 
 .signup {
     text-align: center;
-    background-color: rgb(24, 255, 24);
-    height: 50%;
+    background-color: #2b2f2b;
+    height: 40%;
     border: 15px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -222,6 +173,37 @@ body {
     padding-bottom: 20%;
 }
 
+.form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-item label {
+    position: relative;
+    bottom: 45px;
+    color: #000000;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.form-item input:focus~label {
+    animation-name: floatingLabel;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+input:not(:placeholder-shown)~label {
+    top: -80px;
+}
+
+@keyframes floatingLabel {
+    100% {
+        bottom: 80px;
+    }
+}
+
 .signup-button {
     width: 50%;
     margin: 0.45em;
@@ -230,14 +212,14 @@ body {
     border-radius: 9px;
     padding: 0.2em;
     text-align: center;
-    background-color: #e8e8e8;
+    background-color: #d6d620;
     transition: 0.5s ease-in-out;
     font-family: "TechFitFont-Azonix";
 }
 
 .signup-button:hover {
-    color: rgb(9, 255, 0);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
     transition: 0.3s;
 }
 
@@ -249,14 +231,14 @@ body {
     border-radius: 9px;
     padding: 0.2em;
     text-align: center;
-    background-color: #e8e8e8;
+    background-color: #d6d620;
     transition: 0.5s ease-in-out;
     font-family: "TechFitFont-Azonix";
 }
 
 .signin-button:hover {
-    color: rgb(9, 255, 0);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
     transition: 0.3s;
 }
 
@@ -267,6 +249,7 @@ body {
 
 .h-label {
     padding: 3% 1% 3% 1%;
+    color: #d6d620;
 }
 
 .welcome {
@@ -277,6 +260,7 @@ body {
 
 .w-label {
     padding: 1% 1% 1% 1%;
+    color: #d6d620;
 }
 
 @media (min-width: 475px) {
@@ -284,6 +268,9 @@ body {
         grid-template-areas: 'top top top' 'left form sign' 'left form sign' 'foot foot foot';
     }
     .left-container {
+        display: block;
+    }
+    .sign-container {
         display: block;
     }
 }
@@ -294,87 +281,14 @@ body {
     }
 }
 
-.form-container {
-    grid-area: form;
-    background: #222222;
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
-    border-radius: 15px;
-    max-width: 600px;
-}
-
-.form-container h2 {
-    font-weight: 500;
-    color: #000000;
-    text-align: center;
-}
-
-.form-item {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.4em;
-}
-
-.form-container .form-item input {
-    width: 100%;
-    max-width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: rgb(0, 0, 0);
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #000000;
-    outline: none;
-    background: transparent;
-}
-
-.form-container .form-item label {
-    font-size: 1.2rem;
-    position: relative;
-    bottom: 62px;
-    color: #000000;
-    pointer-events: none;
-    transition: .5s;
-}
-
-.submit-form {
-    margin-bottom: 1em;
-    background: transparent;
-    color: #eedf69;
-    padding: 0.3em;
-    letter-spacing: 2px;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: 2px solid #eedf69;
-    border-radius: 15px;
-    font-weight: 900;
-}
-
-.submit-form:hover {
-    animation-name: colorfullbutton;
-    animation-duration: 1.7s;
-    animation-fill-mode: forwards;
-}
-
-.form-item input:focus~label {
-    animation-name: floatingLabel;
-    animation-duration: 0.7s;
-    animation-fill-mode: forwards;
-}
-
-
-/*
-input:not(:placeholder-shown) ~ label{
-    transform: translateY(-10px);
-}
-*/
-
-input:not(:placeholder-shown)~label {
-    top: -100px;
-}
-
-@keyframes floatingLabel {
-    100% {
-        bottom: 100px;
+@media (max-width: 199px) {
+    .h-label {
+        font-size: small;
+    }
+    .w-label {
+        font-size: small;
+    }
+    .top-text {
+        font-size: small;
     }
 }
