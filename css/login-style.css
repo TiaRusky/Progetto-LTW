@@ -1,3 +1,11 @@
+/*Colori:
+
+- black: #222222
+- steal: #d7d7d7
+- gold: #eedf69
+*/
+
+
 html {
     font-size: 20px !important;
 
@@ -6,7 +14,7 @@ html {
 body {
     width: 100%;
     margin: 0px;
-    background-color: #d7d7d7;
+    background: linear-gradient(#222222, #d7d7d7);
 }
 
 @font-face {
@@ -83,7 +91,11 @@ body {
 
 .form-container{
     grid-area:form;
-    border: 2px solid green;
+    background: #222222;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 15px;
+    max-width: 600px;
 }
 
 .sign-container{
@@ -102,16 +114,48 @@ body {
     justify-content: center;
     align-items: center;
     border: 2px solid red;
-    margin: 20px;
 }
 
-.input-form{
-    width: 50%;
-    margin: 0.45em;
-    max-width: 300px;
+
+.form-container h2{
+    font-weight: 500;
+    color: #eedf69;
+    text-align: center;
 }
 
-@media (min-width: 475px){
+.form-container .form-item input {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #eedf69;
+    outline: none;
+    background: transparent;
+}
+
+.form-container .form-item label {
+    font-size: 16px;
+    color: #eedf69;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.submit-form{
+    margin-bottom: 1em;
+    background: transparent;
+    color: #eedf69;
+    padding: 0.3em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #eedf69;
+    border-radius: 15px;
+}
+
+@media (min-width: 575px){
     .grid-container{
         grid-template-areas: 'nav nav nav'
                              'top top top'
