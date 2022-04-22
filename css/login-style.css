@@ -293,3 +293,88 @@ body {
         padding-bottom: 40%;
     }
 }
+
+.form-container {
+    grid-area: form;
+    background: #222222;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 15px;
+    max-width: 600px;
+}
+
+.form-container h2 {
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4em;
+}
+
+.form-container .form-item input {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    background: transparent;
+}
+
+.form-container .form-item label {
+    font-size: 1.2rem;
+    position: relative;
+    bottom: 62px;
+    color: #000000;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.submit-form {
+    margin-bottom: 1em;
+    background: transparent;
+    color: #eedf69;
+    padding: 0.3em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #eedf69;
+    border-radius: 15px;
+    font-weight: 900;
+}
+
+.submit-form:hover {
+    animation-name: colorfullbutton;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+.form-item input:focus~label {
+    animation-name: floatingLabel;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+
+/*
+input:not(:placeholder-shown) ~ label{
+    transform: translateY(-10px);
+}
+*/
+
+input:not(:placeholder-shown)~label {
+    top: -100px;
+}
+
+@keyframes floatingLabel {
+    100% {
+        bottom: 100px;
+    }
+}
