@@ -22,12 +22,14 @@ body {
     src: url(../fonts/Azonix.otf) format("truetype");
 }
 
+/******************/
+/*NAV*/
+/******************/
 .navbar-toggler{
     width: 35px;
     height: 35px;
     border:none;
 }
-
 
 .active{
     text-decoration: underline !important;
@@ -37,7 +39,7 @@ body {
     text-align: center !important;
 }
 
-/* effect-shine */
+
 .nav-link:hover{
     animation-name:colorfulLink !important;
     animation-duration: 0.7s;
@@ -60,6 +62,10 @@ body {
       }
 }
 
+
+/******************/
+/*Griglia*/
+/******************/
 .grid-container{
     width: 100%;
     display: grid;
@@ -142,6 +148,9 @@ body {
 }
 
 .form-container .form-item label {
+    font-size: 1.2rem;
+    position: relative;
+    bottom:62px;
     color: #eedf69;
     pointer-events: none;
     transition: .5s;
@@ -164,6 +173,30 @@ body {
     animation-name: colorfullbutton;
     animation-duration: 1.7s;
     animation-fill-mode: forwards;
+}
+
+.form-item input:focus ~ label{
+    animation-name: floatingLabel;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+/*
+input:not(:placeholder-shown) ~ label{
+    transform: translateY(-10px);
+}
+*/
+
+
+
+input:not(:placeholder-shown) ~ label {
+    top: -100px;
+}
+
+@keyframes floatingLabel {
+    100%{
+        bottom:100px;
+    }
 }
 
 @keyframes colorfullbutton{
