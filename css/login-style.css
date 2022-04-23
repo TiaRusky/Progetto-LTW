@@ -1,12 +1,16 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
 html {
     font-size: 20px !important;
-
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
 }
 
 body {
     width: 100%;
     margin: 0px;
-    background: white;
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
 }
 
@@ -233,4 +237,13 @@ input:not(:placeholder-shown) ~ label {
 
 #chk:checked ~ .sign-up-container .form-label{
 	transform: scale(.6);
+}
+
+/*********/
+/*Footer*/
+/********/
+
+footer{
+    text-align: center;
+    color:#990000;
 }
