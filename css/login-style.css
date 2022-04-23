@@ -1,11 +1,3 @@
-/*Colori:
-
-- black: #222222
-- steal: #d7d7d7
-- gold: #eedf69
-*/
-
-
 html {
     font-size: 20px !important;
 
@@ -14,7 +6,8 @@ html {
 body {
     width: 100%;
     margin: 0px;
-    background: linear-gradient(#222222, #d7d7d7);
+    background: white;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
 }
 
 @font-face {
@@ -62,56 +55,24 @@ body {
       }
 }
 
+/********************/
+/*Gestione delle form*/
+/********************/
 
-/******************/
-/*Griglia*/
-/******************/
-.grid-container{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: 'nav nav nav'
-                   'top top top'
-                   'form form form'
-                   'form form form'
-                   'sign sign sign'
-                   'foot foot foot';
-    grid-gap: 5px;
-    justify-content: center;
-    height: 100vh;
-}
-
-.navbar{
-    grid-area: nav;
-}
-
-.top-container{
-    grid-area: top;
-    border: 2px solid yellow;
-    text-align:center;
-}
-
-.left-container{
-    display: none;
+.container{
+    position: relative;
+    overflow: hidden;
+    height: 700px;
+    margin: 1px auto;
 }
 
 .form-container{
-    grid-area:form;
     background: #222222;
-    box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 15px;
     max-width: 600px;
-}
-
-.sign-container{
-    grid-area: sign;
-    border: 2px solid grey;
-}
-
-.footer{
-    grid-area: foot;
-    border: 2px solid black;
+    margin: 0px auto;
+    border: 1px solid black;
 }
 
 .flex-form{
@@ -119,13 +80,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-
-.form-container h2{
-    font-weight: 500;
-    color: #eedf69;
-    text-align: center;
 }
 
 .form-item{
@@ -181,14 +135,6 @@ body {
     animation-fill-mode: forwards;
 }
 
-/*
-input:not(:placeholder-shown) ~ label{
-    transform: translateY(-10px);
-}
-*/
-
-
-
 input:not(:placeholder-shown) ~ label {
     top: -100px;
 }
@@ -200,7 +146,6 @@ input:not(:placeholder-shown) ~ label {
 }
 
 @keyframes colorfullbutton{
-
     100%{
         background-color: #eedf69;
         color:#222222;
@@ -208,16 +153,84 @@ input:not(:placeholder-shown) ~ label {
     }
 }
 
+/************************/
+/*Stile della form di signin*/
+/************************/
 
-@media (min-width: 575px){
-    .grid-container{
-        grid-template-areas: 'nav nav nav'
-                             'top top top'
-                             'left form sign'
-                             'left form sign'
-                             'foot foot foot';
+#chk{
+	display: none;
+}
+
+.form-label{
+	color: #eedf69;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+.sign-up-container{
+    position:relative;
+    width: 90%;
+    height: 100%;
+}
+
+.sign-in-container{
+    height: 100%;
+    width: 90%;
+}
+
+.sign-in-container{
+	transform: translateY(-170px);
+	transition: .8s ease-in-out;
+    border-radius: 60% / 10%;
+    background: #d7d7d7;
+}
+
+.sign-in-container .flex-form .form-item-label{
+    color: #990000;
+}
+
+.sign-in-container .flex-form .submit-form{
+    color: #222222;
+    border: 2px solid #222222;
+}
+
+.sign-in-container .form-item input{
+    border-bottom: 1px solid #990000;
+    color: #990000;
+}
+
+.sign-in-container .flex-form .submit-form:hover{
+    animation-name: colorfullbutton2;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorfullbutton2 {
+    100%{
+        background-color: #222222;
+        color:#990000;
+        font-weight: 900;
     }
-    .left-container{
-        display:block;
-    }
+}
+
+.sign-in-container .form-label{
+    color: #990000;
+	transform: scale(.6);
+}
+
+#chk:checked ~ .sign-in-container{
+	transform: translateY(-585px);
+}
+
+#chk:checked ~ .sign-in-container .form-label{
+	transform: scale(1);	
+}
+
+#chk:checked ~ .sign-up-container .form-label{
+	transform: scale(.6);
 }

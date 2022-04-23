@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
-
+<html>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +9,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <title>TechFit - Login</title>
     </head>
-
     <body>
-        <div class="grid-container">
+        <header>
             <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html">
@@ -44,42 +42,63 @@
                   </div>
                 </div>
               </nav>
-            <div class="top-container">
-                <h1>Accedi alle funzionalità del mondo TechFit!</h1>
-            </div>
+        </header>
 
-            <div class="left-container">
-                <p>Qui ci vanno delle immagini carine e qualche frase motivazionale</p>
-            </div>
+        <!--Form di login e signin-->
+        <div class="container">
+            <!--Login-->
 
-            <div class="form-container">
-                <h2>Login</h2>
+            <input type="checkbox" id="chk" aria-hidden="true">
+
+            <div class="form-container sign-up-container">
+                
                 <form action="" method="POST">
+                    <label class="form-label" for="chk" aria-hidden="true">Login</label>
                     <div class="flex-form">
                         <div class="form-item">
                             <input class="input-form" type="email" name="inputEmail" placeholder=" " required>
                             <label>Email</label>
                         </div>
-                        
+                            
                         <div class="form-item">
-                           <input class="input-form" type="password" name="inputPassword" placeholder=" " required>
-                           <label>Password</label>
+                            <input class="input-form" type="password" name="inputPassword" placeholder=" " required>
+                            <label>Password</label>
                         </div>
-                        
-                        <input class="submit-form" type="submit" value="Submit" name="inputSubmit">
+                        <input class="submit-form" type="submit" value="Login" name="inputSubmit">
+                    </div>
+                </form>
+            </div>
+
+            <!--Signin-->
+            <div class="form-container sign-in-container">
+                <form action="" method="POST">
+                    <div class="flex-form">
+                        <label class="form-label" for="chk" aria-hidden="true">Sign up</label>
+                        <div class="form-item">
+                            <input class="input-form" type="email" name="inputEmail" placeholder=" " required>
+                            <label class="form-item-label">Email</label>
+                        </div>
+                      
+                        <div class="form-item">
+                            <input class="input-form" type="text" name="inputUsername" placeholder=" " required>
+                            <label class="form-item-label">Username</label>
+                        </div>
+
+                        <div class="form-item">
+                            <input class="input-form" type="password" name="inputPassword" placeholder=" " required>
+                            <label class="form-item-label">Password</label>
+                        </div>
+
+                        <input class="submit-form" type="submit" value="Sign up" name="inputSubmit">
                     </div>
                 </form>
             </div>
             
-            <div class="sign-container">
-                <p>Qui ci va qualche immagine e un bottone per iscriversi nel caso in cui non siamo registrati</p>
-            </div>
-            
-            <div class="footer">
-                <p>Questo è la fine della pagina: classico footer</p>
-            </div>
         </div>
 
+        <footer>
+            <p>Cisanini addio</p>
+        </footer>
     </body>
 
 </html>
