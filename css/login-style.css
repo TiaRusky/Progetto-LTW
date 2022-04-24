@@ -50,12 +50,12 @@ body {
       }
 
     50%{
-        letter-spacing: 2.5px;
+        letter-spacing: 1.8px;
     }
     
     100% {
-        font-size: 1.5rem;
-        letter-spacing: 4.5px;
+        font-size: 1.2rem;
+        letter-spacing: 2.5px;
       }
 }
 
@@ -66,15 +66,15 @@ body {
 .container{
     position: relative;
     overflow: hidden;
-    height: 700px;
-    margin: 1px auto;
+    height: 600px;
+    margin: 5px auto;
 }
 
 .form-container{
     background: #222222;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 15px;
-    max-width: 600px;
+    max-width: 500px;
     margin: 0px auto;
     border: 1px solid black;
 }
@@ -87,6 +87,7 @@ body {
 }
 
 .form-item{
+    width: 80%;
     display: flex;
     flex-direction: column;
     margin-top: 0.4em;
@@ -187,11 +188,17 @@ input:not(:placeholder-shown) ~ label {
     width: 90%;
 }
 
+/*Nascondo inizialmente la form per iscriversi, mostrando solo la label collegata alla checkbox*/
 .sign-in-container{
 	transform: translateY(-170px);
 	transition: .8s ease-in-out;
     border-radius: 60% / 10%;
     background: #d7d7d7;
+}
+
+/*Per nascondere meglio le label*/
+.sign-in-container .form-item{
+    visibility: hidden;
 }
 
 .sign-in-container .flex-form .form-item-label{
@@ -227,9 +234,17 @@ input:not(:placeholder-shown) ~ label {
 	transform: scale(.6);
 }
 
+/*Quando metto il check sulla checkbox faccio scorrere verso l'alto la form e
+rendo nuovamente visibile le form-item
+*/
 #chk:checked ~ .sign-in-container{
 	transform: translateY(-585px);
 }
+
+#chk:checked ~ .sign-in-container .form-item{
+    visibility: visible;
+}
+
 
 #chk:checked ~ .sign-in-container .form-label{
 	transform: scale(1);	
@@ -237,13 +252,4 @@ input:not(:placeholder-shown) ~ label {
 
 #chk:checked ~ .sign-up-container .form-label{
 	transform: scale(.6);
-}
-
-/*********/
-/*Footer*/
-/********/
-
-footer{
-    text-align: center;
-    color:#990000;
 }
