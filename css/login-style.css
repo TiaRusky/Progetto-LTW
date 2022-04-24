@@ -5,13 +5,13 @@ html, body {
 
 html {
     font-size: 20px !important;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
 }
 
 body {
     width: 100%;
     margin: 0px;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+    background-color: #5b6467;
+    background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);
 }
 
 @font-face {
@@ -104,6 +104,7 @@ body {
     border-bottom: 1px solid #eedf69;
     outline: none;
     background: transparent;
+    font-size: 1.2rem;
 }
 
 .form-container .form-item label {
@@ -190,9 +191,9 @@ input:not(:placeholder-shown) ~ label {
 
 /*Nascondo inizialmente la form per iscriversi, mostrando solo la label collegata alla checkbox*/
 .sign-in-container{
-	transform: translateY(-170px);
+	transform: translateY(-150px);
 	transition: .8s ease-in-out;
-    border-radius: 60% / 10%;
+    border-radius: 40% / 10%;
     background: #d7d7d7;
 }
 
@@ -212,7 +213,7 @@ input:not(:placeholder-shown) ~ label {
 
 .sign-in-container .form-item input{
     border-bottom: 1px solid #990000;
-    color: #990000;
+    color: #222222;
 }
 
 .sign-in-container .flex-form .submit-form:hover{
