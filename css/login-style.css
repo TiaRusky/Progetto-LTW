@@ -142,12 +142,12 @@ body {
 }
 
 input:not(:placeholder-shown) ~ label {
-    top: -100px;
+    top: -110px;
 }
 
 @keyframes floatingLabel {
     100%{
-        bottom:100px;
+        bottom:110px;
     }
 }
 
@@ -203,7 +203,7 @@ input:not(:placeholder-shown) ~ label {
 }
 
 .sign-in-container .flex-form .form-item-label{
-    color: #990000;
+    color: #222222;
 }
 
 .sign-in-container .flex-form .submit-form{
@@ -212,7 +212,7 @@ input:not(:placeholder-shown) ~ label {
 }
 
 .sign-in-container .form-item input{
-    border-bottom: 1px solid #990000;
+    border-bottom: 1px solid #222222;
     color: #222222;
 }
 
@@ -225,13 +225,13 @@ input:not(:placeholder-shown) ~ label {
 @keyframes colorfullbutton2 {
     100%{
         background-color: #222222;
-        color:#990000;
+        color:#eedf69;
         font-weight: 900;
     }
 }
 
 .sign-in-container .form-label{
-    color: #990000;
+    color: #222222;
 	transform: scale(.6);
 }
 
