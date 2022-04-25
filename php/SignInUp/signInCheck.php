@@ -28,6 +28,7 @@
                 session_start();
                 $_SESSION['email'] = $email;
                 $_SESSION['username'] = $username;
+                header("Location: ../AreaPrivata/index.php");
             }
 
             else{       //Qualcosa è andato storto

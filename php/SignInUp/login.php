@@ -98,10 +98,24 @@
         
         </div>
         <!--Alerts-->
-        <div class="alert">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-            This is an alert box.
-        </div>
+        <?php
+            $fullUrl = "http://".$_SERVER['HTTP_HOST']."".$_SERVER["REQUEST_URI"];
+
+            //if(empty($_GET))exit();
+            //strpos : Find the numeric position of the first occurrence of needle in the haystack string.
+
+            if(strpos($fullUrl,"signin=ar") == true){   //Se l'url contiene ?signin=ar allora l'utente era già registrato
+                echo "<div class='error'><span class='closebtn'>&times;</span><p>L'email inserita è già registrata!</p></div>";
+            }
+
+            elseif(strpos($fullUrl,"signin=err")){
+                echo "<div class='error'><span class='closebtn'>&times;</span><p>Errore registrazione utente!</p></div>";
+            }
+            elseif(strpos($fullUrl,"signin=fc")){
+                echo "<div class='error'><span class='closebtn'>&times;</span><p>Errore connesione al db!</p></div>";
+            }
+        ?>
+        
     </body>
 
 </html>
