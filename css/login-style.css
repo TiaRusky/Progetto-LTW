@@ -20,6 +20,9 @@ body {
     src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
 }
 
+/**********/
+/*NAVBAR*/
+/**********/
 .home-pic {
     width: 20%;
     height: auto;
@@ -32,34 +35,32 @@ body {
     border: none;
 }
 
-.active {
-    text-decoration: underline !important;
+.nav-item {
+    font-family: "TechFitFont-Azonix" !important;
 }
 
 .navbar-nav {
     text-align: center !important;
 }
 
-
 .nav-link:hover{
     animation-name:colorfulLink !important;
-    animation-duration: 0.7s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 
 @keyframes colorfulLink {
     0% {
         font-size: 1rem;
-        letter-spacing: normal;
-      }
-
-    50%{
-        letter-spacing: 1.8px;
+    }
+    50% {
+        font-size: 1.1rem;
+        color: rgb(215, 221, 151);
     }
     100% {
         font-size: 1.2rem;
-        letter-spacing: 2.5px;
-      }
+        color: rgb(214, 228, 53);
+    }
 }
 
 /********************/
