@@ -48,8 +48,8 @@
 
         <!--Form di login e signin-->
         <div class="container">
+          
             <!--Login-->
-
             <input type="checkbox" id="chk" aria-hidden="true">
 
             <div class="form-container sign-up-container">
@@ -95,9 +95,13 @@
                     </div>
                 </form>
             </div>
-            
+        
         </div>
-
+        <!--Alerts-->
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            This is an alert box.
+        </div>
     </body>
 
 </html>

@@ -10,6 +10,7 @@ html {
 body {
     width: 100%;
     margin: 0px;
+    position:relative;
     background-color: #5b6467;
     background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);
 }
@@ -68,10 +69,15 @@ body {
 /********************/
 
 .container{
-    position: relative;
+    position: absolute;
     overflow: hidden;
-    height: 600px;
-    margin: 5px auto;
+    height: 550px;
+    margin-top: 5px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 100%; /* Need a specific value to work */
 }
 
 .form-container{
@@ -200,7 +206,7 @@ input:not(:placeholder-shown) ~ label {
 
 /*Nascondo inizialmente la form per iscriversi, mostrando solo la label collegata alla checkbox*/
 .sign-in-container{
-	transform: translateY(-150px);
+	transform: translateY(-100px);
 	transition: .8s ease-in-out;
     border-radius: 40% / 10%;
     background: #d7d7d7;
@@ -242,6 +248,7 @@ input:not(:placeholder-shown) ~ label {
 .sign-in-container .form-label{
     color: #222222;
 	transform: scale(.6);
+    margin: 10px;
 }
 
 /*Quando metto il check sulla checkbox faccio scorrere verso l'alto la form e
@@ -262,4 +269,13 @@ rendo nuovamente visibile le form-item
 
 #chk:checked ~ .sign-up-container .form-label{
 	transform: scale(.6);
+}
+
+/**********************/
+/*Gestione degli alert*/
+/**********************/
+.alert{
+    background-color: red; /*Da eliminare*/
+    text-align: center;
+    position: absolute;
 }
