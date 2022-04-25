@@ -5,7 +5,6 @@
 - gold: #eedf69
 */
 
-
 html {
     font-size: 20px !important;
 }
@@ -17,44 +16,140 @@ body {
 }
 
 @font-face {
-    font-family: "TechFitFont";
+    font-family: "TechFitFont-Azonix";
     src: url(../fonts/Azonix.otf) format("truetype");
 }
 
-.navbar-toggler{
-    width: 35px;
-    height: 35px;
-    border:none;
-}
-
-
-.active{
+.active {
     text-decoration: underline !important;
 }
 
-.navbar-nav{
+.navbar-nav {
     text-align: center !important;
 }
 
+.nav-item {
+    font-family: "TechFitFont-Azonix" !important;
+}
+
+.home-logo {
+    width: 50%;
+}
+
+.login-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 0.45em;
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    background-color: rgb(240, 240, 48);
+    transition: 0.5s ease-in-out;
+}
+
+.login-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
+
 /* effect-shine */
-.nav-link:hover{
-    animation-name:colorfulLink !important;
-    animation-duration: 0.7s;
+
+.nav-link:hover {
+    animation-name: colorfulLink !important;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 
 @keyframes colorfulLink {
     0% {
         font-size: 1rem;
-        letter-spacing: normal;
-      }
-
-    50%{
-        letter-spacing: 2.5px;
     }
-    
+    50% {
+        font-size: 1.1rem;
+        color: rgb(215, 221, 151);
+    }
     100% {
-        font-size: 1.5rem;
-        letter-spacing: 4.5px;
-      }
+        font-size: 1.2rem;
+        color: rgb(214, 228, 53);
+    }
+}
+
+@media (max-width: 700px) {
+    .logo-pic {
+        width: 20%;
+    }
+}
+
+.slider {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.caption {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numberslide {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
