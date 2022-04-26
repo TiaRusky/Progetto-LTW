@@ -75,7 +75,7 @@
             <div class="form-container sign-in-container">
                 <form action="signInCheck.php" method="POST">
                     <div class="flex-form">
-                        <label class="form-label" for="chk" aria-hidden="true">Sign in</label>
+                        <label class="form-label" for="chk" aria-hidden="true">Sign up</label>
                         <div class="form-item">
                             <input class="input-form" type="email" name="inputEmail" placeholder=" " required>
                             <label class="form-item-label">Email</label>
@@ -104,15 +104,21 @@
             //if(empty($_GET))exit();
             //strpos : Find the numeric position of the first occurrence of needle in the haystack string.
 
-            if(strpos($fullUrl,"signin=ar") == true){   //Se l'url contiene ?signin=ar allora l'utente era già registrato
+            //Gestione fallimenti registrazione
+            if(strpos($fullUrl,"signup=ar") == true){   //Se l'url contiene ?signin=ar allora l'utente era già registrato
                 echo "<div class='error'><span class='closebtn'>&times;</span><p>L'email inserita è già registrata!</p></div>";
             }
 
-            elseif(strpos($fullUrl,"signin=err")){
+            elseif(strpos($fullUrl,"signup=err")){
                 echo "<div class='error'><span class='closebtn'>&times;</span><p>Errore registrazione utente!</p></div>";
             }
-            elseif(strpos($fullUrl,"signin=fc")){
+            elseif(strpos($fullUrl,"signup=fc") || strpos($fullUrl,"login=fc")){
                 echo "<div class='error'><span class='closebtn'>&times;</span><p>Errore connesione al db!</p></div>";
+            }
+
+            //Gestione fallimenti login
+            elseif(strpos($fullUrl,"login=wd")){
+                echo "<div class='error'><span class='closebtn'>&times;</span><p>Credenziali errate!</p></div>";
             }
         ?>
         

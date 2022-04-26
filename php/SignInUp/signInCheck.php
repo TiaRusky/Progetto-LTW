@@ -16,7 +16,7 @@
         $query = "select * from utente where email = $1";
         $result = pg_query_params($dbconn,$query,array($email));
         if($tupla = pg_fetch_array($result,NULL,PGSQL_ASSOC)){  //Esiste già un utente con questa email
-            header("Location: login.php?signin=ar");    //ar = already registered
+            header("Location: login.php?signup=ar");    //ar = already registered
         }
 
         //L'utente può registrarsi
@@ -32,13 +32,13 @@
             }
 
             else{       //Qualcosa è andato storto
-                header("Location: login.php?signin=err");
+                header("Location: login.php?signup=err");
             }
         }
     }
     catch(Exception $e){
         //echo $e->getMessage();
-        header("Location: login.php?sigin=fc"); //fd = failed connection
+        header("Location: login.php?signup=fc"); //fd = failed connection
     }
 
 ?>
