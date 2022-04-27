@@ -1,3 +1,9 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
 html {
     font-size: 20px !important;
 }
@@ -30,26 +36,25 @@ body {
 @keyframes colorfulLink {
     0% {
         font-size: 1rem;
-        letter-spacing: normal;
     }
     50% {
-        letter-spacing: 2.5px;
+        font-size: 1.1rem;
+        color: rgb(215, 221, 151);
     }
     100% {
-        font-size: 1.5rem;
-        letter-spacing: 4.5px;
+        font-size: 1.2rem;
+        color: rgb(214, 228, 53);
     }
 }
 
-.grid-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: 'top top top' 'form form form' 'form form form' 'sign sign sign' 'foot foot foot';
-    grid-gap: 5px;
-    justify-content: center;
-    height: 100vh;
-}
+
+/********************/
+
+
+/*Gestione delle form*/
+
+
+/********************/
 
 .top-container {
     grid-area: top;
@@ -69,8 +74,8 @@ body {
 }
 
 .form-container {
-    grid-area: form;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background: #222222;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
     border-radius: 15px;
 }
 
@@ -108,16 +113,11 @@ body {
     padding-top: 7%;
 }
 
-.input-form {
-    width: 50%;
-    margin: 0.45em;
-    max-width: 300px;
-    border: 0px;
-    border-radius: 9px;
-    padding: 0.2em;
-    text-align: center;
-    font-family: "TechFitFont-Monserrat";
-    background-color: #e8e8e8;
+.form-item {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4em;
 }
 
 .input-button {
@@ -149,9 +149,10 @@ body {
     border-top-right-radius: 15px;
 }
 
-.login-title {
-    font-family: "TechFitFont-Azonix";
-    font-size: 1em;
+.submit-form:hover {
+    animation-name: colorfullbutton;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
 }
 
 .signup {
@@ -163,9 +164,8 @@ body {
     border-bottom-right-radius: 15px;
 }
 
-.form-signin {
-    display: block;
-    padding-bottom: 10%;
+input:not(:placeholder-shown)~label {
+    top: -110px;
 }
 
 .form-signup {
@@ -275,9 +275,11 @@ input:not(:placeholder-shown)~label {
     }
 }
 
-@media (max-width: 700px) {
-    .form-signup {
-        padding-bottom: 40%;
+@keyframes colorfullbutton {
+    100% {
+        background-color: #eedf69;
+        color: #222222;
+        font-weight: 900;
     }
 }
 
