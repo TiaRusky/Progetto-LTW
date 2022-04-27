@@ -58,7 +58,7 @@
                     <label class="form-label" for="chk" aria-hidden="true">Login</label>
                     <div class="flex-form">
                         <div class="form-item">
-                            <input class="input-form" type="email" name="inputEmail" placeholder=" " required>
+                            <input class="input-form" type="email" name="inputEmail" placeholder=" " required autocomplete="off">
                             <label>Email</label>
                         </div>
                             
@@ -77,12 +77,12 @@
                     <div class="flex-form">
                         <label class="form-label" for="chk" aria-hidden="true">Sign up</label>
                         <div class="form-item">
-                            <input class="input-form" type="email" name="inputEmail" placeholder=" " required>
+                            <input class="input-form" type="email" name="inputEmail" placeholder=" " required autocomplete="off">
                             <label class="form-item-label">Email</label>
                         </div>
                       
                         <div class="form-item">
-                            <input class="input-form" type="text" name="inputUsername" placeholder=" " required>
+                            <input class="input-form" type="text" name="inputUsername" placeholder=" " required autocomplete="off">
                             <label class="form-item-label">Username</label>
                         </div>
 

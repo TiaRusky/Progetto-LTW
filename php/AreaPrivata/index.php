@@ -12,6 +12,6 @@
         <title>Area personale di <?php echo $_SESSION['username'];?></title>
     </head>
     <body>
-
+        <!--Idea: fare delle card che vengono sollevati da uomini/donne che simulano un esercizio-->
     </body>
 </html>
