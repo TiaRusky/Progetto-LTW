@@ -1,0 +1,62 @@
+/*Colori:
+
+- black: #222222
+- steal: #d7d7d7
+- gold: #eedf69
+*/
+
+html {
+    font-size: 20px !important;
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+    background-color: #5b6467;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+}
+
+.selection{
+    width: 60%;
+    margin: 0.5em auto;
+    background-color: #d7d7d7;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid #eedf69;
+}
+
+.selection-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.selection-title{
+    font-weight: 900;
+}
+
+.selection-pic{
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+@media (min-width: 575px){
+    .container{
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 875px;
+    }
+
+    .selection{
+        width: 45%;
+    }
+}

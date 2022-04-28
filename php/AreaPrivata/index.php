@@ -9,9 +9,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Area personale di <?php echo $_SESSION['username'];?></title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../css/private-style.css" rel="stylesheet">
+        <title>TechFit - Area personale di <?php echo $_SESSION['username'];?></title>
     </head>
     <body>
-        <!--Idea: fare delle card che vengono sollevati da uomini/donne che simulano un esercizio-->
+        <nav>
+            <a class="logout-button" href = "logout.php">Logout</a>
+        </nav>
+
+        <div class="container">
+            
+            <div class="selection">
+                <a href="#" class="selection-link">
+                    <h3 class="selection-title">Inizia allenamento</h3>
+                    <img src="../../pic/Privata/test.jpg" class="selection-pic">
+                    <p>Inizia</p>
+                </a>
+            </div>
+
+            <div class="selection">
+                <a href="#" class="selection-link">
+                    <h3 class="selection-title">Crea una nuova scheda</h3>
+                    <img src="../../pic/Privata/test.jpg" class="selection-pic">
+                    <p>Crea</p>
+                </a>
+            </div>
+
+        </div>
     </body>
 </html>
