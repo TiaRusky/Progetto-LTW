@@ -20,6 +20,9 @@ body {
     src: url(../fonts/Azonix.otf) format("truetype");
 }
 
+/*********/
+/*NAVBAR*/
+/*********/
 .active {
     text-decoration: underline !important;
 }
@@ -57,9 +60,6 @@ body {
     transition: 0.3s;
 }
 
-
-/* effect-shine */
-
 .nav-link:hover {
     animation-name: colorfulLink !important;
     animation-duration: 0.2s;
@@ -86,6 +86,10 @@ body {
     }
 }
 
+
+/*********/
+/*Slider*/
+/*********/
 .slider {
     max-width: 1000px;
     position: relative;
