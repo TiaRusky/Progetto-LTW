@@ -17,25 +17,16 @@ body {
 
 
 @font-face {
-    font-family: "TechFitFont-Monserrat";
-    src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+    font-family: "TechFitFont-Azonix";
+    src: url(../fonts/Azonix.otf) format("truetype");
 }
 
 /**********/
 /*NAVBAR*/
 /**********/
-.home-pic {
-    width: 20%;
-    height: auto;
-    border: #FCCA00 2px solid;
+.home-logo {
+    width: 50%;
 }
-
-.navbar-toggler {
-    width: 35px;
-    height: 35px;
-    border: none;
-}
-
 .nav-item {
     font-family: "TechFitFont-Azonix" !important;
 }
@@ -44,8 +35,8 @@ body {
     text-align: center !important;
 }
 
-.nav-link:hover{
-    animation-name:colorfulLink !important;
+.nav-link:hover {
+    animation-name: colorfulLink !important;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
