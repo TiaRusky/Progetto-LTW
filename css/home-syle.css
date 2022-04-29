@@ -111,3 +111,33 @@ body {
 .carousel-indicators button {
     border-radius: 15px;
 }
+
+.bands {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.about-band {
+    background-color: blueviolet;
+}
+
+.team-band {
+    background-color: rgb(43, 226, 211);
+}
+
+.gallery-band {
+    background-color: rgb(226, 43, 43);
+}
+
+.prod-band {
+    background-color: rgb(46, 226, 43);
+}
+
+.contacts-band {
+    background-color: rgb(226, 205, 43);
+}
