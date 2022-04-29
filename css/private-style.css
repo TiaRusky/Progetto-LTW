@@ -12,23 +12,24 @@ html {
 body {
     width: 100%;
     margin: 0px;
-    background-color: #5b6467;
+    background-color: #d7d7d7;
 }
 
-.container{
+.main{
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
 }
 
 .selection{
     width: 60%;
-    margin: 0.5em auto;
-    background-color: #d7d7d7;
+    margin: 1em auto;
+    background-color: #222222;
     display: flex;
     flex-direction: column;
     text-align: center;
-    border: 2px solid #eedf69;
+    border: 6px groove #222222;
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,.6);
+    border-radius: 7%;
 }
 
 .selection-link{
@@ -38,6 +39,7 @@ body {
 
 .selection-title{
     font-weight: 900;
+    color: #eedf69;
 }
 
 .selection-pic{
@@ -47,16 +49,55 @@ body {
     margin: 0 auto;
 }
 
+.selection:hover{
+    animation-name: selectionPopUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
 
-@media (min-width: 575px){
-    .container{
+@keyframes selectionPopUp{
+    100%{
+        transform: scale(110%);
+    }
+}
+
+.selection-desc{
+    color:#cccccc;
+    font-weight: 600;
+}
+
+.logout-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: #222222;
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    background-color: rgb(240, 240, 48);
+    transition: 0.5s ease-in-out;
+}
+
+.logout-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
+
+/*Gestione visuale NON da telefono*/
+@media (min-width: 586px){
+    .main{
         flex-direction: row;
         justify-content: space-between;
-        margin: 0 auto;
-        max-width: 875px;
+        margin: 3em auto;
+        max-width: 1050px;
     }
 
     .selection{
-        width: 45%;
+        width: 40%;
     }
+
 }
