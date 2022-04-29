@@ -21,7 +21,7 @@
         <nav class="sticky-top navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="../pic/logo/10_crypto/small_logo.png" class="home-logo">
+                    <img src="../../pic/logo/10_crypto/small_logo.png" class="home-logo">
                 </a>
                 <a class="logout-button" type="button" href="logout.php">
                     Logout
@@ -40,7 +40,7 @@
             </div>
 
             <div class="selection">
-                <a href="#" class="selection-link">
+                <a href="schede.php" class="selection-link">
                     <h3 class="selection-title">Schede</h3>
                     <img src="../../pic/Privata/test.jpg" class="selection-pic">
                     <p class="selection-desc">Gestisci le tue schede di allenamento</p>
