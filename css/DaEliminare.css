@@ -17,14 +17,44 @@ html {
 body {
     width: 100%;
     margin: 0px;
-    background-color: #d7d7d7;
+    background-color: #d7d7d7 !important;
 }
 
+/************/
+
+/* NAVBAR */
+
+/************/
 .home-logo{
     width: 40%;
     height: auto;
 }
 
+.logout-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: #222222;
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    background-color: rgb(240, 240, 48);
+    transition: 0.5s ease-in-out;
+}
+
+.logout-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
+/*****************/
+
+/* MAIN CONTENT */
+
+/*****************/
 .main{
     display: flex;
     flex-direction: column;
@@ -94,27 +124,6 @@ Non so se mi piace, forse con i colori giusti
     color:#cccccc;
     font-weight: 600;
 }
-
-.logout-button {
-    font-family: "TechFitFont-Azonix";
-    text-decoration: none;
-    color: #222222;
-    max-width: 300px;
-    border: 0px;
-    border-radius: 9px;
-    padding-left: 1em;
-    padding-right: 1em;
-    text-align: center;
-    background-color: rgb(240, 240, 48);
-    transition: 0.5s ease-in-out;
-}
-
-.logout-button:hover {
-    color: #9a9a9a;
-    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
-    transition: 0.3s;
-}
-
 
 /*Gestione visuale NON da telefono*/
 @media (min-width: 586px){
