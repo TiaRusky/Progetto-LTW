@@ -3,6 +3,7 @@
 - black: #222222
 - steal: #d7d7d7
 - gold: #eedf69
+- navbar: #212529
 */
 
 html {
@@ -86,7 +87,6 @@ body {
     }
 }
 
-
 .carousel-item {
     max-height: 350px !important;
 }
@@ -107,7 +107,7 @@ body {
     border-radius: 15px;
 }
 
-.bands {
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,22 +117,40 @@ body {
     height: 100vh;
 }
 
-.about-band {
-    background-color: blueviolet;
+section h1 {
+    font-size: 4rem;
 }
 
-.team-band {
-    background-color: rgb(43, 226, 211);
+section p {
+    font-size: 1.5rem;
 }
 
-.gallery-band {
-    background-color: rgb(226, 43, 43);
+section#about {
+    background-color: #d7d7d7;
 }
 
-.prod-band {
-    background-color: rgb(46, 226, 43);
+section#team {
+    background-color: #ffe570;
 }
 
-.contacts-band {
-    background-color: rgb(226, 205, 43);
+section#gallery {
+    background-color: #d7d7d7;
+}
+
+section#products {
+    background-color: #ffe570;
+}
+
+section#contacts {
+    background-color: #212529;
+    color: white;
+    height: 30vh;
+}
+
+section#contacts h1 {
+    font-size: 1rem;
+}
+
+section#contacts p {
+    font-size: 0.5rem;
 }
