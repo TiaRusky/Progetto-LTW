@@ -19,26 +19,96 @@
 
     <body>
 
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="../../pic/logo/10_crypto/small_logo.png" class="home-logo">
                 </a>
 
-                <a class="logout-button" type="button" href="logout.php">
-                    Logout
-                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <div class= "header-content">
+
+                        <!-- Barra di ricerca per le schede -->
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Cerca scheda" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Cerca</button>
+                        </form>
+
+                        <!-- Bottone di logout -->
+                        <a class="logout-button" type="button" href="logout.php">
+                            Logout
+                        </a>
+                    </div>
+
+                </div>
             </div>
         </nav>
 
         <div class = "main">
-            
 
+            <!-- Bottone per aggiungere una nuova card-->
+            <div class="card new-card">
+                <button class="new-card-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="new-card-pic" fill="currentColor" class="bi bi-file-plus-fill" viewBox="0 0 16 16">
+                        <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0z"/>
+                    </svg>
+                </button>
+            </div>
 
             <!--Dove andranno le schede scaricate dal database-->
-            <div class="card" style="text-align:center">
+            <div class="card card-style">
                 <div class="card-header">
-                    <p class="card-title">Nome della scheda</p>
+                    <p class="card-title">Nome scheda</p>
+                    <div class="dropdown">
+                        <button class="tDots" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Visualizza</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Elimina</a></li>
+                            <!--<li><a class="dropdown-item" href="#">Modifica Nome</a></li>  Da vedere se si riesce a fare-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Questa è una breve descrizione con caratteri</p>
+                    <a href="#" class="btn btn-primary">train</a>
+                </div>
+            </div>
+
+            <div class="card card-style" style="text-align:center">
+                <div class="card-header">
+                    <p class="card-title">Nome scheda</p>
+                    <div class="dropdown">
+                        <button class="tDots" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Visualizza</a></li>
+                            <li><a class="dropdown-item" href="#">Elimina</a></li>
+                            <li><a class="dropdown-item" href="#">Modifica Nome</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Questa è una breve descrizioneee</p>
+                    <a href="#" class="btn btn-primary">ALLENATI</a>
+                </div>
+            </div>
+
+            <div class="card card-style" style="text-align:center">
+                <div class="card-header">
+                    <p class="card-title">Nome scheda</p>
                     <div class="dropdown">
                         <button class="tDots" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
@@ -58,53 +128,9 @@
                 </div>
             </div>
 
-            <div class="card" style="text-align:center">
+            <div class="card card-style" style="text-align:center">
                 <div class="card-header">
-                    <p class="card-title">Nome della scheda</p>
-                    <div class="dropdown">
-                        <button class="tDots" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                            </svg>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Visualizza</a></li>
-                            <li><a class="dropdown-item" href="#">Elimina</a></li>
-                            <li><a class="dropdown-item" href="#">Modifica Nome</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text">Questa è una breve descrizione</p>
-                    <a href="#" class="btn btn-primary">ALLENATI</a>
-                </div>
-            </div>
-
-            <div class="card" style="text-align:center">
-                <div class="card-header">
-                    <p class="card-title">Nome della scheda</p>
-                    <div class="dropdown">
-                        <button class="tDots" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                            </svg>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Visualizza</a></li>
-                            <li><a class="dropdown-item" href="#">Elimina</a></li>
-                            <li><a class="dropdown-item" href="#">Modifica Nome</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text">Questa è una breve descrizione</p>
-                    <a href="#" class="btn btn-primary">ALLENATI</a>
-                </div>
-            </div>
-
-            <div class="card" style="text-align:center">
-                <div class="card-header">
-                    <p class="card-title">Nome della scheda</p>
+                    <p class="card-title">Nome scheda</p>
                     <div class="dropdown">
                         <button class="tDots" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
