@@ -6,12 +6,16 @@
 - navbar: #212529
 */
 
+
+/***************************************************************************************************************
+*   Generali
+***************************************************************************************************************/
+
 html {
     font-size: 20px !important;
 }
 
 body {
-    width: 100%;
     margin: 0px;
     background-color: #d7d7d7;
 }
@@ -22,13 +26,9 @@ body {
 }
 
 
-/*********/
-
-
-/*NAVBAR*/
-
-
-/*********/
+/***************************************************************************************************************
+*   Navbar
+***************************************************************************************************************/
 
 .active {
     text-decoration: underline !important;
@@ -87,8 +87,13 @@ body {
     }
 }
 
-.carousel-item {
-    max-height: 350px !important;
+
+/***************************************************************************************************************
+*   Carousel
+***************************************************************************************************************/
+
+.carousel {
+    width: 70% !important;
 }
 
 .carousel-control-prev-icon {
@@ -107,50 +112,230 @@ body {
     border-radius: 15px;
 }
 
-section {
+
+/***************************************************************************************************************
+*   Fasce
+***************************************************************************************************************/
+
+.band {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
     width: 100%;
-    height: 100vh;
+    height: 96vh;
 }
 
-section h1 {
-    font-size: 4rem;
+.band h1 {
+    font-family: "TechFitFont-Azonix";
 }
 
-section p {
-    font-size: 1.5rem;
+.band#home {
+    position: relative;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    z-index: 1;
 }
 
-section#about {
+.home-bg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.home-bg-sx {
+    width: 20%;
+}
+
+.home-bg-cen {
+    width: 60%;
+}
+
+.home-bg-dx {
+    width: 20%;
+}
+
+.home-cap {
+    padding-bottom: 25%;
+}
+
+.home-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    text-align: center;
+    background-color: rgb(240, 240, 48);
+    transition: 0.5s ease-in-out;
+    margin: 0 auto;
+}
+
+.home-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
+.band#about {
     background-color: #d7d7d7;
 }
 
-section#team {
-    background-color: #ffe570;
+.about-img {
+    padding: 3%;
 }
 
-section#gallery {
+.band#team {
+    background: url("https://source.unsplash.com/8nMjIn195p0/1280x600") no-repeat center center/cover;
+    color: white;
+}
+
+.makers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 100px;
+}
+
+.cla p,
+.mat p {
+    font-family: "TechFitFont-Azonix";
+    font-weight: 400;
+    font-size: larger;
+    background-color: #d7d7d7;
+    color: #212529;
+    border-radius: 15px;
+    padding-top: 1%;
+    margin-top: 4%;
+}
+
+.cla img,
+.mat img {
+    width: 50%;
+}
+
+.band#gallery {
     background-color: #d7d7d7;
 }
 
-section#products {
-    background-color: #ffe570;
+.band#products {
+    background: url("https://source.unsplash.com/Z6rjfQoDqdY/1280x600") no-repeat center center/cover;
+    color: white;
 }
 
-section#contacts {
+.band#products p {
+    background-color: #ffea00;
+    color: #222222;
+    font-size: larger;
+    border-radius: 15px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.prods-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    text-align: center;
+    background-color: rgb(240, 240, 48);
+    transition: 0.5s ease-in-out;
+    margin: 0 auto;
+}
+
+.prods-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
+.band#contacts {
+    background: #d7d7d7;
+    color: rgb(0, 0, 0);
+}
+
+@keyframes floatingLabel {
+    100% {
+        bottom: 110px;
+    }
+}
+
+@keyframes colorfullbutton {
+    100% {
+        background-color: #eedf69;
+        color: #222222;
+        font-weight: 900;
+    }
+}
+
+footer {
     background-color: #212529;
     color: white;
     height: 30vh;
+    text-align: center;
+    padding-top: 5%;
 }
 
-section#contacts h1 {
-    font-size: 1rem;
+@media screen and (max-width: 276px) {
+    .band h1 {
+        font-size: 19px;
+    }
+    .band p {
+        font-size: 19px;
+    }
 }
 
-section#contacts p {
-    font-size: 0.5rem;
+@media screen and (max-width: 249px) {
+    .band h1 {
+        font-size: 17px;
+    }
+    .band p {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 215px) {
+    .band h1 {
+        font-size: 15px;
+    }
+    .band p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 172px) {
+    .band h1 {
+        font-size: 13px;
+    }
+    .band p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 142px) {
+    .band h1 {
+        font-size: 11px;
+    }
+    .band p {
+        font-size: 11px;
+    }
 }
