@@ -1,0 +1,1 @@
+window.alert("Mani in pasta, sorry")
