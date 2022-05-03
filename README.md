@@ -1,6 +1,6 @@
 # Progetto-LTW
 Progetto relativo al corso Linguaggi e Tecnologie per il Web , ingegneria informatica Sapienza; anno 2021/2022
-Partecipanti: Claudio Schiavella, Mattia Russo
+Partecipanti: Claudio Schiavella, Mattia Russo. Ora 2.0
 
 # Costruzione del db
 create table Utente(
