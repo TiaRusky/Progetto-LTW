@@ -30,10 +30,12 @@
                     session_start();
                     $_SESSION['email'] = $email;
                     $_SESSION['username'] = $tupla["username"];
+                    pg_close($dbconn);
                     header("Location: ../AreaPrivata/index.php");
                 }
 
-                else{  
+                else{ 
+                    pg_close($dbconn); 
                     header("Location: login.php?login=wd");     //wd = wrong data
                 }
                 
