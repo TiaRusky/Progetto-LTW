@@ -101,7 +101,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 /*Gestione delle card*/
@@ -110,6 +109,10 @@ body {
     border:none;
     height: 200px;
     margin-bottom: 0px;
+}
+
+.dropdown-divider{
+    background-color: #e0e0d1 !important;
 }
 
 .card{
@@ -213,7 +216,7 @@ body {
     color: #222222 !important;
 }
 
-@media (min-width:475px){
+@media (min-width:635px){
     .main{
         flex-direction: row;
         flex-wrap: wrap;
