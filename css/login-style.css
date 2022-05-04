@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     height: 100%;
 }
@@ -10,23 +11,29 @@ html {
 body {
     width: 100%;
     margin: 0px;
-    position:relative;
+    position: relative;
     background-color: #5b6467;
     background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);
 }
-
 
 @font-face {
     font-family: "TechFitFont-Azonix";
     src: url(../fonts/Azonix.otf) format("truetype");
 }
 
+
 /**********/
+
+
 /*NAVBAR*/
+
+
 /**********/
+
 .home-logo {
     width: 50%;
 }
+
 .nav-item {
     font-family: "TechFitFont-Azonix" !important;
 }
@@ -55,26 +62,30 @@ body {
     }
 }
 
-/********************/
-/*Gestione delle form*/
+
 /********************/
 
-.container{
+
+/*Gestione delle form*/
+
+
+/********************/
+
+.container {
     position: absolute;
     overflow: hidden;
     height: 550px;
     margin-top: 5px;
-    left: 0; 
+    left: 0;
     right: 0;
-
-    margin-left: auto; 
-    margin-right: auto; 
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
 }
 
-.form-container{
+.form-container {
     background: #222222;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
     border-radius: 15px;
     max-width: 500px;
     margin: 0px auto;
@@ -93,7 +104,7 @@ body {
     align-items: center;
 }
 
-.form-item{
+.form-item {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -117,13 +128,13 @@ body {
 .form-container .form-item label {
     font-size: 1.2rem;
     position: relative;
-    bottom:62px;
+    bottom: 62px;
     color: #eedf69;
     pointer-events: none;
     transition: .5s;
 }
 
-.submit-form{
+.submit-form {
     margin-bottom: 1em;
     background: transparent;
     color: #eedf69;
@@ -136,149 +147,164 @@ body {
     font-weight: 900;
 }
 
-.submit-form:hover{
+.submit-form:hover {
     animation-name: colorfullbutton;
     animation-duration: 1.7s;
     animation-fill-mode: forwards;
 }
 
-.form-item input:focus ~ label{
+.form-item input:focus~label {
     animation-name: floatingLabel;
     animation-duration: 0.7s;
     animation-fill-mode: forwards;
 }
 
-input:not(:placeholder-shown) ~ label {
+input:not(:placeholder-shown)~label {
     top: -110px;
 }
 
 @keyframes floatingLabel {
-    100%{
-        bottom:110px;
+    100% {
+        bottom: 110px;
     }
 }
 
-@keyframes colorfullbutton{
-    100%{
+@keyframes colorfullbutton {
+    100% {
         background-color: #eedf69;
-        color:#222222;
+        color: #222222;
         font-weight: 900;
     }
 }
 
+
 /************************/
+
+
 /*Stile della form di signin*/
+
+
 /************************/
 
-#chk{
-	display: none;
+#chk {
+    display: none;
 }
 
-.form-label{
-	color: #eedf69;
-	font-size: 2.3em;
-	justify-content: center;
-	display: flex;
-	margin: 60px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
+.form-label {
+    color: #eedf69;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
 }
 
-.sign-up-container{
-    position:relative;
+.sign-up-container {
+    position: relative;
     width: 90%;
     height: 100%;
 }
 
-.sign-in-container{
+.sign-in-container {
     height: 100%;
     width: 90%;
 }
+
 
 /*Nascondo inizialmente la form per iscriversi, mostrando solo la label collegata alla checkbox*/
-.sign-in-container{
-	transform: translateY(-100px);
-	transition: .8s ease-in-out;
+
+.sign-in-container {
+    transform: translateY(-100px);
+    transition: .8s ease-in-out;
     border-radius: 40% / 10%;
     background: #d7d7d7;
 }
 
+
 /*Per nascondere meglio le label*/
-.sign-in-container .form-item{
+
+.sign-in-container .form-item {
     visibility: hidden;
 }
 
-.sign-in-container .flex-form .form-item-label{
+.sign-in-container .flex-form .form-item-label {
     color: #222222;
 }
 
-.sign-in-container .flex-form .submit-form{
+.sign-in-container .flex-form .submit-form {
     color: #222222;
     border: 2px solid #222222;
 }
 
-.sign-in-container .form-item input{
+.sign-in-container .form-item input {
     border-bottom: 1px solid #222222;
     color: #222222;
 }
 
-.sign-in-container .flex-form .submit-form:hover{
+.sign-in-container .flex-form .submit-form:hover {
     animation-name: colorfullbutton2;
     animation-duration: 1.7s;
     animation-fill-mode: forwards;
 }
 
 @keyframes colorfullbutton2 {
-    100%{
+    100% {
         background-color: #222222;
-        color:#eedf69;
+        color: #eedf69;
         font-weight: 900;
     }
 }
 
-.sign-in-container .form-label{
+.sign-in-container .form-label {
     color: #222222;
-	transform: scale(.6);
+    transform: scale(.6);
     margin: 10px;
 }
+
 
 /*Quando metto il check sulla checkbox faccio scorrere verso l'alto la form e
 rendo nuovamente visibile le form-item
 */
-#chk:checked ~ .sign-in-container{
-	transform: translateY(-585px);
+
+#chk:checked~.sign-in-container {
+    transform: translateY(-585px);
 }
 
-#chk:checked ~ .sign-in-container .form-item{
+#chk:checked~.sign-in-container .form-item {
     visibility: visible;
 }
 
-
-#chk:checked ~ .sign-in-container .form-label{
-	transform: scale(1);	
+#chk:checked~.sign-in-container .form-label {
+    transform: scale(1);
 }
 
-#chk:checked ~ .sign-up-container .form-label{
-	transform: scale(.6);
+#chk:checked~.sign-up-container .form-label {
+    transform: scale(.6);
 }
+
 
 /**********************/
+
+
 /*Gestione degli alert*/
+
+
 /**********************/
-.error{
+
+.error {
     margin: 5px auto;
     width: 45%;
     max-width: 450px;
     background-color: #FFCCBA;
     border: 2px solid #f44336;
     font-weight: 700;
-    color:#D63301;
+    color: #D63301;
     opacity: .99;
     text-align: center;
-    padding : 0.4em;
+    padding: 0.4em;
 }
-
 
 .closebtn {
     color: black;

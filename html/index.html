@@ -153,34 +153,32 @@
         </div>
         <div class="row">
             <div class="col-lg band" id="contacts">
+
                 <h1>Contatti</h1>
                 <p>Non esitare a contattarci per qualsiasi domanda o curiosità! Siamo aperti a collaborazioni di qualsiasi tipo! </p>
-                <form action="../js/sendMail.js" method="GET">
-                    <div class="flex-form">
-                        <div class="form-item">
-                            <input class="input-form" type="email" name="inputEmail" placeholder=" " required autocomplete="off">
-                            <label class="form-item-label">Tua mail</label>
+                <div class="form-container sign-up-container">
+                    <form action="loginCheck.php" method="POST">
+                        <div class="flex-form">
+                            <div class="wai">
+                                <div class="form-item">
+                                    <input class="input-form" type="email" name="inputEmail" placeholder=" " required autocomplete="off">
+                                    <label>Email</label>
+                                </div>
+                                <div class="form-item">
+                                    <input class="input-form" type="object" name="inputObject" placeholder=" " required autocomplete="off">
+                                    <label>Oggetto</label>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <input class="input-form" type="textarea" name="inputMsg" placeholder=" " required>
+                                <label>Messaggio</label>
+                            </div>
+                            <input class="prods-button" type="submit" value="Invia" name="inputSubmit">
                         </div>
-
-                        <div class="form-item">
-                            <input class="input-form" type="text" name="inputUsername" placeholder=" " required autocomplete="off">
-                            <label class="form-item-label">Nome</label>
-                        </div>
-
-                        <div class="form-item">
-                            <input class="input-form" type="text" name="inputUsername" placeholder=" " required autocomplete="off">
-                            <label class="form-item-label">Oggetto</label>
-                        </div>
-
-                        <div class="form-item">
-                            <input class="input-form" type="text" name="inputUsername" placeholder=" " required autocomplete="off">
-                            <label class="form-item-label">Testo</label>
-                        </div>
-
-                        <input class="home-button" type="submit" value="Invia" name="inputSubmit">
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
+
             <footer>
                 <p>Copyright 2022 &copy;</p>
             </footer>
