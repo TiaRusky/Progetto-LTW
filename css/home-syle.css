@@ -295,6 +295,61 @@ footer {
     padding-top: 5%;
 }
 
+@media screen and (max-width: 942px) {
+    .cla p {
+        font-size: 18px;
+    }
+    .mat p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .cla p {
+        font-size: 12px !important;
+    }
+    .mat p {
+        font-size: 12px !important;
+    }
+}
+
+@media screen and (max-width: 276px) {
+    .cla p {
+        font-size: 12px;
+    }
+    .mat p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cla p {
+        font-size: 10px;
+    }
+    .mat p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .band#about p {
+        font-size: 14px;
+    }
+    .band#about h1 {
+        font-size: 15px;
+    }
+    .about-img img {
+        width: 20%;
+        padding-bottom: 4%;
+    }
+}
+
+@media screen and (max-width: 220px) {
+    .home-button {
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 276px) {
     .band h1 {
         font-size: 19px;
