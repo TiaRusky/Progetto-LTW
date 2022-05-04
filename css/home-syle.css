@@ -254,7 +254,7 @@ body {
     align-items: center;
     align-content: center;
     justify-items: center;
-    gap: 10%;
+    gap: 1%;
 }
 
 .band#gallery h1 {
@@ -329,7 +329,7 @@ footer {
 
 @media screen and (max-width: 942px) {
     .band#gallery h1 {
-        font-size: 0.7em;
+        font-size: 0.9em;
     }
 }
 
