@@ -93,7 +93,17 @@ body {
 ***************************************************************************************************************/
 
 .carousel {
-    width: 70% !important;
+    width: 100% !important;
+}
+
+.d-block#wide {
+    display: block !important;
+    width: 100% !important;
+}
+
+.d-block#portr {
+    display: none !important;
+    width: 100% !important;
 }
 
 .carousel-control-prev-icon {
@@ -110,6 +120,16 @@ body {
 
 .carousel-indicators button {
     border-radius: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .d-block#wide {
+        display: none !important;
+    }
+    .d-block#portr {
+        display: block !important;
+        max-height: 600px;
+    }
 }
 
 
@@ -207,7 +227,7 @@ body {
     justify-content: center;
     align-items: center;
     align-content: center;
-    gap: 100px;
+    gap: 1%;
 }
 
 .cla p,
@@ -229,6 +249,18 @@ body {
 
 .band#gallery {
     background-color: #d7d7d7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    gap: 1%;
+}
+
+.band#gallery h1 {
+    text-orientation: sideways;
+    writing-mode: sideways-rl;
+    width: 3%;
 }
 
 .band#products {
@@ -273,6 +305,96 @@ body {
     color: rgb(0, 0, 0);
 }
 
+.form-container {
+    background: #222222;
+    width: 100%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 15px;
+    margin: 0px auto;
+    border: 1px solid black;
+}
+
+.form-container-flex {
+    width: 100%;
+    height: 80%;
+}
+
+.flex-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.form-item {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4em;
+}
+
+.wai {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.4em;
+}
+
+.form-container .form-item input {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #eedf69;
+    outline: none;
+    background: transparent;
+    font-size: 1.2rem;
+}
+
+.form-container .form-item label {
+    font-size: 1.2rem;
+    position: relative;
+    bottom: 62px;
+    color: #eedf69;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.submit-form {
+    margin-bottom: 1em;
+    background: transparent;
+    color: #eedf69;
+    padding: 0.3em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #eedf69;
+    border-radius: 15px;
+    font-weight: 900;
+}
+
+.submit-form:hover {
+    animation-name: colorfullbutton;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+.form-item input:focus~label {
+    animation-name: floatingLabel;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+input:not(:placeholder-shown)~label {
+    top: -110px;
+}
+
 @keyframes floatingLabel {
     100% {
         bottom: 110px;
@@ -293,6 +415,67 @@ footer {
     height: 30vh;
     text-align: center;
     padding-top: 5%;
+}
+
+@media screen and (max-width: 942px) {
+    .band#gallery h1 {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 942px) {
+    .cla p {
+        font-size: 18px;
+    }
+    .mat p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .cla p {
+        font-size: 12px !important;
+    }
+    .mat p {
+        font-size: 12px !important;
+    }
+}
+
+@media screen and (max-width: 276px) {
+    .cla p {
+        font-size: 12px;
+    }
+    .mat p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cla p {
+        font-size: 10px;
+    }
+    .mat p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .band#about p {
+        font-size: 14px;
+    }
+    .band#about h1 {
+        font-size: 15px;
+    }
+    .about-img img {
+        width: 20%;
+        padding-bottom: 4%;
+    }
+}
+
+@media screen and (max-width: 220px) {
+    .home-button {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 276px) {
