@@ -113,6 +113,26 @@ body {
 /**********************/
 /*Gestione delle modal*/
 /**********************/
+
+/*Gestione dell'info esercizi*/
+.info-button{
+    background:transparent !important;
+    border:none !important;
+}
+
+.popover{
+    border: 2px solid #eedf69 !important;
+    border-radius: 15% !important;
+} 
+
+.popover-body{
+    color: #e0e0d1 !important;
+    background-color: #222222 !important;
+    font-weight: 600 !important;
+    border-radius: 15% !important;
+}
+
+
 .modal-content{
     background-color: #d7d7d7 !important;
 }
@@ -134,11 +154,14 @@ body {
     color: #eedf69 !important;
 }
 
-.modal-body input,
-.modal-body select{
-    background-color: #222222;
-    color:antiquewhite;
+.modal-body input{
+    color: #222222;
     text-align: center;
+}
+
+.modal-body select{
+    color:#e0e0d1;
+    background-color: #222222;
 }
 
 .modal-body input[type="number"]{
@@ -149,6 +172,19 @@ body {
 .modal-body select:focus{
     box-shadow: 0px 0px 5px 4px #eedf69;
     outline:none;
+}
+
+/*Per nascondere le frecce delle input*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .modal-btn{
@@ -170,6 +206,19 @@ body {
     transition: 1.7s;
 }
 
+.modal-form label{
+    color:#222222;
+    font-weight: bold;
+}
+
+.modal-form input{
+    border: none;
+    border-bottom: 1px solid #222222;
+    outline: none;
+    background: transparent;
+}
+
+/*Gestione delle form nelle model*/
 .modal-form{
     display: flex;
     flex-direction: column;
@@ -178,7 +227,7 @@ body {
 .form-element{
     display: flex;
     flex-direction: column;
-    margin: 0.4em 0;
+    margin: 0.6em 0;
 }
 
 .form-element .btn{

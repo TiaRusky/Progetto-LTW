@@ -185,8 +185,13 @@
                                 <!-- Questa parte deve essere aggiunta con jquery: input number per ogni serie -->
                                 
                                 <div class="form-element numero-ripetizioni-element">
-                                    <label>Num. ripetizioni serie</label>
+                                    <label>Num. ripetizioni serie 1</label>
                                     <input type="number" name="numRipetizioni" value="1" max="20" min="1" required>
+                                </div>
+
+                                <div class="form-element">
+                                    <label>Recupero (secondi)</label>
+                                    <input type="number" name="recupero" max="120" min ="20" required>
                                 </div>
                                 
                                 <div class="form-element form-element-esecuzione">
@@ -195,7 +200,14 @@
                                 </div>
 
                                 <div class="form-element desc-element">
-                                    <label>Modalità esecuzione</label>
+                                    <label>
+                                        Modalità esecuzione
+                                        <button type="button" class="info-button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Es: Superset; Stripping; Peak Contraction ..." data-bs-trigger="click">        
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+                                                <path d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z"/>
+                                            </svg>
+                                        </button>
+                                    </label>
                                     <input type="text" name="inputModEsec" maxlength="15">
                                 </div>
                                 <!--

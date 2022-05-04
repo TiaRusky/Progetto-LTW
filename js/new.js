@@ -1,5 +1,11 @@
 $(document).ready(function (){
-    
+
+    /*Gestione popover*/
+    $('[data-bs-toggle="popover"]').popover();
+
+    /***********/
+    /*Gestione numero ripetizioni di ogni serie*/
+    /***********/
     var $elementoNumeroSerie = $('.numSerie');
 
     $elementoNumeroSerie.on("change",function(e){
