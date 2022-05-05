@@ -11,3 +11,19 @@ $(document).ready(function() {
 
     });
 });
+
+$(document).ready(function() {
+    $('.home-button').on('click', function(ev) {
+        var nav_h = $('.navbar').height() + 10;
+        console.log("in");
+
+        $('html, body').animate({
+            'scrollTop': $('footer').offset().top
+        }, 3000);
+
+        $('html, body').animate({
+            'scrollTop': $('#about').offset().top - nav_h
+        }, 2000);
+
+    });
+});

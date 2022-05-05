@@ -213,6 +213,29 @@ body {
     background-color: #d7d7d7;
 }
 
+.about-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    text-align: center;
+    background-color: rgb(240, 240, 48);
+    transition: 0.5s ease-in-out;
+    margin: 0 auto;
+}
+
+.about-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
 .about-img {
     padding: 3%;
 }
@@ -259,8 +282,12 @@ body {
 
 .band#gallery h1 {
     text-orientation: sideways;
-    writing-mode: sideways-rl;
+    writing-mode: vertical-rl;
     width: 3%;
+}
+
+.band#gallery h1#rigth {
+    writing-mode: vertical-lr !important;
 }
 
 .band#products {
@@ -341,6 +368,7 @@ body {
     display: flex;
     flex-direction: row;
     margin-top: 0.4em;
+    gap: 3%;
 }
 
 .form-container .form-item input {
