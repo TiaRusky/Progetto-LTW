@@ -63,10 +63,6 @@
                     Annulla
                 </button>
             </div>
-            <!-- Come suddividere in blocchi i vari gruppi muscolari -->
-            <div class="blocks-main">
-                
-            </div>
 
             <!-- Contiene gli esercizi, divisi per gruppi muscolari,
                      aggiunti finora-->
