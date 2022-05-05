@@ -6,7 +6,7 @@ $(document).ready(function (){
     var $formPetto = $("#form-petto");
     var $formBicipiti = $("#form-bicipiti");
     var $formGambe = $("#form-gambe");
-    var $formSpalle = $("form-spalle");
+    var $formSpalle = $("#form-spalle");
 
     //Le varie flexbox di esercizi
     var $flexDorsali = $(".flex-dorsali");
