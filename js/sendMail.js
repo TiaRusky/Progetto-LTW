@@ -5,7 +5,11 @@ function sendEmail() {
     var obj = document.contactus.inputObject.value;
     var msg = document.contactus.inputMsg.value;
 
-    window.open('mailto:c.schiavella@gmail.com?from=mail&subject=obj&body=msg');
+    console.log(mail);
+    console.log(obj);
+    console.log(msg);
+
+    window.open('mailto:c.schiavella@gmail.com?from=' + mail + '&subject=' + obj + '&body=' + msg);
 
     window.alert('Mail inviata!');
 
