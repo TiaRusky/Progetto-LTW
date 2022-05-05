@@ -96,13 +96,14 @@ body {
 .body-main{
     display: flex;
     flex-direction: column;
-    border: 2px solid yellow; /*Da eliminare*/
 }
 
 .flex-gruppo{
     display: flex;
     flex-direction: column;
     border: solid ;
+    justify-content: center;
+    align-items: center;
 }
 
 .legend-wrapper{
@@ -253,6 +254,9 @@ input[type=number] {
     margin-bottom: 0.4em;
 }
 
+.card{
+    width: fit-content;
+}
 
 /*Per gestire bene il top-main*/
 @media (min-width:375px){
