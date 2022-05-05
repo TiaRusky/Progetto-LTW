@@ -17,12 +17,7 @@ $(document).ready(function() {
         console.log("in");
 
         $('html, body').animate({
-            'scrollTop': $('footer').offset().top
-        }, 3000);
-
-        $('html, body').animate({
-            'scrollTop': $('#about').offset().top - nav_h
-        }, 2000);
-
+            'scrollTop': $('#products').offset().top - nav_h
+        }, 300);
     });
 });
