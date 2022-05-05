@@ -30,6 +30,10 @@ body {
 *   Navbar
 ***************************************************************************************************************/
 
+.navbar {
+    position: absolute;
+}
+
 .active {
     text-decoration: underline !important;
 }
