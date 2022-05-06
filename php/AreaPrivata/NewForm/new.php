@@ -55,7 +55,7 @@
         <div class="main">
             <!-- Contiene i bottoni per la gestione della scheda che si sta creando-->
             <div class="top-main">
-                <button class="top-main-button">
+                <button class="top-main-button" id="add-form-button">
                     Salva
                 </button>
 

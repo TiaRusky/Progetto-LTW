@@ -1,5 +1,8 @@
 $(document).ready(function (){
 
+    //Buttone per salvare la scheda
+    var $addFormButton = $("#add-form-button");
+
     //Le varie form da cui posso inserire esercizi
     var $formDorsali = $("#form-dorsali");
     var $formTricipiti = $("#form-tricipiti");
@@ -81,6 +84,18 @@ $(document).ready(function (){
 
     $formSpalle.on("submit",function(e){
         newExcHandler($formSpalle,$flexSpalle,e);
+    });
+
+    /*Salvataggio della scheda*/
+    $addFormButton.on("click",function(){
+        var $esercizi = $(".exc");
+        if($esercizi.length == 0){
+            alert("Non è stato aggiunto alcun esercizio");
+        }
+
+        else{
+            //Costruire un array di oggetti da passare alla funzione php
+        }
     });
 
     /*Raccolta dati dalle card: prove generali*/
