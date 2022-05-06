@@ -243,6 +243,11 @@ input[type=number] {
     max-width: 300px;
 }
 
+.confirmation-form{
+    display: flex;
+    flex-direction: column;
+}
+
 /**********************/
 /*Gestione delle card*/
 /**********************/

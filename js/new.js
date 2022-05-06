@@ -1,7 +1,7 @@
 $(document).ready(function (){
 
     //Buttone per salvare la scheda
-    var $addFormButton = $("#add-form-button");
+    var $addFormButton = $("#submit-conferma");
 
     //Le varie form da cui posso inserire esercizi
     var $formDorsali = $("#form-dorsali");
@@ -86,47 +86,61 @@ $(document).ready(function (){
         newExcHandler($formSpalle,$flexSpalle,e);
     });
 
+    /***************************/
     /*Salvataggio della scheda*/
-    $addFormButton.on("click",function(){
-        var $esercizi = $(".exc");
-        if($esercizi.length == 0){
-            alert("Non è stato aggiunto alcun esercizio");
+    /***************************/
+    $addFormButton.on("click",function(e){
+        e.preventDefault();         //Annullo l'invo della form
+        var $esercizi = $(".exc");  //Raccolgo gli esercizi
+
+        if($esercizi.length == 0){      //Se non ci sono esercizi non creo la scheda
+            $("#modalCreaScheda").modal('toggle');
+            alert("La scheda non è stata creata poiché non sono stati inseriti esercizi");
         }
 
         else{
             //Costruire un array di oggetti da passare alla funzione php
+            //Ogni oggetto sarà l'esercizio con le varie informazioni;
+
+
+            //Dati scheda
+            var $formScheda = $("#modalCreaScheda");
+            var nomeScheda = $formScheda.find("#form-name").val();
+            var descrizioneScheda = $formScheda.find("#form-description").val();
+            
+            //Gestione esercizi
+            var input = new Array();
+            var gruppoMuscolare;
+            var nomeEsercizio;
+            var numSerie;
+            var ripetizioni;
+            var recupero;
+            var numEsecuzione;
+            var descrizione;
+            $esercizi.each(function(){
+                var $this = $(this);    //Seleziono l'esercizio corrente
+                gruppoMuscolare = $this.closest(".flex-gruppo").attr("id");
+                nomeEsercizio = $this.find(".card-title").text();
+                numSerie = $this.find(".num-serie").text();
+                ripetizioni = $this.find(".num-reps-button").attr("data-bs-content");
+                numEsecuzione = $this.find(".num-esecuzione").text();
+                recupero = $this.find(".recupero").text();
+
+                var esercizio = {           //Costruisco un JSON da aggiungere all'array 
+                    gruppoM: gruppoMuscolare,
+                    nomeEser: nomeEsercizio,
+                    numS : numSerie,
+                    rip : ripetizioni,
+                    numEse : numEsecuzione,
+                    rec : recupero
+                };
+                
+                input.push(esercizio);
+            });
+            //Passo i dati a php che si occuperà di parlare con il db
+
         }
     });
-
-    /*Raccolta dati dalle card: prove generali*/
-    var $esercizi = $(".exc");     //Prelevo tutti gli esercizi
-    //Funzione di prova per vedere se riesco a prelevare tutti i dati
-    /*
-    $esercizi.on("click",function(){
-
-        //Nome esercizio
-        var $cardTitle = $esercizi.find(".card-title");
-        var $nomeEsercizo = $cardTitle.text();
-
-        //Numero di serie
-        var $numSerie = $esercizi.find(".num-serie").text();
-
-        //Ripetizioni
-        var $ripetizioni = $esercizi.find(".num-reps-button").attr("data-bs-content");
-        
-        //Numero di esecuzione
-        var $numEsecuzione = $esercizi.find(".num-esecuzione").text();
-        
-        //Recupero
-        var $recupero = $esercizi.find(".recupero").text();
-
-        //Descrizione
-        var $descrzione = $esercizi.find(".descrizione").text();
-        //alert("Nome esercizio: "+$nomeEsercizo+"\nNumero serie: "+$numSerie.toString());
-        //alert("Ripetizioni: "+$ripetizioni);
-        alert("Num. esecuzione: "+$numEsecuzione+"\nRecupero: "+$recupero+"\nDescrizione: "+$descrzione);
-    });
-    */
 
     /***********/
     /*Gestione numero ripetizioni di ogni serie*/
