@@ -1,0 +1,141 @@
+/*Colori:
+
+- black: #222222
+- steal: #d7d7d7
+- gold: #eedf69
+*/
+
+@font-face {
+    font-family: "TechFitFont-Azonix";
+    src: url(../fonts/Azonix.otf) format("truetype");
+}
+
+html {
+    font-size: 20px !important;
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+    background-color: #d7d7d7 !important;
+}
+
+/************/
+
+/* NAVBAR */
+
+/************/
+.home-logo{
+    width: 40%;
+    height: auto;
+}
+
+.logout-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: #222222;
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    background-color: rgb(240, 240, 48);
+    transition: 0.5s ease-in-out;
+}
+
+.logout-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
+/*****************/
+
+/* MAIN CONTENT */
+
+/*****************/
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.selection{
+    width: 60%;
+    margin: 1em auto;
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 6px groove #222222;
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,.6);
+    border-radius: 7%;
+}
+
+
+.selection-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.selection-title{
+    font-weight: 900;
+    color: #eedf69;
+    font-family: "TechFitFont-Azonix";
+}
+
+.selection-pic{
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    /*
+    animation-name: pulsatingBorder;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    */
+}
+
+/*
+Non so se mi piace, forse con i colori giusti
+@keyframes pulsatingBorder {
+    0%   { border-color: rgba(179, 143, 0, 1); }
+    50%  { border-color: rgba(179, 143, 0, 0); }
+    100% { border-color: rgba(179, 143, 0, 1); }
+}
+*/
+
+.selection:hover{
+    animation-name: selectionPopUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes selectionPopUp{
+    100%{
+        transform: scale(110%);
+        box-shadow: 1px 5px 15px 5px rgba(102, 0, 0,.6);
+    }
+}
+
+.selection-desc{
+    color:#cccccc;
+    font-weight: 600;
+}
+
+/*Gestione visuale NON da telefono*/
+@media (min-width: 586px){
+    .main{
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 3em auto;
+        max-width: 1050px;
+    }
+
+    .selection{
+        width: 40%;
+    }
+
+}

@@ -18,8 +18,8 @@
             }
 
             else{   //L'email inserita è registrata, devo verificare che la password corrisponda
-                $dbPsw = $tupla["password"];
-                echo $dbPsw!=$tupla["password"];
+                //$dbPsw = $tupla["password"];
+                //echo $dbPsw!=$tupla["password"];
                 
                 $query = "select * from utente where email=$1 and password=$2";
                 $result = pg_query_params($dbconn,$query,array($email,$psw));
@@ -30,10 +30,12 @@
                     session_start();
                     $_SESSION['email'] = $email;
                     $_SESSION['username'] = $tupla["username"];
+                    pg_close($dbconn);
                     header("Location: ../AreaPrivata/index.php");
                 }
 
-                else{  
+                else{ 
+                    pg_close($dbconn); 
                     header("Location: login.php?login=wd");     //wd = wrong data
                 }
                 
