@@ -327,7 +327,7 @@ body {
     padding: 10px 0;
     font-size: 16px;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     border: none;
     border-bottom: 1px solid #eedf69;
     outline: none;
@@ -345,10 +345,11 @@ body {
 }
 
 .submit-form {
+    font-family: "TechFitFont-Azonix";
     margin-bottom: 1em;
     background: transparent;
     color: #eedf69;
-    padding: 0.3em;
+    padding: 0.3em 0.5em 0.3em 0.5em;
     letter-spacing: 2px;
     text-decoration: none;
     text-transform: uppercase;

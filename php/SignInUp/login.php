@@ -16,7 +16,7 @@
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#home">
+                <a class="navbar-brand" href="../../html/index.html">
                     <img src="../../pic/logo/10_crypto/small_logo.png" class="home-logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -40,9 +40,6 @@
                             <a class="nav-link" href="../../html/index.html#contacts">Contattaci</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <a href="../php/AreaPrivata/index.php" class="login-button" type="button">Login</a>
-                    </form>
                 </div>
             </div>
         </nav>
