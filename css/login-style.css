@@ -12,8 +12,7 @@ body {
     width: 100%;
     margin: 0px;
     position: relative;
-    background-color: #5b6467;
-    background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);
+    background: url("https://source.unsplash.com/FLpV4VJqBrw/1980x1600") no-repeat center center/cover;
 }
 
 @font-face {
@@ -22,60 +21,15 @@ body {
 }
 
 
-/**********/
-
-
-/*NAVBAR*/
-
-
-/**********/
-
-.home-logo {
-    width: 50%;
-}
-
-.nav-item {
-    font-family: "TechFitFont-Azonix" !important;
-}
-
-.navbar-nav {
-    text-align: center !important;
-}
-
-.nav-link:hover {
-    animation-name: colorfulLink !important;
-    animation-duration: 0.2s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes colorfulLink {
-    0% {
-        font-size: 1rem;
-    }
-    50% {
-        font-size: 1.1rem;
-        color: rgb(215, 221, 151);
-    }
-    100% {
-        font-size: 1.2rem;
-        color: rgb(214, 228, 53);
-    }
-}
-
-
-/********************/
-
-
-/*Gestione delle form*/
-
-
-/********************/
+/********************
+Gestione delle form
+********************/
 
 .container {
     position: absolute;
     overflow: hidden;
     height: 550px;
-    margin-top: 5px;
+    margin-top: 2%;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -87,9 +41,9 @@ body {
     background: #222222;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
     border-radius: 15px;
-    max-width: 500px;
+    max-width: 900px;
     margin: 0px auto;
-    border: 1px solid black;
+    border: 1px solid;
 }
 
 .form-container-flex {
@@ -109,6 +63,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 0.4em;
+    margin-top: 0.1em;
 }
 
 .form-container .form-item input {
@@ -117,7 +72,7 @@ body {
     padding: 10px 0;
     font-size: 16px;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     border: none;
     border-bottom: 1px solid #eedf69;
     outline: none;
@@ -135,10 +90,11 @@ body {
 }
 
 .submit-form {
+    font-family: "TechFitFont-Azonix";
     margin-bottom: 1em;
     background: transparent;
     color: #eedf69;
-    padding: 0.3em;
+    padding: 0.3em 0.5em 0.3em 0.5em;
     letter-spacing: 2px;
     text-decoration: none;
     text-transform: uppercase;
@@ -178,19 +134,16 @@ input:not(:placeholder-shown)~label {
 }
 
 
-/************************/
-
-
-/*Stile della form di signin*/
-
-
-/************************/
+/***********************
+Stile della form di signin
+************************/
 
 #chk {
     display: none;
 }
 
 .form-label {
+    font-family: "TechFitFont-Azonix";
     color: #eedf69;
     font-size: 2.3em;
     justify-content: center;
@@ -217,9 +170,13 @@ input:not(:placeholder-shown)~label {
 
 .sign-in-container {
     transform: translateY(-100px);
+    max-height: 100px;
     transition: .8s ease-in-out;
     border-radius: 40% / 10%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     background: #d7d7d7;
+    margin-bottom: 1%;
 }
 
 
@@ -270,6 +227,7 @@ rendo nuovamente visibile le form-item
 
 #chk:checked~.sign-in-container {
     transform: translateY(-585px);
+    max-height: 585px;
 }
 
 #chk:checked~.sign-in-container .form-item {
@@ -284,14 +242,46 @@ rendo nuovamente visibile le form-item
     transform: scale(.6);
 }
 
+@media screen and (max-width: 460px) {
+    #chk:checked~.sign-in-container .form-label {
+        font-size: 26px;
+    }
+    #chk:checked~.sign-up-container .form-label {
+        font-size: 45px;
+    }
+}
 
-/**********************/
+@media screen and (max-width: 280px) {
+    #chk:checked~.sign-in-container .form-label {
+        font-size: 18px;
+    }
+    #chk:checked~.sign-up-container .form-label {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 255px) {
+    .sign-in-container .form-label {
+        font-size: 32px;
+    }
+    .sign-up-container .form-label {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    #chk:checked~.sign-in-container .form-label {
+        font-size: 12px;
+    }
+    #chk:checked~.sign-up-container .form-label {
+        font-size: 30px;
+    }
+}
 
 
-/*Gestione degli alert*/
-
-
-/**********************/
+/*********************
+Gestione degli alert
+*********************/
 
 .error {
     margin: 5px auto;

@@ -50,34 +50,32 @@
 
         <!--Form di login e signin-->
         <div class="container">
-          
             <!--Login-->
             <input type="checkbox" id="chk" aria-hidden="true">
 
             <div class="form-container sign-up-container">
                 
                 <form action="loginCheck.php" method="POST">
-                    <label class="form-label" for="chk" aria-hidden="true">Login</label>
+                    <label class="form-label" for="chk" aria-hidden="true">Accedi</label>
                     <div class="flex-form">
                         <div class="form-item">
                             <input class="input-form" type="email" name="inputEmail" placeholder=" " required autocomplete="off">
                             <label>Email</label>
                         </div>
-                            
                         <div class="form-item">
                             <input class="input-form" type="password" name="inputPassword" placeholder=" " required>
                             <label>Password</label>
                         </div>
-                        <input class="submit-form" type="submit" value="Login" name="inputSubmit">
+                        <input class="submit-form" type="submit" value="Sign in" name="inputSubmit">
                     </div>
                 </form>
             </div>
 
-            <!--Signin-->
+            <!--Signup-->
             <div class="form-container sign-in-container">
                 <form action="signInCheck.php" method="POST">
                     <div class="flex-form">
-                        <label class="form-label" for="chk" aria-hidden="true">Sign up</label>
+                        <label class="form-label" for="chk" aria-hidden="true">Registrati</label>
                         <div class="form-item">
                             <input class="input-form" type="email" name="inputEmail" placeholder=" " required autocomplete="off">
                             <label class="form-item-label">Email</label>
@@ -93,7 +91,7 @@
                             <label class="form-item-label">Password</label>
                         </div>
 
-                        <input class="submit-form" type="submit" value="Sign in" name="inputSubmit">
+                        <input class="submit-form" type="submit" value="Sign up" name="inputSubmit">
                     </div>
                 </form>
             </div>
