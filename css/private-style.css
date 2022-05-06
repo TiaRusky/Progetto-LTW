@@ -1,0 +1,238 @@
+/*Colori:
+
+- black: #222222
+- steal: #d7d7d7
+- gold: #eedf69
+*/
+
+/************/
+/* FONT */
+/************/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Roboto:wght@300&display=swap');
+
+@font-face {
+    font-family: "TechFitFont-Azonix";
+    src: url(../fonts/Azonix.otf) format("truetype");
+}
+
+/**************/
+/*HTML & BODY*/
+/**************/
+html {
+    font-size: 20px !important;
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+    background-color: #d7d7d7 !important;
+}
+
+/************/
+/* NAVBAR */
+/************/
+.home-logo{
+    width: 40%;
+    height: auto;
+}
+
+.header-content{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4em;
+    justify-content: space-between;
+}
+
+.d-flex{
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 0.6em;
+}
+
+.logout-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: #222222;
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    background-color: rgb(240, 240, 48);
+    transition: 0.5s ease-in-out;
+    margin: 0 auto;
+    height: fit-content; 
+}
+
+.logout-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
+/*SearchBar*/
+.form-control:focus{
+    box-shadow: 0px 0px 4px 4px #eedf69 !important;
+}
+
+.btn-outline-success{
+    border: 1px solid #eedf69 !important;
+    color: #eedf69 !important;
+    font-family: "TechFitFont-Azonix";
+}
+
+.btn-outline-success:hover{
+    background-color: #e0e0d1 !important;
+    color: #222222 !important;
+    transition: 0.5s;
+}
+
+
+/****************/
+/*Gestione MAIN*/
+/****************/
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Gestione delle card*/
+.new-card-button{
+    background-color: transparent;
+    border:none;
+    height: 200px;
+    margin-bottom: 0px;
+}
+
+.dropdown-divider{
+    background-color: #e0e0d1 !important;
+}
+
+.card{
+    width: 50%;
+    text-align: center;
+    max-width: 290px;
+    margin: 0.6em;
+    text-align: center;
+    border: none !important;
+}
+
+.card-style{
+    box-shadow: 0px 0px 10px 7px #222222;
+}
+
+.new-card{
+    background-color: transparent !important;
+    border: none !important;
+    /*width: 100px;*/
+}
+
+.new-card-pic{
+    width: 100%;
+    height: 175px;
+}
+
+.card-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #222222 !important;
+}
+
+.card-title{
+    width: 70%;
+    color: #eedf69 !important;
+    font-weight: 400;
+    font-family: "TechFitFont-Azonix";
+}
+
+.card-body{
+    background-color: #3399ff;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-body p{
+    text-align: left;
+}
+
+.dropdown{
+    width: 5%;
+}
+
+.tDots{
+    color: white !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.card .btn{
+    width: 85%;
+    background: transparent;
+    background-color:#222222;
+    color: #eedf69;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #222222;
+    border-radius: 15px;
+    font-weight: 900;
+    font-family: "TechFitFont-Azonix";    
+}
+
+
+
+.card .btn:hover{
+    animation-name: colorfullbutton !important;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorfullbutton{
+    100%{
+        background-color: #e0e0d1;
+        color:#222222;
+        font-weight: 900;
+        border: 2px solid #222222;
+    }
+}
+
+
+.dropdown-menu{
+    background-color: #222222 !important;
+}
+
+.dropdown-item{
+    color: #eedf69 !important;
+}
+
+.dropdown-item:hover{
+    color: #222222 !important;
+}
+
+@media (min-width:635px){
+    .main{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 768px){
+    .header-content{
+        flex-direction: row;
+    }
+
+    .d-flex{
+        margin: 0;
+    }
+
+    .logout-button{
+        margin: 0;
+    }
+}

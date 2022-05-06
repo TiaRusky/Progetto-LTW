@@ -1,0 +1,321 @@
+@font-face {
+    font-family: "TechFitFont-Azonix";
+    src: url(../fonts/Azonix.otf) format("truetype");
+}
+
+html {
+    font-size: 20px !important;
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+    background-color: #d7d7d7 !important;
+}
+
+/************/
+/* NAVBAR */
+/************/
+.home-logo{
+    width: 40%;
+    height: auto;
+}
+
+.header-content{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4em;
+    justify-content: space-between;
+}
+
+.d-flex{
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 0.6em;
+}
+
+.logout-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: #222222;
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    background-color: rgb(240, 240, 48);
+    transition: 0.5s ease-in-out;
+    margin: 0 auto;
+    height: fit-content; 
+}
+
+.logout-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
+/*SearchBar*/
+.form-control:focus{
+    box-shadow: 0px 0px 4px 4px #eedf69 !important;
+}
+
+.btn-outline-success{
+    border: 1px solid #eedf69 !important;
+    color: #eedf69 !important;
+    font-family: "TechFitFont-Azonix";
+}
+
+.btn-outline-success:hover{
+    background-color: #e0e0d1 !important;
+    color: #222222 !important;
+    transition: 0.5s;
+}
+
+/****************/
+/*Gestione MAIN*/
+/****************/
+.top-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.3em;
+    border: 2px solid green; /*Da eliminare*/
+}
+
+.top-main-button{
+    width: fit-content;
+    max-width: 170px;
+    margin-top: 0.4em;
+}
+
+.body-main{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-gruppo{
+    display: flex;
+    flex-direction: column;
+    border: solid ;
+    justify-content: center;
+    align-items: center;
+}
+
+.legend-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+/**********************/
+/*Gestione delle modal*/
+/**********************/
+
+/*Gestione dell'info esercizi*/
+.info-button{
+    background:transparent !important;
+    border:none !important;
+}
+
+.popover{
+    border: 2px solid #eedf69 !important;
+    border-radius: 15% !important;
+} 
+
+.popover-body{
+    color: #e0e0d1 !important;
+    background-color: #222222 !important;
+    font-weight: 600 !important;
+    border-radius: 15% !important;
+}
+
+
+.modal-content{
+    background-color: #d7d7d7 !important;
+}
+
+.modal-header{
+    background-color: #222222 !important;
+    color: #eedf69 !important;
+    font-weight: 700;
+    font-family: "TechFitFont-Azonix";
+}
+
+.modal-body{
+    color:#222222 !important;
+    font-size: 1.2rem;
+}
+
+.modal-footer{
+    background-color: #222222 !important;
+    color: #eedf69 !important;
+}
+
+.modal-body input{
+    color: #222222;
+    text-align: center;
+}
+
+.modal-body select{
+    color:#e0e0d1;
+    background-color: #222222;
+}
+
+.modal-body input[type="number"]{
+    width: 75px;
+}
+
+.modal-body input:focus,
+.modal-body select:focus{
+    box-shadow: 0px 0px 5px 4px #eedf69;
+    outline:none;
+}
+
+/*Per nascondere le frecce delle input*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.modal-btn{
+    border: 2px solid #eedf69 !important;
+    color: #eedf69 !important;
+    background: transparent !important;
+    padding: 0.3em !important;
+    letter-spacing: 2px !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    border-radius: 15px !important;
+    font-weight: 900 !important;
+    background-image:none !important;
+}
+
+.modal-btn:hover{
+    background-color: #eedf69 !important;
+    color:#222222 !important;
+    transition: 1.7s;
+}
+
+.modal-form label{
+    color:#222222;
+    font-weight: bold;
+}
+
+.modal-form input{
+    border: none;
+    border-bottom: 1px solid #222222;
+    outline: none;
+    background: transparent;
+}
+
+/*Gestione delle form nelle model*/
+.modal-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-element{
+    display: flex;
+    flex-direction: column;
+    margin: 0.6em 0;
+}
+
+.form-element .btn{
+    margin: 0.4em auto;
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-element input,
+.form-element select{
+    width: 100%;
+    max-width: 300px;
+}
+
+/**********************/
+/*Gestione delle card*/
+/**********************/
+.new-card-button{
+    background: none ;
+    border: none;
+    width: 45px;
+    margin-left: 0.6em;
+    margin-bottom: 0.4em;
+}
+
+.card{
+    width: fit-content;
+}
+
+/*Per gestire bene il top-main*/
+@media (min-width:375px){
+    .top-main{
+        flex-direction: row;
+    }
+
+    .top-main-button{
+        margin: 0 0.4em;
+        width: 30%;
+    }
+}
+
+/*Per la gestione delle flex fasce muscolari*/
+@media (min-width: 475px){
+    .flex-gruppo{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/*Per gestire bene la navbar*/
+@media (min-width: 768px){
+    .header-content{
+        flex-direction: row;
+    }
+
+    .d-flex{
+        margin: 0;
+    }
+
+    .logout-button{
+        margin: 0 0.4em;
+    }
+}
+
+
+/*Per gestire bene le modal*/
+@media (min-width: 615px){
+    
+    .form-element{
+        align-items: center;
+    }
+
+    .form-element .btn{
+        width: 40%;
+    }
+
+    .modal-form{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .form-element{
+        grid-column: 1/2;
+    }
+
+    .numero-ripetizioni-element{
+        grid-column: 2/3;
+		grid-row: 1/11;
+    }
+}
