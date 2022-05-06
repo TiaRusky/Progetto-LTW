@@ -1,5 +1,5 @@
 function sendEmail() {
-    event.preventDefault();
+    //    event.preventDefault();
 
     var mail = document.contactus.inputEmail.value;
     var obj = document.contactus.inputObject.value;
@@ -9,7 +9,7 @@ function sendEmail() {
     console.log(obj);
     console.log(msg);
 
-    window.open('mailto:c.schiavella@gmail.com?from=' + mail + '&subject=' + obj + '&body=' + msg);
+    window.open('mailto:techfit.web@gmail.com?to=' + mail + '&subject=' + obj + '&body=' + msg);
 
     window.alert('Mail inviata!');
 
