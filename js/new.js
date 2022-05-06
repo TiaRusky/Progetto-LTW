@@ -125,6 +125,7 @@ $(document).ready(function (){
                 ripetizioni = $this.find(".num-reps-button").attr("data-bs-content");
                 numEsecuzione = $this.find(".num-esecuzione").text();
                 recupero = $this.find(".recupero").text();
+                descrizione = $this.find(".descrizione").text();
 
                 var esercizio = {           //Costruisco un JSON da aggiungere all'array 
                     gruppoM: gruppoMuscolare,
@@ -132,13 +133,23 @@ $(document).ready(function (){
                     numS : numSerie,
                     rip : ripetizioni,
                     numEse : numEsecuzione,
-                    rec : recupero
+                    rec : recupero,
+                    desc : descrizione
                 };
                 
                 input.push(esercizio);
             });
             //Passo i dati a php che si occuperà di parlare con il db
-
+            $.ajax({
+                url : 'insertForm.php',
+                type: 'POST',
+                data : {"array": input,"nome":nomeScheda,"descrizione":descrizioneScheda},
+                success : function(result){
+                    $("#modalCreaScheda").modal('toggle');
+                    //alert(result);
+                    window.location.replace("../index.php");      //Redirico l'utente nella homePrivata
+                }
+            });
         }
     });
 

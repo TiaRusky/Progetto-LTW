@@ -23,6 +23,6 @@ create table esercizio(
 	numOrdine integer not null,
 	descrizione varchar(15),
 	primary key(nome,utenteScheda,nomeScheda),
-	foreign key (nomeScheda,utenteScheda) references Scheda(nome,utente)
+	foreign key (nomeScheda,utenteScheda) references Scheda(nome,utente) on delete cascade
 );
 
