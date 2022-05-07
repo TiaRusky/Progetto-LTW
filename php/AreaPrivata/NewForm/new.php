@@ -38,8 +38,8 @@
                     <div class= "header-content">
                         <!-- Barra di ricerca per i gruppi muscolari -->
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Cerca gruppo" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Cerca</button>
+                            <input class="form-control me-2" type="search" placeholder="Cerca gruppo" aria-label="Search" id="search-in">
+                            <button class="btn btn-outline-success" type="submit" id="search-btn">Cerca</button>
                         </form>
 
                         <!-- Bottone di logout -->
@@ -55,20 +55,21 @@
         <div class="main">
             <!-- Contiene i bottoni per la gestione della scheda che si sta creando-->
             <div class="top-main">
-                <button class="top-main-button" id="add-form-button">
+                <button class="top-main-button"  data-bs-toggle="modal" data-bs-target="#modalCreaScheda">
                     Salva
                 </button>
-
+   
                 <button class="top-main-button">
-                    Annulla
+                    <a href="../index.php">Annulla</a>
                 </button>
+                
             </div>
 
             <!-- Contiene gli esercizi, divisi per gruppi muscolari,
                      aggiunti finora-->
             <div class="body-main">
 
-                <fieldset class="flex-dorsali flex-gruppo">
+                <fieldset class="flex-dorsali flex-gruppo" id="dorsali">
                     <legend class="float-none w-auto px-1">
                         
                         <div class="legend-wrapper">
@@ -84,7 +85,7 @@
                     
                 </fieldset>
 
-                <fieldset class="flex-tricipiti flex-gruppo">
+                <fieldset class="flex-tricipiti flex-gruppo" id="tricipiti">
                     <legend class="float-none w-auto px-1">
                         <div class="legend-wrapper">
                             Tricipiti
@@ -97,7 +98,7 @@
                     </legend>
                 </fieldset>
 
-                <fieldset class="flex-petto flex-gruppo">
+                <fieldset class="flex-petto flex-gruppo" id="petto">
                     <legend class="float-none w-auto px-1">
                         
                         <div class="legend-wrapper">
@@ -111,7 +112,7 @@
                     </legend>
                 </fieldset>
 
-                <fieldset class="flex-bicipiti flex-gruppo">
+                <fieldset class="flex-bicipiti flex-gruppo" id="bicipiti">
                     <legend class="float-none w-auto px-1">
                         <div class="legend-wrapper">
                             Bicipiti
@@ -124,7 +125,7 @@
                     </legend>
                 </fieldset>
 
-                <fieldset class="flex-gambe flex-gruppo">
+                <fieldset class="flex-gambe flex-gruppo" id="gambe">
                     <legend class="float-none w-auto px-1">
                         <div class="legend-wrapper">
                             Gambe
@@ -137,7 +138,7 @@
                     </legend>
                 </fieldset>
 
-                <fieldset class="flex-spalle flex-gruppo">
+                <fieldset class="flex-spalle flex-gruppo" id="spalle">
                     <legend class="float-none w-auto px-1">
                         <div class="legend-wrapper">
                             Spalle
@@ -569,7 +570,43 @@
                 </div>
             </div>
 
+        <!-- Modal -->
+            <div class="modal fade" id="modalCreaScheda" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
 
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalCreaSchedaLabel">Conferma Creazione</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <form class= "confirmation-form" action="" method="POST">
+                                <div class="form-element">
+                                    <label >Nome scheda</label>
+                                    <input type="text" name="formName" maxlength="10" id="form-name" required>
+                                </div>
+                                <div class="form-element">
+                                    <label>Descrizione</label>
+                                    <input type="text" name="formDescription" id="form-description" maxlength="30">
+                                </div>
+
+                                <div class= "form-element">
+                                    <p class="error-msg"></p>
+                                </div>
+                                <button type="button" data-bs-dismiss="modal" id="submit-annulla" hidden>Annulla</button>
+                                <button type="submit" id="submit-conferma" hidden>Conferma</button>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <label for="submit-annulla" tabindex="0" class="modal-btn">Annulla</label>
+                            <label for="submit-conferma" tabindex="0" class="modal-btn">Conferma</label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
         
     </body>

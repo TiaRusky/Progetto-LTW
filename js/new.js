@@ -1,7 +1,14 @@
 $(document).ready(function (){
 
+    //Messaggio di errore nella conferma della scheda
+    var $errorMsg = $("#modalCreaScheda .error-msg");
+    var $modalCreaScheda= $("#modalCreaScheda");
+
     //Buttone per salvare la scheda
-    var $addFormButton = $("#add-form-button");
+    var $addFormButton = $("#submit-conferma");
+
+    //Bottone di ricerca
+    var $searchBtn = $("#search-btn");
 
     //Le varie form da cui posso inserire esercizi
     var $formDorsali = $("#form-dorsali");
@@ -19,9 +26,28 @@ $(document).ready(function (){
     var $flexGambe = $(".flex-gambe");
     var $flexSpalle = $(".flex-spalle");
 
-
     //Gestione del popover
     $('[data-bs-toggle="popover"]').popover();
+
+    //Quando chiudo la modal pulisco i possibili messaggi di errore
+    $modalCreaScheda.on('hidden.bs.modal', function () {
+        $errorMsg.text("");             
+    });
+
+    //Gestione della ricerca
+    $searchBtn.on("click",function(e){
+        e.preventDefault();     //Annullo l'invio della form (=ricaricamento pagina)
+        var input = $("#search-in").val().toLowerCase();
+
+        //Non funziona
+        switch(input){
+            case "dorsali":
+                $("html, body").animate({ scrollTop: $("#dorsali").offset().top }, 2000);
+                break;
+        }
+
+        $("#search-in").val("");
+    });
 
     /*Aggiunta degli esercizi*/
     function newExcHandler($form,$flex,e){
@@ -86,47 +112,84 @@ $(document).ready(function (){
         newExcHandler($formSpalle,$flexSpalle,e);
     });
 
+    /***************************/
     /*Salvataggio della scheda*/
-    $addFormButton.on("click",function(){
-        var $esercizi = $(".exc");
-        if($esercizi.length == 0){
-            alert("Non è stato aggiunto alcun esercizio");
+    /***************************/
+    $addFormButton.on("click",function(e){
+        e.preventDefault();         //Annullo l'invo della form
+        $errorMsg.text("");         //Pulisco eventuali errori vecchi
+        var $esercizi = $(".exc");  //Raccolgo gli esercizi
+
+        if($esercizi.length == 0){      //Se non ci sono esercizi non creo la scheda
+            //$("#modalCreaScheda").modal('toggle');
+            $errorMsg.text("La scheda è vuota!");
         }
 
         else{
             //Costruire un array di oggetti da passare alla funzione php
+            //Ogni oggetto sarà l'esercizio con le varie informazioni;
+
+
+            //Dati scheda
+            var $formScheda = $("#modalCreaScheda");
+            var nomeScheda = $formScheda.find("#form-name").val();
+            var descrizioneScheda = $formScheda.find("#form-description").val();
+            
+            //Gestione esercizi
+            var input = new Array();
+            var gruppoMuscolare;
+            var nomeEsercizio;
+            var numSerie;
+            var ripetizioni;
+            var recupero;
+            var numEsecuzione;
+            var descrizione;
+            $esercizi.each(function(){
+                var $this = $(this);    //Seleziono l'esercizio corrente
+                gruppoMuscolare = $this.closest(".flex-gruppo").attr("id");
+                nomeEsercizio = $this.find(".card-title").text();
+                numSerie = $this.find(".num-serie").text();
+                ripetizioni = $this.find(".num-reps-button").attr("data-bs-content");
+                numEsecuzione = $this.find(".num-esecuzione").text();
+                recupero = $this.find(".recupero").text();
+                descrizione = $this.find(".descrizione").text();
+
+                var esercizio = {           //Costruisco un JSON da aggiungere all'array 
+                    gruppoM: gruppoMuscolare,
+                    nomeEser: nomeEsercizio,
+                    numS : numSerie,
+                    rip : ripetizioni,
+                    numEse : numEsecuzione,
+                    rec : recupero,
+                    desc : descrizione
+                };
+                
+                input.push(esercizio);
+            });
+            //Passo i dati a php che si occuperà di parlare con il db
+            $.ajax({
+                url : 'insertForm.php',
+                type: 'POST',
+                data : {"array": input,"nome":nomeScheda,"descrizione":descrizioneScheda},
+                //async : false,
+                success : function(result){
+                    
+                   if(result == "FAE"){    //Form Already Exist
+                        $errorMsg.text("Hai già una scheda con questo nome");
+                    }
+
+                    else if(result == "err"){
+                        $errorMsg.text("Si è verificato un errore");
+                    }
+
+                    else{   //La scheda è stata creata con successo
+                        $("#modalCreaScheda").modal('toggle');
+                        window.location.replace("../index.php");      //Redirico l'utente nella homePrivata
+                    }
+                }
+            });
         }
     });
-
-    /*Raccolta dati dalle card: prove generali*/
-    var $esercizi = $(".exc");     //Prelevo tutti gli esercizi
-    //Funzione di prova per vedere se riesco a prelevare tutti i dati
-    /*
-    $esercizi.on("click",function(){
-
-        //Nome esercizio
-        var $cardTitle = $esercizi.find(".card-title");
-        var $nomeEsercizo = $cardTitle.text();
-
-        //Numero di serie
-        var $numSerie = $esercizi.find(".num-serie").text();
-
-        //Ripetizioni
-        var $ripetizioni = $esercizi.find(".num-reps-button").attr("data-bs-content");
-        
-        //Numero di esecuzione
-        var $numEsecuzione = $esercizi.find(".num-esecuzione").text();
-        
-        //Recupero
-        var $recupero = $esercizi.find(".recupero").text();
-
-        //Descrizione
-        var $descrzione = $esercizi.find(".descrizione").text();
-        //alert("Nome esercizio: "+$nomeEsercizo+"\nNumero serie: "+$numSerie.toString());
-        //alert("Ripetizioni: "+$ripetizioni);
-        alert("Num. esecuzione: "+$numEsecuzione+"\nRecupero: "+$recupero+"\nDescrizione: "+$descrzione);
-    });
-    */
 
     /***********/
     /*Gestione numero ripetizioni di ogni serie*/

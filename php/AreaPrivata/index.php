@@ -14,6 +14,8 @@
         <link href="../../css/private-style.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../../js/index.js"></script>
         <title>TechFit - Home di <?php echo $_SESSION['username'];?></title>
     </head>
 
@@ -63,6 +65,41 @@
             </div>
 
             <!--Dove andranno le schede scaricate dal database-->
+            <?php 
+                $dbconn = pg_connect("host=localhost user=postgres password=passwordLTW dbname=ProgettoLTW port=5432");
+                $query = "select * from scheda where utente = $1";
+                $result = pg_query_params($dbconn,$query,array($_SESSION["email"]));
+
+                $tupla = pg_fetch_all($result,PGSQL_ASSOC);
+                $n = count($tupla);
+                for($i = 0;$i<$n; $i++){    //Prelevo ogni scheda e la mostro
+                    $descrizione = $tupla[$i]["descrizione"];
+                    if($descrizione == "")$descrizione = "Nessuna descrizione";
+                    echo '<div class="card card-style">
+                            <div class="card-header">
+                                <p class="card-title">'.$tupla[$i]["nome"].'</p>
+                                <div class="dropdown">
+                                    <button class="tDots" type="button" id="dropdownMenuButton'.$i.'" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                    </svg>
+                                    </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton'.$i.'">
+                                    <li><a class="dropdown-item" href="#">Visualizza</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item delete-item" href="#">Elimina</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                            <div class="card-body">
+                            <p class="card-text">'.$descrizione.'</p>
+                            <a href="#" class="btn btn-primary">train</a>
+                        </div>
+                     </div>';  
+                }
+                pg_close($dbconn);
+            ?>
+            <!--Placeholder di come devono essere composte le schede
             <div class="card card-style">
                 <div class="card-header">
                     <p class="card-title">Nome scheda</p>
@@ -76,7 +113,7 @@
                             <li><a class="dropdown-item" href="#">Visualizza</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Elimina</a></li>
-                            <!--<li><a class="dropdown-item" href="#">Modifica Nome</a></li>  Da vedere se si riesce a fare-->
+                            <!--<li><a class="dropdown-item" href="#">Modifica Nome</a></li>  Da vedere se si riesce a fare
                         </ul>
                     </div>
                 </div>
@@ -85,74 +122,8 @@
                     <a href="#" class="btn btn-primary">train</a>
                 </div>
             </div>
+            -->
 
-            <div class="card card-style" style="text-align:center">
-                <div class="card-header">
-                    <p class="card-title">Nome scheda</p>
-                    <div class="dropdown">
-                        <button class="tDots" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                            </svg>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Visualizza</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Elimina</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Modifica Nome</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text">Questa è una breve descrizioneee</p>
-                    <a href="#" class="btn btn-primary">ALLENATI</a>
-                </div>
-            </div>
-
-            <div class="card card-style" style="text-align:center">
-                <div class="card-header">
-                    <p class="card-title">Nome scheda</p>
-                    <div class="dropdown">
-                        <button class="tDots" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                            </svg>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Visualizza</a></li>
-                            <li><a class="dropdown-item" href="#">Elimina</a></li>
-                            <li><a class="dropdown-item" href="#">Modifica Nome</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text">Questa è una breve descrizione</p>
-                    <a href="#" class="btn btn-primary">ALLENATI</a>
-                </div>
-            </div>
-
-            <div class="card card-style" style="text-align:center">
-                <div class="card-header">
-                    <p class="card-title">Nome scheda</p>
-                    <div class="dropdown">
-                        <button class="tDots" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                            </svg>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Visualizza</a></li>
-                            <li><a class="dropdown-item" href="#">Elimina</a></li>
-                            <li><a class="dropdown-item" href="#">Modifica Nome</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text">Questa è una breve descrizione</p>
-                    <a href="#" class="btn btn-primary">ALLENATI</a>
-                </div>
-            </div>
         </div>
     </body>
 </html>
