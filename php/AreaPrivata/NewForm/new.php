@@ -58,10 +58,11 @@
                 <button class="top-main-button"  data-bs-toggle="modal" data-bs-target="#modalCreaScheda">
                     Salva
                 </button>
-
+   
                 <button class="top-main-button">
-                    Annulla
+                    <a href="../index.php">Annulla</a>
                 </button>
+                
             </div>
 
             <!-- Contiene gli esercizi, divisi per gruppi muscolari,
@@ -588,6 +589,10 @@
                                 <div class="form-element">
                                     <label>Descrizione</label>
                                     <input type="text" name="formDescription" id="form-description" maxlength="30">
+                                </div>
+
+                                <div class= "form-element">
+                                    <p class="error-msg"></p>
                                 </div>
                                 <button type="button" data-bs-dismiss="modal" id="submit-annulla" hidden>Annulla</button>
                                 <button type="submit" id="submit-conferma" hidden>Conferma</button>

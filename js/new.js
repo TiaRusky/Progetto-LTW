@@ -1,5 +1,13 @@
 $(document).ready(function (){
 
+    //Messaggio di errore nella conferma della scheda
+    var $errorMsg = $("#modalCreaScheda .error-msg");
+    var $modalCreaScheda= $("#modalCreaScheda");
+
+    $modalCreaScheda.on('hidden.bs.modal', function () {
+        $errorMsg.text("");             //Quando chiudo la modal pulisco i possibili messaggi di errore
+      });
+
     //Buttone per salvare la scheda
     var $addFormButton = $("#submit-conferma");
 
@@ -91,11 +99,12 @@ $(document).ready(function (){
     /***************************/
     $addFormButton.on("click",function(e){
         e.preventDefault();         //Annullo l'invo della form
+        $errorMsg.text("");         //Pulisco eventuali errori vecchi
         var $esercizi = $(".exc");  //Raccolgo gli esercizi
 
         if($esercizi.length == 0){      //Se non ci sono esercizi non creo la scheda
-            $("#modalCreaScheda").modal('toggle');
-            alert("La scheda non è stata creata poiché non sono stati inseriti esercizi");
+            //$("#modalCreaScheda").modal('toggle');
+            $errorMsg.text("La scheda è vuota!");
         }
 
         else{
@@ -144,10 +153,21 @@ $(document).ready(function (){
                 url : 'insertForm.php',
                 type: 'POST',
                 data : {"array": input,"nome":nomeScheda,"descrizione":descrizioneScheda},
+                //async : false,
                 success : function(result){
-                    $("#modalCreaScheda").modal('toggle');
-                    //alert(result);
-                    window.location.replace("../index.php");      //Redirico l'utente nella homePrivata
+                    
+                   if(result == "FAE"){    //Form Already Exist
+                        $errorMsg.text("Hai già una scheda con questo nome");
+                    }
+
+                    else if(result == "err"){
+                        $errorMsg.text("Si è verificato un errore");
+                    }
+
+                    else{   //La scheda è stata creata con successo
+                        $("#modalCreaScheda").modal('toggle');
+                        window.location.replace("../index.php");      //Redirico l'utente nella homePrivata
+                    }
                 }
             });
         }

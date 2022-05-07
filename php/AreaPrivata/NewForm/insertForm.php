@@ -14,7 +14,7 @@
 
     if($tupla = pg_fetch_array($result,NULL,PGSQL_ASSOC)){  //Esiste già una scheda con quel nome associata a quell'utente
         pg_close($dbconn);
-        return "FAE"; //Form Already Exist
+        echo "FAE"; //Form Already Exist
     }
 
     else{   //Posso creare la scheda
@@ -51,7 +51,7 @@
 
         else{   //Inserimento non avvenuto
             pg_close($dbconn);
-            return "err";
+            echo "err";
         }
     }
 ?>
