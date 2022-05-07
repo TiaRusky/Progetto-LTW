@@ -14,6 +14,8 @@
         <link href="../../css/private-style.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../../js/index.js"></script>
         <title>TechFit - Home di <?php echo $_SESSION['username'];?></title>
     </head>
 
@@ -82,10 +84,10 @@
                                     <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
                                     </svg>
                                     </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1'.$i.'">
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton'.$i.'">
                                     <li><a class="dropdown-item" href="#">Visualizza</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Elimina</a></li>
+                                    <li><a class="dropdown-item delete-item" href="#">Elimina</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -95,8 +97,9 @@
                         </div>
                      </div>';  
                 }
+                pg_close($dbconn);
             ?>
-            <!--    Placeholder di come devono essere composte le schede
+            <!--Placeholder di come devono essere composte le schede
             <div class="card card-style">
                 <div class="card-header">
                     <p class="card-title">Nome scheda</p>
