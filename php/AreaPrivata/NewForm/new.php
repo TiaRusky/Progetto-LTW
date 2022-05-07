@@ -38,8 +38,8 @@
                     <div class= "header-content">
                         <!-- Barra di ricerca per i gruppi muscolari -->
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Cerca gruppo" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Cerca</button>
+                            <input class="form-control me-2" type="search" placeholder="Cerca gruppo" aria-label="Search" id="search-in">
+                            <button class="btn btn-outline-success" type="submit" id="search-btn">Cerca</button>
                         </form>
 
                         <!-- Bottone di logout -->

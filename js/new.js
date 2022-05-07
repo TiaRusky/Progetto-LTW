@@ -4,12 +4,11 @@ $(document).ready(function (){
     var $errorMsg = $("#modalCreaScheda .error-msg");
     var $modalCreaScheda= $("#modalCreaScheda");
 
-    $modalCreaScheda.on('hidden.bs.modal', function () {
-        $errorMsg.text("");             //Quando chiudo la modal pulisco i possibili messaggi di errore
-      });
-
     //Buttone per salvare la scheda
     var $addFormButton = $("#submit-conferma");
+
+    //Bottone di ricerca
+    var $searchBtn = $("#search-btn");
 
     //Le varie form da cui posso inserire esercizi
     var $formDorsali = $("#form-dorsali");
@@ -27,9 +26,28 @@ $(document).ready(function (){
     var $flexGambe = $(".flex-gambe");
     var $flexSpalle = $(".flex-spalle");
 
-
     //Gestione del popover
     $('[data-bs-toggle="popover"]').popover();
+
+    //Quando chiudo la modal pulisco i possibili messaggi di errore
+    $modalCreaScheda.on('hidden.bs.modal', function () {
+        $errorMsg.text("");             
+    });
+
+    //Gestione della ricerca
+    $searchBtn.on("click",function(e){
+        e.preventDefault();     //Annullo l'invio della form (=ricaricamento pagina)
+        var input = $("#search-in").val().toLowerCase();
+
+        //Non funziona
+        switch(input){
+            case "dorsali":
+                $("html, body").animate({ scrollTop: $("#dorsali").offset().top }, 2000);
+                break;
+        }
+
+        $("#search-in").val("");
+    });
 
     /*Aggiunta degli esercizi*/
     function newExcHandler($form,$flex,e){

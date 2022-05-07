@@ -11,6 +11,7 @@ create table Utente(
 create table scheda(
 	nome varchar(15),
 	utente varchar(50) references Utente,
+	descrizione varchar(30),
 	primary key(nome,utente)
 );
 
