@@ -242,6 +242,10 @@ rendo nuovamente visibile le form-item
     transform: scale(.6);
 }
 
+#chk:checked~.sign-up-container {
+    padding-bottom: 5%;
+}
+
 @media screen and (max-width: 460px) {
     #chk:checked~.sign-in-container .form-label {
         font-size: 26px;
