@@ -28,7 +28,7 @@ html {
 body {
     width: 100%;
     margin: 0px;
-    background-color: #d7d7d7 !important;
+    background: url("https://source.unsplash.com/7JX0-bfiuxQ/1280x1200") no-repeat center center/cover !important;
 }
 
 
@@ -49,10 +49,14 @@ Gestione delle card
 ***************************************************************************************************************/
 
 .new-card-button {
-    background-color: transparent;
-    border: none;
-    height: 200px;
+    font-family: "TechFitFont-Azonix";
+    font-size: 5em;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    border: 3px solid#222222;
+    border-radius: 50px;
     margin-bottom: 0px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .dropdown-divider {
