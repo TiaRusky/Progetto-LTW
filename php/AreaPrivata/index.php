@@ -114,7 +114,7 @@
                             <li><a class="dropdown-item" href="#">Visualizza</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Elimina</a></li>
-                            <!--<li><a class="dropdown-item" href="#">Modifica Nome</a></li>  Da vedere se si riesce a fare
+                            <li><a class="dropdown-item" href="#">Modifica Nome</a></li>  Da vedere se si riesce a fare
                         </ul>
                     </div>
                 </div>

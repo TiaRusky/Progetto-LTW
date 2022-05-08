@@ -6,8 +6,6 @@ $(document).ready(function() {
 
     $('.navbar a').on('click', function() {
         var href = $(this).attr('href');
-
-
         $('html, body').animate({
             'scrollTop': $(href).offset().top - nav_h
         }, 200);
@@ -27,3 +25,5 @@ $(document).ready(function() {
         }, sameValue);
     });
 });
+
+// Metodo per cambiare da pagina x a home e scorrere nella banda selezionata

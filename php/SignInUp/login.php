@@ -4,12 +4,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../../pic/logo/10_crypto/small_logo.ico" type="image/icon type">
         <link href="../../css/nav-style.css" rel="stylesheet">
         <link href="../../css/login-style.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/d8697e016e.js" crossorigin="anonymous"></script>
         <script src="../../js/login.js"></script>
+        <script src="../../js/scroll.js"></script>
         <title>TechFit - Login</title>
     </head>
     <body>
@@ -25,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="../../html/index.html#about">About</a>
+                        <a class="nav-link" href="../../html/index.html#about">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../../html/index.html#team">Team</a>
@@ -103,7 +106,7 @@
 
             //Gestione fallimenti registrazione
             if(strpos($fullUrl,"signup=ar") == true){   //Se l'url contiene ?signin=ar allora l'utente era già registrato
-                echo "<div class='error'><span class='closebtn'>&times;</span><p>L'email inserita è già registrata!</p></div>";
+                echo "<div class='error'><span class='closebtn'>&times;</span><p><i class='fas fa-exclamation-triangle'></i>L'email inserita è già registrata!<i class='fas fa-exclamation-triangle'></i></p></div>";
             }
 
             elseif(strpos($fullUrl,"signup=err")){
@@ -115,7 +118,7 @@
 
             //Gestione fallimenti login
             elseif(strpos($fullUrl,"login=wd")){
-                echo "<div class='error'><span class='closebtn'>&times;</span><p>Credenziali errate!</p></div>";
+                echo "<div class='error'><span class='closebtn'>&times;</span><p><i class='fas fa-exclamation-triangle'></i> Credenziali errate! <i class='fas fa-exclamation-triangle'></i></p></div>";
             }
         ?>
         

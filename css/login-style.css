@@ -291,21 +291,28 @@ Gestione degli alert
     margin: 5px auto;
     width: 45%;
     max-width: 450px;
-    background-color: #FFCCBA;
+    background: url("../pic/error-x-error.gif") center center/cover;
     border: 2px solid #f44336;
-    font-weight: 700;
-    color: #D63301;
+    border-radius: 15px;
+    font-weight: 900;
+    color: #ffffff;
     opacity: .99;
     text-align: center;
     padding: 0.4em;
 }
 
+.error p {
+    font-size: 1.5em;
+    padding-top: 5%;
+}
+
 .closebtn {
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     float: left;
     font-size: 1.2rem;
     line-height: 10px;
     cursor: pointer;
     transition: 0.3s;
+    padding: 0.4em;
 }
