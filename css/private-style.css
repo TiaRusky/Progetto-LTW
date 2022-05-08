@@ -161,8 +161,46 @@ Gestione delle card
     color: #222222 !important;
 }
 
-@media (min-width:635px) {
-    .main {
+/*******************************************/
+/*Gestione MODAL per visualizzare le schede*/
+/*In comune con private-style, si potrebbe fare un unico foglio di stile*/
+/*******************************************/
+
+.modal-content{
+    background-color: #d7d7d7 !important;
+}
+
+.modal-header{
+    background-color: #222222 !important;
+    color: #eedf69 !important;
+    font-weight: 700;
+    font-family: "TechFitFont-Azonix";
+}
+
+.modal-body{
+    color:#222222 !important;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-gruppo{
+    display: flex;
+    flex-direction: column;
+    border: solid ;
+    justify-content: center;
+    align-items: center;
+}
+
+.legend-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+@media (min-width:635px){
+    .main{
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -177,5 +215,12 @@ Gestione delle card
     }
     .logout-button {
         margin: 0;
+    }
+}
+
+@media (min-width: 475px){
+    .flex-gruppo{
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
