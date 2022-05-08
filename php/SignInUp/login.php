@@ -106,7 +106,7 @@
 
             //Gestione fallimenti registrazione
             if(strpos($fullUrl,"signup=ar") == true){   //Se l'url contiene ?signin=ar allora l'utente era già registrato
-                echo "<div class='error'><span class='closebtn'>&times;</span><p><i class='fas fa-exclamation-triangle'></i>L'email inserita è già registrata!<i class='fas fa-exclamation-triangle'></i></p></div>";
+                echo "<div class='error'><span class='closebtn'>&times;</span><p><i class='fas fa-exclamation-triangle'></i>L'email inserita è già registrata!</p></div>";
             }
 
             elseif(strpos($fullUrl,"signup=err")){
@@ -118,7 +118,7 @@
 
             //Gestione fallimenti login
             elseif(strpos($fullUrl,"login=wd")){
-                echo "<div class='error'><span class='closebtn'>&times;</span><p><i class='fas fa-exclamation-triangle'></i> Credenziali errate! <i class='fas fa-exclamation-triangle'></i></p></div>";
+                echo "<div class='error'><span class='closebtn'>&times;</span><p><i class='fas fa-exclamation-triangle'></i> Credenziali errate!</p></div>";
             }
         ?>
         
