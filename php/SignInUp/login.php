@@ -118,7 +118,7 @@
 
             //Gestione fallimenti login
             elseif(strpos($fullUrl,"login=wd")){
-                echo "<div class='error'><span class='closebtn'>&times;</span><p  class='lng-err'><i class='fas fa-exclamation-triangle'></i> Credenziali errate! <i class='fas fa-exclamation-triangle'></i></p><p class='shrt-err'> Credenziali errate! </p></div>";
+                echo "<div class='error'><span class='closebtn'>&times;</span><p class='lng-err'><i class='fas fa-exclamation-triangle'></i> Credenziali errate! <i class='fas fa-exclamation-triangle'></i></p><p class='shrt-err'> Credenziali errate! </p></div>";
             }
         ?>
         
