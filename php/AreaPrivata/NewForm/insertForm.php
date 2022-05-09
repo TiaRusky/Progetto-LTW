@@ -40,8 +40,8 @@
                 $numEsecuzione = (int) $esercizio["numEse"];
                 $recupero = (int) $esercizio["rec"];
                 $descrizione = $esercizio["desc"];
-                $query = "insert into esercizio values ($1,$2,$3,$4,$5,$6,$7)";
-                $result = pg_query_params($dbconn,$query,array($nomeEsercizio,$email,$nomeScheda,$gruppoMuscolare,$numSerie,$numEsecuzione,$descrizione));
+                $query = "insert into esercizio values ($1,$2,$3,$4,$5,$6,$7,$8,$9)";
+                $result = pg_query_params($dbconn,$query,array($nomeEsercizio,$email,$nomeScheda,$gruppoMuscolare,$numSerie,$numEsecuzione,$descrizione,$ripetizioni,$recupero));
 
                 if(!$result){
                     //Esercizio non inserito

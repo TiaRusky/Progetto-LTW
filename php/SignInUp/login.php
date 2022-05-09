@@ -106,14 +106,14 @@
 
             //Gestione fallimenti registrazione
             if(strpos($fullUrl,"signup=ar") == true){   //Se l'url contiene ?signin=ar allora l'utente era già registrato
-                echo "<div class='error'><span class='closebtn'>&times;</span><p><i class='fas fa-exclamation-triangle'></i>L'email inserita è già registrata!<i class='fas fa-exclamation-triangle'></i></p></div>";
+                echo "<div class='error'><span class='closebtn'>&times;</span><p  class='lng-err'><i class='fas fa-exclamation-triangle'></i> L'email inserita è già registrata! <i class='fas fa-exclamation-triangle'></i></p><p class='shrt-err'> L'email inserita è già registrata! </p></div>";
             }
 
             elseif(strpos($fullUrl,"signup=err")){
-                echo "<div class='error'><span class='closebtn'>&times;</span><p>Errore registrazione utente!</p></div>";
+                echo "<div class='error'><span class='closebtn'>&times;</span><p></p></div>";echo "<div class='error'><span class='closebtn'>&times;</span><p  class='lng-err'><i class='fas fa-exclamation-triangle'></i> Errore registrazione utente! <i class='fas fa-exclamation-triangle'></i></p><p class='shrt-err'> Errore registrazione utente! </p></div>";
             }
             elseif(strpos($fullUrl,"signup=fc") || strpos($fullUrl,"login=fc")){
-                echo "<div class='error'><span class='closebtn'>&times;</span><p>Errore connesione al db!</p></div>";
+                echo "<div class='error'><span class='closebtn'>&times;</span><p  class='lng-err'><i class='fas fa-exclamation-triangle'></i> Errore connesione al db! <i class='fas fa-exclamation-triangle'></i></p><p class='shrt-err'> Errore connesione al db! </p></div>";
             }
 
             //Gestione fallimenti login
