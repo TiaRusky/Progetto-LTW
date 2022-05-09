@@ -117,6 +117,33 @@
     animation-fill-mode: forwards;
 }
 
+@media screen and (max-width: 600px) {
+    .header-content {
+        padding-top: 5%;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 1em;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .btn-src {
+        font-size: 0.5rem;
+        width: 30%;
+    }
+    .form-control {
+        font-size: 0.8rem;
+        width: 30%;
+    }
+    .form-control::placeholder {
+        font-size: 0.8rem;
+    }
+    .logout-button {
+        font-size: 0.8rem;
+        width: 40%;
+    }
+}
+
 @keyframes colorfullbutton {
     100% {
         background-color: #eedf69;
@@ -125,6 +152,6 @@
     }
 }
 
-.d-flex .login-button{
+.d-flex .login-button {
     margin: 0 auto;
 }
