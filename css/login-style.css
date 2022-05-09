@@ -301,8 +301,15 @@ Gestione degli alert
     padding: 0.4em;
 }
 
-.error p {
+.lng-err {
+    display: block;
     font-size: 1.5em;
+    padding-top: 5%;
+}
+
+.shrt-err {
+    display: none;
+    font-size: 1em;
     padding-top: 5%;
 }
 
@@ -315,4 +322,52 @@ Gestione degli alert
     cursor: pointer;
     transition: 0.3s;
     padding: 0.4em;
+}
+
+@media screen and (max-width: 896px) {
+    .lng-err {
+        font-size: 1.1rem;
+    }
+    .closebtn {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .lng-err {
+        font-size: 1rem;
+    }
+    .closebtn {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .lng-err {
+        font-size: 0.8rem;
+    }
+    .closebtn {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .lng-err {
+        display: none;
+    }
+    .shrt-err {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .closebtn {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .shrt-err {
+        font-size: 0.6rem;
+    }
 }
