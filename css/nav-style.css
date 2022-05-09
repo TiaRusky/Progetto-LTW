@@ -144,6 +144,33 @@
     }
 }
 
+@media screen and (max-width: 280px) {
+    .btn-src {
+        font-size: 0.4rem;
+        width: 30%;
+    }
+    .form-control {
+        font-size: 0.7rem;
+        width: 30%;
+    }
+    .form-control::placeholder {
+        font-size: 0.7rem;
+    }
+    .logout-button {
+        font-size: 0.7rem;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .form-control {
+        font-size: 0.5rem;
+    }
+    .logout-button {
+        font-size: 0.5rem;
+    }
+}
+
 @keyframes colorfullbutton {
     100% {
         background-color: #eedf69;
