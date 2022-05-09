@@ -28,7 +28,7 @@ html {
 body {
     width: 100%;
     margin: 0px;
-    background: url("https://source.unsplash.com/7JX0-bfiuxQ/1280x1200") no-repeat center center/cover !important;
+    background-color: #9a9a9a;
 }
 
 
@@ -50,16 +50,59 @@ Gestione delle card
 
 .new-card-button {
     font-family: "TechFitFont-Azonix";
-    font-size: 5em;
-    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-    border: 3px solid#222222;
-    border-radius: 50px;
+    font-size: 4.5em;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient( to right, #464223 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #464223 100%);
     margin-bottom: 0px;
     padding-left: 10%;
     padding-right: 10%;
+    align-items: center;
+    appearance: none;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #222222;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
 }
 
-.dropdown-divider {
+.new-card-button:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.new-card-button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.new-card-button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+@media screen and (max-width: 480px) {
+    .new-card-button {
+        width: 50%;
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .new-card-button {
+        width: 40%;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 210px) {
+    .new-card-button {
+        font-size: 1em;
+    }
+}
+
+.new-card-button .dropdown-divider {
     background-color: #e0e0d1 !important;
 }
 
@@ -161,46 +204,51 @@ Gestione delle card
     color: #222222 !important;
 }
 
-/*******************************************/
-/*Gestione MODAL per visualizzare le schede*/
-/*In comune con private-style, si potrebbe fare un unico foglio di stile*/
+
 /*******************************************/
 
-.modal-content{
+
+/*Gestione MODAL per visualizzare le schede*/
+
+
+/*In comune con private-style, si potrebbe fare un unico foglio di stile*/
+
+
+/*******************************************/
+
+.modal-content {
     background-color: #d7d7d7 !important;
 }
 
-.modal-header{
+.modal-header {
     background-color: #222222 !important;
     color: #eedf69 !important;
     font-weight: 700;
     font-family: "TechFitFont-Azonix";
 }
 
-.modal-body{
-    color:#222222 !important;
+.modal-body {
+    color: #222222 !important;
     font-size: 1.2rem;
     display: flex;
     flex-direction: column;
 }
 
-.flex-gruppo{
+.flex-gruppo {
     display: flex;
     flex-direction: column;
-    border: solid ;
+    border: solid;
     justify-content: center;
     align-items: center;
 }
 
-.legend-wrapper{
+.legend-wrapper {
     display: flex;
     flex-direction: row;
 }
 
-
-
-@media (min-width:635px){
-    .main{
+@media (min-width:635px) {
+    .main {
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -218,8 +266,8 @@ Gestione delle card
     }
 }
 
-@media (min-width: 475px){
-    .flex-gruppo{
+@media (min-width: 475px) {
+    .flex-gruppo {
         flex-direction: row;
         flex-wrap: wrap;
     }
