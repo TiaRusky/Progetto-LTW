@@ -255,7 +255,7 @@ In comune con private-style, si potrebbe fare un unico foglio di stile
     flex-direction: row;
 }
 
-@media (min-width:635px) {
+@media (min-width:700px) {
     .main {
         flex-direction: row;
         flex-wrap: wrap;

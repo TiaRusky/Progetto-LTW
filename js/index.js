@@ -7,6 +7,10 @@ $(document).ready(function(){
     var $flexGambe = $(".flex-gambe");
     var $flexSpalle = $(".flex-spalle")
 
+    //Bottone di ricerca
+    var $searchBtn = $("#search-btn");
+    var $searchIn = $("#search-in");
+
     //Tutti i link per eliminare schede
     $deleteItem = $(".delete-item");
 
@@ -106,7 +110,26 @@ $(document).ready(function(){
             }
         });
         
+    });
 
+     /***************************/
+    /*Gestione della searchBar*/
+    /***************************/
+    $searchBtn.on("click",function(e){
+        e.preventDefault();
+        var input = $searchIn.val().toLowerCase();
+        var $item = $("#"+input);
+        if($item.length == 0){              //Non esiste una scheda con quel nome
+            
+        }
+        else{                               //Esiste la scheda
+            $("body, html").animate({
+                scrollTop: $item.offset().top,
+                
+            },800); 
+        }
+
+        $searchIn.val("");
     });
         
 });
