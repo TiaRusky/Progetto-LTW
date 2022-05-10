@@ -16,6 +16,11 @@
     src: url(../fonts/Azonix.otf) format("truetype");
 }
 
+@font-face {
+    font-family: "TechFitFont-Monserrat";
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
 
 /***************************************************************************************************************
 HTML & BODY
@@ -62,7 +67,7 @@ Gestione pulsante add card
     appearance: none;
     border-radius: 4px;
     border-width: 0;
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 20px 40px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
     box-sizing: border-box;
     color: #222222;
     text-decoration: none;
@@ -152,12 +157,14 @@ Gestione card
 
 .card-body {
     background-color: #3399ff;
+    /*background-color: #d7d7d7;*/
     font-weight: 700;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: "TechFitFont-Monserrat";
 }
 
 .card-body p {
-    text-align: left;
+    text-align: center;
 }
 
 .dropdown {
@@ -204,6 +211,7 @@ Gestione card
 
 .dropdown-item {
     color: #eedf69 !important;
+    font-family: "TechFitFont-Azonix";
 }
 
 .dropdown-item:hover {
@@ -211,16 +219,10 @@ Gestione card
 }
 
 
-/*******************************************/
-
-
-/*Gestione MODAL per visualizzare le schede*/
-
-
-/*In comune con private-style, si potrebbe fare un unico foglio di stile*/
-
-
-/*******************************************/
+/*******************************************
+Gestione MODAL per visualizzare le schede
+In comune con private-style, si potrebbe fare un unico foglio di stile
+*******************************************/
 
 .modal-content {
     background-color: #d7d7d7 !important;

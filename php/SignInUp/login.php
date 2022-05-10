@@ -110,7 +110,7 @@
             }
 
             elseif(strpos($fullUrl,"signup=err")){
-                echo "<div class='error'><span class='closebtn'>&times;</span><p></p></div>";echo "<div class='error'><span class='closebtn'>&times;</span><p  class='lng-err'><i class='fas fa-exclamation-triangle'></i> Errore registrazione utente! <i class='fas fa-exclamation-triangle'></i></p><p class='shrt-err'> Errore registrazione utente! </p></div>";
+                echo "<div class='error'><span class='closebtn'>&times;</span><p  class='lng-err'><i class='fas fa-exclamation-triangle'></i> Errore registrazione utente! <i class='fas fa-exclamation-triangle'></i></p><p class='shrt-err'> Errore registrazione utente! </p></div>";
             }
             elseif(strpos($fullUrl,"signup=fc") || strpos($fullUrl,"login=fc")){
                 echo "<div class='error'><span class='closebtn'>&times;</span><p  class='lng-err'><i class='fas fa-exclamation-triangle'></i> Errore connesione al db! <i class='fas fa-exclamation-triangle'></i></p><p class='shrt-err'> Errore connesione al db! </p></div>";

@@ -70,6 +70,15 @@ body {
     }
 }
 
+@media screen and (max-height: 640px) {
+    .d-block#wide {
+        display: block !important;
+    }
+    .d-block#portr {
+        display: none !important;
+    }
+}
+
 
 /***************************************************************************************************************
 *   Fasce
@@ -391,15 +400,21 @@ input:not(:placeholder-shown)~label {
 footer {
     background-color: #212529;
     color: white;
-    height: 30vh;
+    height: 15vh;
     text-align: center;
-    padding-top: 5%;
 }
 
-@media (max-width: 700px){
-    .wai{
+.fot-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+@media (max-width: 700px) {
+    .wai {
         flex-direction: column;
-        
         align-items: center;
     }
 }
@@ -507,5 +522,96 @@ footer {
     }
     .band p {
         font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .band#contacts {
+        font-size: 0.7em;
+    }
+    .band#contacts h1 {
+        font-size: 2em;
+    }
+    .form-container .form-item input {
+        font-size: 1.1em;
+        height: 40%;
+    }
+    .form-container .form-item label {
+        font-size: 1.5em;
+        height: 50%;
+    }
+}
+
+@media screen and (max-height: 680px) {
+    .band#contacts {
+        font-size: 0.8em;
+    }
+    .band#contacts h1 {
+        font-size: 2.5em;
+    }
+    .form-container .form-item input {
+        font-size: 1.5em;
+        height: 50%;
+    }
+    .form-container .form-item label {
+        font-size: 1.5em;
+        height: 50%;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .band#contacts {
+        font-size: 0.7em;
+    }
+    .band#contacts h1 {
+        font-size: 2em;
+    }
+    .form-container .form-item input {
+        font-size: 1.1em;
+        height: 40%;
+    }
+    .form-container .form-item label {
+        font-size: 1.5em;
+        height: 50%;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .band#contacts h1 {
+        font-size: 1.8em;
+    }
+    .form-container .form-item input {
+        height: 30%;
+        padding: 0px;
+    }
+    .form-container .form-item label {
+        font-size: 1.3em;
+        height: 50%;
+    }
+    .submit-form {
+        margin-bottom: 0px;
+    }
+    @keyframes floatingLabel {
+        100% {
+            bottom: 80px;
+        }
+    }
+    input:not(:placeholder-shown)~label {
+        top: -80px;
+    }
+}
+
+@media screen and (max-height: 385px) and (max-width:700px) {
+    .wai {
+        flex-direction: row !important;
+    }
+    footer {
+        height: 30vh;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    footer {
+        height: 30vh;
     }
 }
