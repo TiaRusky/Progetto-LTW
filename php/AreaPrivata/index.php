@@ -18,6 +18,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="../../js/index.js"></script>
+        <script src="../../js/searchBar.js"></script>
         <title>TechFit - Home di <?php echo $_SESSION['username'];?></title>
     </head>
 
@@ -38,8 +39,8 @@
                     <div class= "header-content">
 
                         <!-- Barra di ricerca per le schede -->
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Cerca scheda" aria-label="Search">
+                        <form class="d-flex" onsubmit="searchItem();" name="search">
+                            <input class="form-control me-2" type="search" placeholder="Cerca scheda" aria-label="Search" name="searchInput">
                             <input class="btn-src" type="submit" value="Cerca" name="searchSubmit">
                         </form>
 
@@ -75,7 +76,7 @@
                         if($descrizione == "")$descrizione = "Nessuna descrizione";
                         echo '<div class="card card-style">
                                 <div class="card-header">
-                                    <p class="card-title">'.$tupla[$i]["nome"].'</p>
+                                    <p class="card-title" id="'.strtolower($tupla[$i]["nome"]).'">'.$tupla[$i]["nome"].'</p>
                                     <div class="dropdown">
                                         <button class="tDots" type="button" id="dropdownMenuButton'.$i.'" data-bs-toggle="dropdown" aria-expanded="false">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
