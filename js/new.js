@@ -9,6 +9,7 @@ $(document).ready(function (){
 
     //Bottone di ricerca
     var $searchBtn = $("#search-btn");
+    var $searchIn = $("#search-in");
 
     //Le varie form da cui posso inserire esercizi
     var $formDorsali = $("#form-dorsali");
@@ -34,19 +35,48 @@ $(document).ready(function (){
         $errorMsg.text("");             
     });
 
-    //Gestione della ricerca
+    /********************************/
+    /*Gestione della barra di ricerca*/
+    /********************************/
     $searchBtn.on("click",function(e){
-        e.preventDefault();     //Annullo l'invio della form (=ricaricamento pagina)
-        var input = $("#search-in").val().toLowerCase();
-
-        //Non funziona
-        switch(input){
+        e.preventDefault();             //Annullo l'invio della form
+        var gruppo = $searchIn.val().toLowerCase();   //Prelevo l'input
+        switch(gruppo){                 //In base all'input mi sposto alla relativa flex
             case "dorsali":
-                $("html, body").animate({ scrollTop: $("#dorsali").offset().top }, 2000);
+                $("body, html").animate({
+                    scrollTop: $flexDorsali.offset().top
+                },800);
+                break;
+            case "tricipiti":
+                $("body, html").animate({
+                    scrollTop: $flexTricipiti.offset().top
+                },800);
+                break;
+            case "petto":
+                $("body, html").animate({
+                    scrollTop: $flexPetto.offset().top
+                },800);
+                break;
+            case "bicipiti":
+                $("body, html").animate({
+                    scrollTop: $flexBicipiti.offset().top
+                },800);
+                break;
+            case "gambe":
+                $("body, html").animate({
+                    scrollTop: $flexGambe.offset().top
+                },800);
+                break;
+            case "spalle":
+                $("body, html").animate({
+                    scrollTop: $flexSpalle.offset().top
+                },800);
+                break;
+            default:
+                alert("Error");
                 break;
         }
-
-        $("#search-in").val("");
+        $searchIn.val("");
     });
 
     /*Aggiunta degli esercizi*/

@@ -22,7 +22,6 @@
     <body>
 
         <!-- Solito menù -->
-
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -38,7 +37,7 @@
                     <div class= "header-content">
                         <!-- Barra di ricerca per i gruppi muscolari -->
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Cerca gruppo" aria-label="Search" id="search-in">
+                            <input class="form-control me-2" type="search" placeholder="Cerca gruppo" aria-label="Search" id="search-in" autocomplete="off">
                             <button class="btn btn-outline-success" type="submit" id="search-btn">Cerca</button>
                         </form>
 
@@ -584,7 +583,7 @@
                             <form class= "confirmation-form" action="" method="POST">
                                 <div class="form-element">
                                     <label >Nome scheda</label>
-                                    <input type="text" name="formName" maxlength="10" id="form-name" required>
+                                    <input type="text" name="formName" maxlength="10" id="form-name" autocomplete="off" required>
                                 </div>
                                 <div class="form-element">
                                     <label>Descrizione</label>
