@@ -39,7 +39,7 @@
 
                         <!-- Barra di ricerca per le schede -->
                         <form class="d-flex"  name="search">
-                            <input class="form-control me-2" type="search" placeholder="Cerca scheda" aria-label="Search" id="search-in" autocomplete="false">
+                            <input class="form-control me-2" type="search" placeholder="Cerca scheda" aria-label="Search" id="search-in" autocomplete="off">
                             <input class="btn-src" type="submit" value="Cerca" id="search-btn">
                         </form>
 
