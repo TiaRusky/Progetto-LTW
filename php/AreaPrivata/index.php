@@ -18,7 +18,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="../../js/index.js"></script>
-        <script src="../../js/searchBar.js"></script>
         <title>TechFit - Home di <?php echo $_SESSION['username'];?></title>
     </head>
 
@@ -39,9 +38,9 @@
                     <div class= "header-content">
 
                         <!-- Barra di ricerca per le schede -->
-                        <form class="d-flex" onsubmit="searchItem();" name="search">
-                            <input class="form-control me-2" type="search" placeholder="Cerca scheda" aria-label="Search" name="searchInput">
-                            <input class="btn-src" type="submit" value="Cerca" name="searchSubmit">
+                        <form class="d-flex"  name="search">
+                            <input class="form-control me-2" type="search" placeholder="Cerca scheda" aria-label="Search" id="search-in" autocomplete="off">
+                            <input class="btn-src" type="submit" value="Cerca" id="search-btn">
                         </form>
 
                         <!-- Bottone di logout -->
