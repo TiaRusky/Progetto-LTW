@@ -291,7 +291,8 @@ Gestione degli alert
     margin: 5px auto;
     width: 45%;
     max-width: 450px;
-    background: url("../pic/error-x-error.gif") center center/cover;
+    /*background: url("../pic/error-x-error.gif") center center/cover;*/
+    background-color: #222222;
     border: 2px solid #f44336;
     border-radius: 15px;
     font-weight: 900;

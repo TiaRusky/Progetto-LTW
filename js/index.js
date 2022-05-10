@@ -34,7 +34,7 @@ $(document).ready(function(){
         $(".flex-gruppo .card").remove();
         //Ricavo il nome della scheda
         var nomeScheda = $(e.target).closest(".card-header").find(".card-title").text();
-        
+        $("#modalSchedaLabel").text(nomeScheda);
         $.ajax({
             url : "getExc.php",
             type : "POST",

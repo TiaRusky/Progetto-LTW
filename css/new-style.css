@@ -91,6 +91,27 @@ body {
     width: fit-content;
     max-width: 170px;
     margin-top: 0.4em;
+    
+    font-family: "TechFitFont-Azonix";
+    background: transparent;
+    color: #222222;
+    padding: 0.5em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #222222;
+    border-radius: 15px;
+    font-weight: 900;
+}
+
+.top-main-button a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.top-main-button a:hover{
+    text-decoration: none;
+    color: #222222;
 }
 
 .body-main{
@@ -104,6 +125,7 @@ body {
     border: solid ;
     justify-content: center;
     align-items: center;
+    min-height: 300px;
 }
 
 .legend-wrapper{
@@ -261,6 +283,15 @@ input[type=number] {
 
 .card{
     width: fit-content;
+    margin-bottom: 0.7em;
+    background-color: #222222 !important;
+}
+
+.card-title{
+    
+    color: #eedf69 !important;
+    font-weight: 400;
+    font-family: "TechFitFont-Azonix";
 }
 
 /*Per gestire bene il top-main*/
@@ -272,6 +303,7 @@ input[type=number] {
     .top-main-button{
         margin: 0 0.4em;
         width: 30%;
+        min-width: fit-content;
     }
 }
 
