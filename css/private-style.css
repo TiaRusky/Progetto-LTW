@@ -152,6 +152,10 @@ Gestione pulsante add card
     }
 }
 
+.dropdown-divider{
+    background-color: red !important;
+}
+
 .new-card-button .dropdown-divider {
     background-color: #e0e0d1 !important;
 }
@@ -195,7 +199,7 @@ Gestione card
 ***************************************************************************************************************/
 
 .card {
-    width: 50%;
+    width: 88%;
     text-align: center;
     max-width: 290px;
     margin: 2em 1.5em 0em 1.5em;
@@ -235,7 +239,7 @@ Gestione card
 
 .card-body {
     background-color: #222222;
-    font-weight: 700;
+    font-weight: 800;
     color: white;
     font-family: "TechFitFont-Monserrat";
 }
@@ -301,7 +305,6 @@ Gestione card
 Gestione MODAL per visualizzare le schede
 In comune con private-style, si potrebbe fare un unico foglio di stile
 *******************************************/
-
 .modal-content {
     background-color: #d7d7d7 !important;
 }
@@ -331,6 +334,14 @@ In comune con private-style, si potrebbe fare un unico foglio di stile
 .legend-wrapper {
     display: flex;
     flex-direction: row;
+}
+
+/*Gestione delle card nel visualizza scheda*/
+
+/*Gestione dell'info esercizi*/
+.info-button{
+    background:transparent !important;
+    border:none !important;
 }
 
 @media (min-width:700px) {
