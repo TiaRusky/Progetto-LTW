@@ -161,7 +161,7 @@ body {
 }
 
 .popover{
-    border: 2px solid #eedf69 !important;
+    /*border: 2px solid #eedf69 !important;*/
     border-radius: 15% !important;
 } 
 
