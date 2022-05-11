@@ -21,7 +21,6 @@
     src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
 }
 
-
 /***************************************************************************************************************
 HTML & BODY
 ***************************************************************************************************************/
@@ -37,6 +36,50 @@ body {
     background-image: url("../pic/cool-background.png");
 }
 
+/***************************************************************************************************************
+Gestione nav
+***************************************************************************************************************/
+.home-logo{
+    width: 40%;
+    height: auto;
+}
+
+.header-content{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4em;
+    justify-content: space-between;
+}
+
+.d-flex{
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 0.6em;
+}
+
+.logout-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: #222222;
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    background-color: rgb(240, 240, 48);
+    transition: 0.5s ease-in-out;
+    margin: 0 auto;
+    height: fit-content; 
+}
+
+.logout-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
 
 /***************************************************************************************************************
 Gestione main
@@ -115,6 +158,10 @@ Gestione pulsante add card
 /***************************************/
 /*Gestione  searchbar*/
 /***************************************/
+.form-control:focus{
+    box-shadow: 0px 0px 4px 4px #eedf69 !important;
+}
+
 .btn-outline-success{
     border: 1px solid #eedf69 !important;
     color: #eedf69 !important;

@@ -133,6 +133,7 @@ $(document).ready(function() {
             $("body, html").animate({
                 scrollTop: $item.offset().top,
             }, 800);
+            
         }
 
         $searchIn.val("");
