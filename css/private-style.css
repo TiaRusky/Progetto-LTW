@@ -146,6 +146,7 @@ Gestione card
     flex-direction: row;
     justify-content: space-between;
     background-color: #222222 !important;
+    border: 0px !important;
 }
 
 .card-title {
@@ -156,10 +157,9 @@ Gestione card
 }
 
 .card-body {
-    background-color: #3399ff;
-    /*background-color: #d7d7d7;*/
+    background-color: #222222;
     font-weight: 700;
-    /*font-family: 'Roboto', sans-serif;*/
+    color: white;
     font-family: "TechFitFont-Monserrat";
 }
 
@@ -180,29 +180,30 @@ Gestione card
 .card .btn {
     width: 85%;
     background: transparent;
-    background-color: #222222;
-    color: #eedf69;
+    background-color: #eedf69;
+    border: 2px solid #eedf69 !important;
+    color: #222222;
     text-decoration: none;
     text-transform: uppercase;
-    border: 2px solid #222222;
     border-radius: 15px;
+    border: 0px;
+    font-size: 1.2em;
+    padding: 0.2em 1em 0.2em 1em;
     font-weight: 900;
     font-family: "TechFitFont-Azonix";
+    transition: 0.5s;
 }
 
 .card .btn:hover {
-    animation-name: colorfullbutton !important;
-    animation-duration: 0.1s;
-    animation-fill-mode: forwards;
+    background-color: #222222;
+    color: #eedf69;
+    font-weight: 900;
 }
 
-@keyframes colorfullbutton {
-    100% {
-        background-color: #e0e0d1;
-        color: #222222;
-        font-weight: 900;
-        border: 2px solid #222222;
-    }
+.card .btn:focus,
+.card .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .dropdown-menu {

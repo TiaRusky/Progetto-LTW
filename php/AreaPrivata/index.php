@@ -91,7 +91,7 @@
                             </div>
                                 <div class="card-body">
                                 <p class="card-text">'.$descrizione.'</p>
-                                <a href="#" class="btn btn-primary">train</a>
+                                <a href="../../html/train.html" class="btn btn-primary">train</a>
                             </div>
                         </div>';  
                     }
