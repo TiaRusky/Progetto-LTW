@@ -38,10 +38,16 @@ $(document).ready(function() {
     /********************************/
     /*Gestione della barra di ricerca*/
     /********************************/
-    $searchBtn.on("click", function(e) {
-        e.preventDefault(); //Annullo l'invio della form
-        var gruppo = $searchIn.val().toLowerCase(); //Prelevo l'input
-        switch (gruppo) { //In base all'input mi sposto alla relativa flex
+    $searchIn.on("focus",function(){
+        $searchIn.removeClass("error-box");         //Ogni volta che cerco qualcosa rimuovo la classe erro
+    });                                             //a cui è assocaita l'animazione
+
+    $searchBtn.on("click", function(e) {    
+        //$searchIn.removeClass("error-box");              
+        e.preventDefault();                             //Annullo l'invio della form
+        var gruppo = $searchIn.val().toLowerCase();      //Prelevo l'input
+
+        switch (gruppo) {                               //In base all'input mi sposto alla relativa flex
             case "dorsali":
                 $("body, html").animate({
                     scrollTop: $flexDorsali.offset().top
@@ -73,10 +79,10 @@ $(document).ready(function() {
                 }, 800);
                 break;
             default:
-                alert("Error");
+                $searchIn.addClass("error-box");
                 break;
         }
-        $searchIn.val("");
+        $searchIn.val("");          //Ripulisco la input
     });
 
     /*Aggiunta degli esercizi*/
