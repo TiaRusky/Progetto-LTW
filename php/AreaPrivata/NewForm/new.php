@@ -587,7 +587,7 @@
                                 </div>
                                 <div class="form-element">
                                     <label>Descrizione</label>
-                                    <input type="text" name="formDescription" id="form-description" maxlength="30">
+                                    <input type="text" name="formDescription" id="form-description" maxlength="30" autocomplete="off">
                                 </div>
 
                                 <div class= "form-element">
