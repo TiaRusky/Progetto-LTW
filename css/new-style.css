@@ -87,6 +87,10 @@ body {
     transition: 0.5s;
 }
 
+.btn-outline-success:focus{
+    box-shadow: none !important;
+}
+
 /****************/
 /*Gestione MAIN*/
 /****************/
