@@ -49,7 +49,8 @@ body {
     background-color: rgb(240, 240, 48);
     transition: 0.5s ease-in-out;
     margin: 0 auto;
-    height: fit-content; 
+    height: fit-content;
+    align-self: center;
 }
 
 .logout-button:hover {
