@@ -84,6 +84,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 0.3em;
+    margin-bottom: 0.3em;
 }
 
 .top-main-button{
@@ -92,8 +93,9 @@ body {
     margin-top: 0.4em;
     margin-bottom: 0.4em;
     font-family: "TechFitFont-Azonix";
-    background-color: #222222;
-    color: #eedf69;
+    background-color: transparent;
+    border: 2px solid #222222;
+    color: #222222;
     padding: 0.5em;
     letter-spacing: 2px;
     text-decoration: none;
@@ -104,16 +106,27 @@ body {
 
 .top-main-button a{
     text-decoration: none;
-    color: #eedf69;
+    color: #222222;
 }
 
-.top-main-button a:hover{
+
+.top-main-button:hover a{
     text-decoration: none;
     color: #eedf69;
 }
 
 .top-main-button:hover{
-    box-shadow: 0px 0px 4px 4px #eedf69 ;
+    animation-name: colorfullbutton;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorfullbutton {
+    100% {
+        background-color: #222222;
+        color: #eedf69;
+        font-weight: 900;
+    }
 }
 
 .body-main{
