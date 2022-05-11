@@ -48,6 +48,8 @@ $(document).ready(function() {
                     var esercizi = JSON.parse(result);
                     var length = esercizi.length;
 
+                    console.log(esercizi);
+
                     var nome;
                     var gruppoM;
                     var numSerie;
@@ -60,11 +62,13 @@ $(document).ready(function() {
                         //Prelevo i dati dell'esercizio
                         nome = esercizi[i].nome;
                         gruppoM = esercizi[i].gruppom;
-                        numSerie = esercizi[i].numSerie;
-                        numOrdine = esercizi[i].numOrdine;
+                        numSerie = esercizi[i].numserie;
+                        numOrdine = esercizi[i].numordine;
                         descrizione = esercizi[i].descrizione;
                         ripetizioni = esercizi[i].reps;
                         recupero = esercizi[i].recupero;
+
+                        console.log(nome, gruppoM, numSerie, numOrdine, descrizione, ripetizioni, recupero);
 
                         var $card = $('<div class="card exc"> \
                             <div class="card-body"> \
