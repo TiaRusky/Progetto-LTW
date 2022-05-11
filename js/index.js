@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
     //Le varie zone della modal
     var $flexDorsali = $(".flex-dorsali");
     var $flexTricipiti = $(".flex-tricipiti");
@@ -18,35 +18,37 @@ $(document).ready(function(){
     $viewItem = $(".view-item");
 
     //Gestione eliminazione scheda
-    $deleteItem.on("click",function(e){
+    $deleteItem.on("click", function(e) {
         //Devo prelevare la scheda che si vuole eliminare (il nome)
         var nomeScheda = $(e.target).closest(".card-header").find(".card-title").text();
         $.ajax({
-            url : "deleteForm.php",
+            url: "deleteForm.php",
             type: "POST",
-            data: {"nome":nomeScheda},
-            success : function(result){
-                if(result){
+            data: { "nome": nomeScheda },
+            success: function(result) {
+                if (result) {
                     $(e.target).closest(".card").remove();
                 }
             }
         });
     });
 
-    $viewItem.on("click",function(e){
+    $viewItem.on("click", function(e) {
         //Pulisco la modal
         $(".flex-gruppo .card").remove();
         //Ricavo il nome della scheda
         var nomeScheda = $(e.target).closest(".card-header").find(".card-title").text();
         $("#modalSchedaLabel").text(nomeScheda);
         $.ajax({
-            url : "getExc.php",
-            type : "POST",
-            data: {"nome":nomeScheda},
-            success : function(result){
-                if(result != "err"){
+            url: "getExc.php",
+            type: "POST",
+            data: { "nome": nomeScheda },
+            success: function(result) {
+                if (result != "err") {
                     var esercizi = JSON.parse(result);
                     var length = esercizi.length;
+
+                    console.log(esercizi);
 
                     var nome;
                     var gruppoM;
@@ -56,7 +58,7 @@ $(document).ready(function(){
                     var ripetizioni;
                     var recupero;
 
-                    for(let i = 0;i<length;i++){
+                    for (let i = 0; i < length; i++) {
                         //Prelevo i dati dell'esercizio
                         nome = esercizi[i].nome;
                         gruppoM = esercizi[i].gruppom;
@@ -65,27 +67,29 @@ $(document).ready(function(){
                         descrizione = esercizi[i].descrizione;
                         ripetizioni = esercizi[i].reps;
                         recupero = esercizi[i].recupero;
-                        
+
+                        console.log(nome, gruppoM, numSerie, numOrdine, descrizione, ripetizioni, recupero);
+
                         var $card = $('<div class="card exc"> \
                             <div class="card-body"> \
-                            <h5 class="card-title">'+nome+'</h5>\
+                            <h5 class="card-title">' + nome + '</h5>\
                             <ul class="list-group list-group-flush">\
                             <li class="list-group-item">\
                             <label> Num. Serie: </label>\
-                            <label class="num-serie">'+numSerie+'\
+                            <label class="num-serie">' + numSerie + '\
                             <button type="button" class="info-button num-reps-button" data-bs-container="body" data-bs-toggle="popover" \
-                            data-bs-placement="top" data-bs-content="'+ripetizioni+'" data-bs-trigger="click">\
+                            data-bs-placement="top" data-bs-content="' + ripetizioni + '" data-bs-trigger="click">\
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16"> \
                             <path d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z"/>\
                             </svg></button></label></li><li class="list-group-item"><label>Num. esecuzione: </label> \
-                            <label class="num-esecuzione">'+numOrdine+'</label></li><li class="list-group-item"> \
-                            <label>Recupero (s):</label><label class="recupero">'+recupero+'</label>\
-                            </li><li class="list-group-item"><label>Descrizione:</label><label class="descrizione">'+descrizione+'</label>\
+                            <label class="num-esecuzione">' + numOrdine + '</label></li><li class="list-group-item"> \
+                            <label>Recupero (s):</label><label class="recupero">' + recupero + '</label>\
+                            </li><li class="list-group-item"><label>Descrizione:</label><label class="descrizione">' + descrizione + '</label>\
                             </li></ul></div></div>');
-                    
-                        $card.find("[data-bs-toggle]").popover();   //Rendo il popover interagibile
-                        
-                        switch(gruppoM){
+
+                        $card.find("[data-bs-toggle]").popover(); //Rendo il popover interagibile
+
+                        switch (gruppoM) {
                             case "dorsali":
                                 $flexDorsali.prepend($card);
                                 break;
@@ -109,28 +113,27 @@ $(document).ready(function(){
                 }
             }
         });
-        
+
     });
 
-     /***************************/
+    /***************************/
     /*Gestione della searchBar*/
     /***************************/
-    $searchBtn.on("click",function(e){
+    $searchBtn.on("click", function(e) {
         e.preventDefault();
         var input = $searchIn.val().toLowerCase();
-        var $item = $("#"+input);
-        if($item.length == 0){              //Non esiste una scheda con quel nome
+        var $item = $("#" + input);
+        if ($item.length == 0) { //Non esiste una scheda con quel nome
             $searchIn.animate({
                 border: "2px solid red !important"
-            },700);
-        }
-        else{                               //Esiste la scheda
+            }, 700);
+        } else { //Esiste la scheda
             $("body, html").animate({
                 scrollTop: $item.offset().top,
-            },800);
+            }, 800);
         }
 
         $searchIn.val("");
     });
-        
+
 });
