@@ -199,10 +199,6 @@ body {
     text-align: center;
 }
 
-.modal-body select{
-    color:#e0e0d1;
-    background-color: #222222;
-}
 
 .modal-body input[type="number"]{
     width: 75px;
@@ -210,7 +206,7 @@ body {
 
 .modal-body input:focus,
 .modal-body select:focus{
-    box-shadow: 0px 0px 5px 4px #eedf69;
+    box-shadow: 0 4px 2px -2px  #eedf69;
     outline:none;
 }
 
@@ -251,11 +247,18 @@ input[type=number] {
     font-weight: bold;
 }
 
+.modal-form select,
 .modal-form input{
     border: none;
     border-bottom: 1px solid #222222;
     outline: none;
     background: transparent;
+}
+
+.modal-form select option{
+    background-color: #222222;
+    color: #d7d7d7;
+
 }
 
 /*Gestione delle form nelle model*/
