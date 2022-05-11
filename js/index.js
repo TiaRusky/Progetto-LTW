@@ -119,15 +119,17 @@ $(document).ready(function() {
     /***************************/
     /*Gestione della searchBar*/
     /***************************/
+    $searchIn.on("focus",function(){
+        $searchIn.removeClass("error-box");         //Ogni volta che cerco qualcosa rimuovo la classe erro
+    });                                             //a cui è assocaita l'animazione
+
     $searchBtn.on("click", function(e) {
         e.preventDefault();
         var input = $searchIn.val().toLowerCase();
         var $item = $("#" + input);
-        if ($item.length == 0) { //Non esiste una scheda con quel nome
-            $searchIn.animate({
-                border: "2px solid red !important"
-            }, 700);
-        } else { //Esiste la scheda
+        if ($item.length == 0) {                    //Non esiste una scheda con quel nome
+            $searchIn.addClass("error-box");
+        } else {                                    //Esiste la scheda
             $("body, html").animate({
                 scrollTop: $item.offset().top,
             }, 800);
