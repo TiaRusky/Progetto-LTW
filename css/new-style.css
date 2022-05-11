@@ -63,6 +63,17 @@ body {
     box-shadow: 0px 0px 4px 4px #eedf69 !important;
 }
 
+.error-box{
+    animation: shake 0.2s ease-in-out 0s 2;
+}
+
+@keyframes shake {
+    0% { margin-left: 0rem; box-shadow: 0 0 0.5em red;}
+    25% { margin-left: 0.5rem; box-shadow: 0 0 0.5em red;}
+    75% { margin-left: -0.5rem; box-shadow: 0 0 0.5em red;}
+    100% { margin-left: 0rem; box-shadow: 0 0 0.5em red;}
+}
+
 .btn-outline-success{
     border: 1px solid #eedf69 !important;
     color: #eedf69 !important;
@@ -75,6 +86,10 @@ body {
     transition: 0.5s;
 }
 
+.btn-outline-success:focus{
+    box-shadow: none !important;
+}
+
 /****************/
 /*Gestione MAIN*/
 /****************/
@@ -84,6 +99,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 0.3em;
+    margin-bottom: 0.3em;
 }
 
 .top-main-button{
@@ -92,8 +108,9 @@ body {
     margin-top: 0.4em;
     margin-bottom: 0.4em;
     font-family: "TechFitFont-Azonix";
-    background-color: #222222;
-    color: #eedf69;
+    background-color: transparent;
+    border: 2px solid #222222;
+    color: #222222;
     padding: 0.5em;
     letter-spacing: 2px;
     text-decoration: none;
@@ -104,16 +121,27 @@ body {
 
 .top-main-button a{
     text-decoration: none;
-    color: #eedf69;
+    color: #222222;
 }
 
-.top-main-button a:hover{
+
+.top-main-button:hover a{
     text-decoration: none;
     color: #eedf69;
 }
 
 .top-main-button:hover{
-    box-shadow: 0px 0px 4px 4px #eedf69 ;
+    animation-name: colorfullbutton;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorfullbutton {
+    100% {
+        background-color: #222222;
+        color: #eedf69;
+        font-weight: 900;
+    }
 }
 
 .body-main{
@@ -148,7 +176,7 @@ body {
 }
 
 .popover{
-    border: 2px solid #eedf69 !important;
+    /*border: 2px solid #eedf69 !important;*/
     border-radius: 15% !important;
 } 
 
@@ -186,10 +214,6 @@ body {
     text-align: center;
 }
 
-.modal-body select{
-    color:#e0e0d1;
-    background-color: #222222;
-}
 
 .modal-body input[type="number"]{
     width: 75px;
@@ -197,7 +221,7 @@ body {
 
 .modal-body input:focus,
 .modal-body select:focus{
-    box-shadow: 0px 0px 5px 4px #eedf69;
+    box-shadow: 0 4px 2px -2px  #eedf69;
     outline:none;
 }
 
@@ -212,7 +236,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
-}
+}ror
 
 .modal-btn{
     border: 2px solid #eedf69 !important;
@@ -233,16 +257,25 @@ input[type=number] {
     transition: 1.7s;
 }
 
+.confirmation-form label,
 .modal-form label{
     color:#222222;
     font-weight: bold;
 }
 
+.confirmation-form input,
+.modal-form select,
 .modal-form input{
     border: none;
     border-bottom: 1px solid #222222;
     outline: none;
     background: transparent;
+}
+
+.modal-form select option{
+    background-color: #222222;
+    color: #d7d7d7;
+
 }
 
 /*Gestione delle form nelle model*/

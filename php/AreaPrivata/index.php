@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../../pic/logo/10_crypto/small_logo.ico" type="image/icon type">
         <link href="../../css/private-style.css" rel="stylesheet">
-        <link href="../../css/nav-style.css" rel="stylesheet">
+        <!--<link href="../../css/nav-style.css" rel="stylesheet">-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -40,13 +40,14 @@
                         <!-- Barra di ricerca per le schede -->
                         <form class="d-flex"  name="search">
                             <input class="form-control me-2" type="search" placeholder="Cerca scheda" aria-label="Search" id="search-in" autocomplete="off">
-                            <input class="btn-src" type="submit" value="Cerca" id="search-btn">
+                            <input class="btn btn-outline-success" type="submit" value="Cerca" id="search-btn">
                         </form>
 
                         <!-- Bottone di logout -->
                         <a class="logout-button" type="button" href="logout.php">
                             Logout
                         </a>
+
                     </div>
 
                 </div>
