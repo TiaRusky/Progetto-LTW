@@ -329,6 +329,7 @@ In comune con private-style, si potrebbe fare un unico foglio di stile
     border: solid;
     justify-content: center;
     align-items: center;
+    min-height: 500px;
 }
 
 .legend-wrapper {
@@ -367,5 +368,7 @@ In comune con private-style, si potrebbe fare un unico foglio di stile
     .flex-gruppo {
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: left;
     }
 }

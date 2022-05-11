@@ -237,7 +237,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
-}ror
+}
 
 .modal-btn{
     border: 2px solid #eedf69 !important;
