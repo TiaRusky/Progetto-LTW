@@ -29,7 +29,7 @@
     padding-left: 1em;
     padding-right: 1em;
     text-align: center;
-    background-color: rgb(240, 240, 48);
+    background-color: #eedf69;
     transition: 0.5s ease-in-out;
 }
 
@@ -49,7 +49,7 @@
     padding-left: 1em;
     padding-right: 1em;
     text-align: center;
-    background-color: rgb(240, 240, 48);
+    background-color: #eedf69;
     transition: 0.5s ease-in-out;
     height: fit-content;
     margin-top: 0.4em;
