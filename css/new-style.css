@@ -3,6 +3,12 @@
     src: url(../fonts/Azonix.otf) format("truetype");
 }
 
+@font-face {
+    font-family: "TechFitFont-Monserrat";
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+
 html {
     font-size: 20px !important;
 }
@@ -185,7 +191,7 @@ body {
     border-top: 1px solid #222222;
     /*Da vedere se garba*/
     align-items: center;
-    min-height: 300px;
+    /*min-height: 300px;*/
 }
 
 .legend-wrapper {
@@ -274,12 +280,11 @@ input::-webkit-inner-spin-button {
 
 
 /* Firefox */
-
 input[type=number] {
     -moz-appearance: textfield;
 }
 
-ror .modal-btn {
+.modal-btn {
     border: 2px solid #eedf69 !important;
     color: #eedf69 !important;
     background: transparent !important;
@@ -368,14 +373,41 @@ ror .modal-btn {
 
 .card {
     width: fit-content;
+    /*max-width: 310px;*/
     margin-bottom: 0.7em;
     background-color: #222222 !important;
+    border-radius: 15px 50px !important;
 }
 
-.card-title {
+.card-title{
     color: #eedf69 !important;
     font-weight: 400;
     font-family: "TechFitFont-Azonix";
+    max-width: 250px;
+}
+
+.card .list-group-item{
+    width: fit-content;
+    height: fit-content;
+    background-color: #eedf69 !important;
+    margin: 0.3em 0 !important;
+    border-radius: 10px 10px 10px 10px !important;
+    /*background: rgb(241,221,66);
+    background: linear-gradient(186deg, rgba(241,221,66,1) 1%, rgba(172,171,171,1) 54%);*/
+    /*background: rgb(212,175,55);
+    background: linear-gradient(186deg, rgba(212,175,55,1) 1%, rgba(172,171,171,1) 54%, rgba(212,175,55,1) 98%);*/
+    background: rgb(244,188,6);
+    background: linear-gradient(186deg, rgba(244,188,6,1) 1%, rgba(203,200,200,1) 54%, rgba(246,188,0,1) 98%);
+}
+
+.card .popover-body{
+    background-color: #e0e0d1 !important;
+    color: #222222 !important;
+}
+
+.card label{
+    font-weight: 800 !important;
+    color: #222222 ;
 }
 
 
@@ -399,6 +431,11 @@ ror .modal-btn {
     .flex-gruppo {
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: left;
+    }
+    .card{
+        margin: 0.7em 0.5em;
     }
 }
 

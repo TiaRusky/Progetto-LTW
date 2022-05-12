@@ -158,6 +158,10 @@ Gestione pulsante add card
     }
 }
 
+.dropdown-divider{
+    background-color: red !important;
+}
+
 .new-card-button .dropdown-divider {
     background-color: #e0e0d1 !important;
 }
@@ -220,7 +224,7 @@ Gestione card
 ***************************************************************************************************************/
 
 .card {
-    width: 50%;
+    width: 88%;
     text-align: center;
     max-width: 290px;
     margin: 2em 1.5em 0em 1.5em;
@@ -260,7 +264,7 @@ Gestione card
 
 .card-body {
     background-color: #222222;
-    font-weight: 700;
+    font-weight: 800;
     color: white;
     font-family: "TechFitFont-Monserrat";
 }
@@ -321,12 +325,55 @@ Gestione card
     color: #222222 !important;
 }
 
+/*******************************************/
+/*Gestione delle card nella zona visualizza*/
+/*******************************************/
+.exc {
+    width: 97%;
+    /*max-width: 310px;*/
+    margin-bottom: 0.7em;
+    background-color: #222222 !important;
+    border-radius: 15px 50px !important;
+    text-align: left;
+    margin-bottom: 0.5em;
+    margin-top: 0.1em;
+}
 
+.exc .card-body{
+    background: none !important;
+    font-family: unset;
+}
+
+.exc .card-title{
+    width: 100%;
+    color: #eedf69 !important;
+    font-weight: 400;
+    font-family: "TechFitFont-Azonix";
+    max-width: 250px;
+}
+
+.exc .list-group-item{
+
+    width: 100%;
+    height: fit-content;
+    background-color: #eedf69 !important;
+    margin: 0.3em 0 !important;
+    border-radius: 10px 10px 10px 10px !important;
+    background: rgb(244,188,6);
+    background: linear-gradient(186deg, rgba(244,188,6,1) 1%, rgba(203,200,200,1) 54%, rgba(246,188,0,1) 98%);
+}
+
+.exc .list-group-item label{
+    font-size: 1rem;
+}
+
+.exc label{
+    font-weight: 800 !important;
+    color: #222222 ;
+}
 /*******************************************
 Gestione MODAL per visualizzare le schede
-In comune con private-style, si potrebbe fare un unico foglio di stile
 *******************************************/
-
 .modal-content {
     background-color: #d7d7d7 !important;
 }
@@ -348,7 +395,7 @@ In comune con private-style, si potrebbe fare un unico foglio di stile
 .flex-gruppo {
     display: flex;
     flex-direction: column;
-    border: solid;
+    border-top: 1px solid #222222;
     justify-content: center;
     align-items: center;
 }
@@ -358,6 +405,12 @@ In comune con private-style, si potrebbe fare un unico foglio di stile
     flex-direction: row;
 }
 
+/*Gestione dell'info esercizi*/
+.info-button{
+    background:transparent !important;
+    border:none !important;
+}
+
 @media (min-width:700px) {
     .main {
         flex-direction: row;
@@ -365,6 +418,7 @@ In comune con private-style, si potrebbe fare un unico foglio di stile
     }
 }
 
+/*Gestione navbar*/
 @media (min-width: 768px) {
     .header-content {
         flex-direction: row;
@@ -377,9 +431,14 @@ In comune con private-style, si potrebbe fare un unico foglio di stile
     }
 }
 
-@media (min-width: 475px) {
+@media (min-width: 675px) {
     .flex-gruppo {
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: left;
+    }
+    .card{
+        margin: 0.7em 0.5em;
     }
 }
