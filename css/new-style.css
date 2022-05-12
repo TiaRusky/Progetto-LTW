@@ -162,7 +162,7 @@ body {
     justify-content: center;
     border-top: 1px solid #222222;  /*Da vedere se garba*/
     align-items: center;
-    min-height: 300px;
+    /*min-height: 300px;*/
 }
 
 .legend-wrapper{
