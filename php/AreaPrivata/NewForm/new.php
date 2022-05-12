@@ -67,10 +67,9 @@
             <!-- Contiene gli esercizi, divisi per gruppi muscolari,
                      aggiunti finora-->
             <div class="body-main">
-
                 <fieldset class="flex-dorsali flex-gruppo" id="dorsali">
+                    
                     <legend class="float-none w-auto px-1">
-                        
                         <div class="legend-wrapper">
                             <!--Dorsali-->
                             <img src="../../../pic/new/icons8-bodybuilder-96.png" alt="logo-dorsali">
