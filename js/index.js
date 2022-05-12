@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    //Menu hambuger
+    $navbar = $(".navbar-toggler");
+
     //Le varie zone della modal
     var $flexDorsali = $(".flex-dorsali");
     var $flexTricipiti = $(".flex-tricipiti");
@@ -119,6 +122,10 @@ $(document).ready(function() {
     /***************************/
     /*Gestione della searchBar*/
     /***************************/
+    $navbar.on("click",function(){
+        $searchIn.removeClass("error-box"); 
+    });
+
     $searchIn.on("focus",function(){
         $searchIn.removeClass("error-box");         //Ogni volta che cerco qualcosa rimuovo la classe erro
     });                                             //a cui è assocaita l'animazione

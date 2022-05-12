@@ -52,10 +52,11 @@ body {
     padding-left: 1em;
     padding-right: 1em;
     text-align: center;
-    background-color: rgb(240, 240, 48);
+    background-color: #eedf69;
     transition: 0.5s ease-in-out;
     margin: 0 auto;
     height: fit-content;
+    align-self: center;
 }
 
 .logout-button:hover {

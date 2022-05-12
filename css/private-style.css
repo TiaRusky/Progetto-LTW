@@ -72,10 +72,11 @@ Gestione nav
     padding-left: 1em;
     padding-right: 1em;
     text-align: center;
-    background-color: rgb(240, 240, 48);
+    background-color: #eedf69;
     transition: 0.5s ease-in-out;
     margin: 0 auto;
     height: fit-content;
+    align-self: center;
 }
 
 .logout-button:hover {
@@ -106,15 +107,18 @@ Gestione pulsante add card
     font-size: 4.5em;
     height: 100%;
     width: 50%;
-    background: linear-gradient( to right, #464223 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #464223 100%);
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
     margin-bottom: 0px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 10% 5% 10% 5%;
+    /*padding-left: 10%;*/
+    /*padding-right: 10%;*/
     align-items: center;
     appearance: none;
-    border-radius: 4px;
-    border-width: 0;
-    box-shadow: rgba(45, 35, 66, 0.4) 0 20px 40px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    border-radius: 50px;
+    /*border-radius: 25px;*/
+    border: 3px solid #222222;
+    /*border: 0px;*/
+    box-shadow: rgba(45, 35, 66, 0.4) 0 20px 40px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
     box-sizing: border-box;
     color: #222222;
     text-decoration: none;
@@ -122,16 +126,15 @@ Gestione pulsante add card
 }
 
 .new-card-button:focus {
-    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
 }
 
 .new-card-button:hover {
-    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
     transform: translateY(-2px);
 }
 
 .new-card-button:active {
-    box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
 
