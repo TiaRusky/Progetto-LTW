@@ -140,7 +140,7 @@
                             <legend class="float-none w-auto px-1">
                                 
                                 <div class="legend-wrapper">
-                                    Dorsali
+                                    <img src="../../pic/new/icons8-bodybuilder-96.png" alt="logo-dorsali">
                                 </div>
                             </legend>
                         
@@ -149,7 +149,7 @@
                         <fieldset class="flex-tricipiti flex-gruppo" id="tricipiti">
                             <legend class="float-none w-auto px-1">
                                 <div class="legend-wrapper">
-                                    Tricipiti
+                                    <img src="../../pic/new/icons8-triceps-96.png" alt="logo-tricipiti">
                                 </div>
                             </legend>
                         </fieldset>
@@ -158,7 +158,7 @@
                             <legend class="float-none w-auto px-1">
                                 
                                 <div class="legend-wrapper">
-                                    Petto
+                                    <img src="../../pic/new/icons8-chest-96.png" alt="logo-petto">
                                 </div>
                             </legend>
                         </fieldset>
@@ -166,7 +166,7 @@
                         <fieldset class="flex-bicipiti flex-gruppo" id="bicipiti">
                             <legend class="float-none w-auto px-1">
                                 <div class="legend-wrapper">
-                                    Bicipiti
+                                    <img src="../../pic/new/icons8-biceps-96.png" alt="logo-bicipiti">
                                 </div>
                             </legend>
                         </fieldset>
@@ -174,7 +174,7 @@
                         <fieldset class="flex-gambe flex-gruppo" id="gambe">
                             <legend class="float-none w-auto px-1">
                                 <div class="legend-wrapper">
-                                    Gambe
+                                    <img src="../../pic/new/icons8-quadriceps-96.png" alt="logo-gambe">
                                 </div>
                             </legend>
                         </fieldset>
@@ -182,7 +182,7 @@
                         <fieldset class="flex-spalle flex-gruppo" id="spalle">
                             <legend class="float-none w-auto px-1">
                                 <div class="legend-wrapper">
-                                    Spalle
+                                    <img src="../../pic/new/icons8-shoulders-96.png" alt="logo-spalle">
                                 </div>
                             </legend>
                         </fieldset>
