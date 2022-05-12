@@ -341,6 +341,7 @@ Gestione card
 
 .exc .card-body{
     background: none !important;
+    font-family: unset;
 }
 
 .exc .card-title{
@@ -366,6 +367,10 @@ Gestione card
     font-size: 1rem;
 }
 
+.exc label{
+    font-weight: 800 !important;
+    color: #222222 ;
+}
 /*******************************************
 Gestione MODAL per visualizzare le schede
 *******************************************/
