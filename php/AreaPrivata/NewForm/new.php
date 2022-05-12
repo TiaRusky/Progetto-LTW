@@ -72,7 +72,8 @@
                     <legend class="float-none w-auto px-1">
                         
                         <div class="legend-wrapper">
-                            Dorsali
+                            <!--Dorsali-->
+                            <img src="../../../pic/new/icons8-bodybuilder-96.png" alt="logo-dorsali">
                             <!-- Bottone per aggiungere un nuovo esercizio relativo a questo gruppo-->
                             <button class="new-card-button" data-bs-toggle="modal" data-bs-target="#dorsali-modal">
                             <svg xmlns="http://www.w3.org/2000/svg" class="new-card-pic" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
@@ -87,7 +88,8 @@
                 <fieldset class="flex-tricipiti flex-gruppo" id="tricipiti">
                     <legend class="float-none w-auto px-1">
                         <div class="legend-wrapper">
-                            Tricipiti
+                            <!--Tricipiti-->
+                            <img src="../../../pic/new/icons8-triceps-96.png" alt="logo-tricipiti">
                             <button class="new-card-button" data-bs-toggle="modal" data-bs-target="#tricipiti-modal"> 
                                 <svg xmlns="http://www.w3.org/2000/svg" class="new-card-pic" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
@@ -101,7 +103,8 @@
                     <legend class="float-none w-auto px-1">
                         
                         <div class="legend-wrapper">
-                            Petto
+                            <!--Petto-->
+                            <img src="../../../pic/new/icons8-chest-96.png" alt="logo-petto">
                             <button class="new-card-button" data-bs-toggle="modal" data-bs-target="#petto-modal">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="new-card-pic" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
@@ -114,7 +117,8 @@
                 <fieldset class="flex-bicipiti flex-gruppo" id="bicipiti">
                     <legend class="float-none w-auto px-1">
                         <div class="legend-wrapper">
-                            Bicipiti
+                            <!--Bicipiti-->
+                            <img src="../../../pic/new/icons8-biceps-96.png" alt="logo-bicipiti">
                             <button class="new-card-button" data-bs-toggle="modal" data-bs-target="#bicipiti-modal">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="new-card-pic" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
@@ -127,7 +131,8 @@
                 <fieldset class="flex-gambe flex-gruppo" id="gambe">
                     <legend class="float-none w-auto px-1">
                         <div class="legend-wrapper">
-                            Gambe
+                            <!--Gambe-->
+                            <img src="../../../pic/new/icons8-quadriceps-96.png" alt="logo-gambe">
                             <button class="new-card-button" data-bs-toggle="modal" data-bs-target="#gambe-modal">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="new-card-pic" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
@@ -140,7 +145,8 @@
                 <fieldset class="flex-spalle flex-gruppo" id="spalle">
                     <legend class="float-none w-auto px-1">
                         <div class="legend-wrapper">
-                            Spalle
+                            <!--Spalle-->
+                            <img src="../../../pic/new/icons8-shoulders-96.png" alt="logo-spalle">
                             <button class="new-card-button" data-bs-toggle="modal" data-bs-target="#spalle-modal">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="new-card-pic" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
