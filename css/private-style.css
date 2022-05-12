@@ -300,10 +300,49 @@ Gestione card
     color: #222222 !important;
 }
 
+/*******************************************/
+/*Gestione delle card nella zona visualizza*/
+/*******************************************/
+.exc {
+    width: 97%;
+    /*max-width: 310px;*/
+    margin-bottom: 0.7em;
+    background-color: #222222 !important;
+    border-radius: 15px 50px !important;
+    text-align: left;
+    margin-bottom: 0.5em;
+    margin-top: 0.1em;
+}
+
+.exc .card-body{
+    background: none !important;
+}
+
+.exc .card-title{
+    width: 100%;
+    color: #eedf69 !important;
+    font-weight: 400;
+    font-family: "TechFitFont-Azonix";
+    max-width: 250px;
+}
+
+.exc .list-group-item{
+
+    width: 100%;
+    height: fit-content;
+    background-color: #eedf69 !important;
+    margin: 0.3em 0 !important;
+    border-radius: 10px 10px 10px 10px !important;
+    background: rgb(244,188,6);
+    background: linear-gradient(186deg, rgba(244,188,6,1) 1%, rgba(203,200,200,1) 54%, rgba(246,188,0,1) 98%);
+}
+
+.exc .list-group-item label{
+    font-size: 1rem;
+}
 
 /*******************************************
 Gestione MODAL per visualizzare le schede
-In comune con private-style, si potrebbe fare un unico foglio di stile
 *******************************************/
 .modal-content {
     background-color: #d7d7d7 !important;
@@ -326,18 +365,15 @@ In comune con private-style, si potrebbe fare un unico foglio di stile
 .flex-gruppo {
     display: flex;
     flex-direction: column;
-    border: solid;
+    border-top: 1px solid #222222;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
 }
 
 .legend-wrapper {
     display: flex;
     flex-direction: row;
 }
-
-/*Gestione delle card nel visualizza scheda*/
 
 /*Gestione dell'info esercizi*/
 .info-button{
@@ -352,6 +388,7 @@ In comune con private-style, si potrebbe fare un unico foglio di stile
     }
 }
 
+/*Gestione navbar*/
 @media (min-width: 768px) {
     .header-content {
         flex-direction: row;
@@ -364,11 +401,14 @@ In comune con private-style, si potrebbe fare un unico foglio di stile
     }
 }
 
-@media (min-width: 475px) {
+@media (min-width: 675px) {
     .flex-gruppo {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: left;
+    }
+    .card{
+        margin: 0.7em 0.5em;
     }
 }
