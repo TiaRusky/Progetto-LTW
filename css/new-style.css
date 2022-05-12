@@ -374,6 +374,8 @@ input[type=number] {
     .flex-gruppo{
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: left;
     }
     .card{
         margin: 0.7em 0.5em;
