@@ -13,15 +13,21 @@ body {
     background-color: #d7d7d7 !important;
 }
 
+
 /************/
+
+
 /* NAVBAR */
+
+
 /************/
-.home-logo{
+
+.home-logo {
     width: 40%;
     height: auto;
 }
 
-.header-content{
+.header-content {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -30,7 +36,7 @@ body {
     justify-content: space-between;
 }
 
-.d-flex{
+.d-flex {
     max-width: 400px;
     margin: 0 auto;
     margin-bottom: 0.6em;
@@ -46,7 +52,7 @@ body {
     padding-left: 1em;
     padding-right: 1em;
     text-align: center;
-    background-color: rgb(240, 240, 48);
+    background-color: #eedf69;
     transition: 0.5s ease-in-out;
     margin: 0 auto;
     height: fit-content;
@@ -59,42 +65,62 @@ body {
     transition: 0.3s;
 }
 
+
 /*SearchBar*/
-.form-control:focus{
+
+.form-control:focus {
     box-shadow: 0px 0px 4px 4px #eedf69 !important;
 }
 
-.error-box{
+.error-box {
     animation: shake 0.2s ease-in-out 0s 2;
 }
 
 @keyframes shake {
-    0% { margin-left: 0rem; box-shadow: 0 0 0.5em red;}
-    25% { margin-left: 0.5rem; box-shadow: 0 0 0.5em red;}
-    75% { margin-left: -0.5rem; box-shadow: 0 0 0.5em red;}
-    100% { margin-left: 0rem; box-shadow: 0 0 0.5em red;}
+    0% {
+        margin-left: 0rem;
+        box-shadow: 0 0 0.5em red;
+    }
+    25% {
+        margin-left: 0.5rem;
+        box-shadow: 0 0 0.5em red;
+    }
+    75% {
+        margin-left: -0.5rem;
+        box-shadow: 0 0 0.5em red;
+    }
+    100% {
+        margin-left: 0rem;
+        box-shadow: 0 0 0.5em red;
+    }
 }
 
-.btn-outline-success{
+.btn-outline-success {
     border: 1px solid #eedf69 !important;
     color: #eedf69 !important;
     font-family: "TechFitFont-Azonix";
 }
 
-.btn-outline-success:hover{
+.btn-outline-success:hover {
     background-color: #e0e0d1 !important;
     color: #222222 !important;
     transition: 0.5s;
 }
 
-.btn-outline-success:focus{
+.btn-outline-success:focus {
     box-shadow: none !important;
 }
 
+
 /****************/
+
+
 /*Gestione MAIN*/
+
+
 /****************/
-.top-main{
+
+.top-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,7 +129,7 @@ body {
     margin-bottom: 0.3em;
 }
 
-.top-main-button{
+.top-main-button {
     width: fit-content;
     max-width: 170px;
     margin-top: 0.4em;
@@ -120,18 +146,17 @@ body {
     font-weight: 900;
 }
 
-.top-main-button a{
+.top-main-button a {
     text-decoration: none;
     color: #222222;
 }
 
-
-.top-main-button:hover a{
+.top-main-button:hover a {
     text-decoration: none;
     color: #eedf69;
 }
 
-.top-main-button:hover{
+.top-main-button:hover {
     animation-name: colorfullbutton;
     animation-duration: 1.2s;
     animation-fill-mode: forwards;
@@ -145,101 +170,113 @@ body {
     }
 }
 
-.body-main{
+.body-main {
     display: flex;
     flex-direction: column;
 }
 
-.flex-gruppo{
+.flex-gruppo {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-top: 1px solid #222222;  /*Da vedere se garba*/
+    border-top: 1px solid #222222;
+    /*Da vedere se garba*/
     align-items: center;
     min-height: 300px;
 }
 
-.legend-wrapper{
+.legend-wrapper {
     display: flex;
     flex-direction: row;
     font-family: "TechFitFont-Azonix";
     font-weight: 900;
 }
 
+
 /**********************/
+
+
 /*Gestione delle modal*/
+
+
 /**********************/
+
 
 /*Gestione dell'info esercizi*/
-.info-button{
-    background:transparent !important;
-    border:none !important;
+
+.info-button {
+    background: transparent !important;
+    border: none !important;
 }
 
-.popover{
+.popover {
     /*border: 2px solid #eedf69 !important;*/
     border-radius: 15% !important;
-} 
+}
 
-.popover-body{
+.popover-body {
     color: #e0e0d1 !important;
     background-color: #222222 !important;
     font-weight: 600 !important;
     border-radius: 15% !important;
 }
 
-
-.modal-content{
+.modal-content {
     background-color: #d7d7d7 !important;
 }
 
-.modal-header{
+.modal-header {
     background-color: #222222 !important;
     color: #eedf69 !important;
     font-weight: 700;
     font-family: "TechFitFont-Azonix";
 }
 
-.modal-body{
-    color:#222222 !important;
+.modal-body {
+    color: #222222 !important;
     font-size: 1.2rem;
 }
 
-.modal-footer{
+.modal-footer {
     background-color: #222222 !important;
     color: #eedf69 !important;
 }
 
-.modal-body input{
+.modal-body input {
     color: #222222;
     text-align: center;
 }
 
-
-.modal-body input[type="number"]{
+.modal-body input[type="number"] {
     width: 75px;
 }
 
 .modal-body input:focus,
-.modal-body select:focus{
-    box-shadow: 0 4px 2px -2px  #eedf69;
-    outline:none;
+.modal-body select:focus {
+    box-shadow: 0 4px 2px -2px #eedf69;
+    outline: none;
 }
+
 
 /*Per nascondere le frecce delle input*/
+
+
 /* Chrome, Safari, Edge, Opera */
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}ror
 
-.modal-btn{
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+ror .modal-btn {
     border: 2px solid #eedf69 !important;
     color: #eedf69 !important;
     background: transparent !important;
@@ -249,148 +286,153 @@ input[type=number] {
     text-transform: uppercase !important;
     border-radius: 15px !important;
     font-weight: 900 !important;
-    background-image:none !important;
+    background-image: none !important;
 }
 
-.modal-btn:hover{
+.modal-btn:hover {
     background-color: #eedf69 !important;
-    color:#222222 !important;
+    color: #222222 !important;
     transition: 1.7s;
 }
 
 .confirmation-form label,
-.modal-form label{
-    color:#222222;
+.modal-form label {
+    color: #222222;
     font-weight: bold;
 }
 
 .confirmation-form input,
 .modal-form select,
-.modal-form input{
+.modal-form input {
     border: none;
     border-bottom: 1px solid #222222;
     outline: none;
     background: transparent;
 }
 
-.modal-form select option{
+.modal-form select option {
     background-color: #222222;
     color: #d7d7d7;
-
 }
 
+
 /*Gestione delle form nelle model*/
-.modal-form{
+
+.modal-form {
     display: flex;
     flex-direction: column;
 }
 
-.form-element{
+.form-element {
     display: flex;
     flex-direction: column;
     margin: 0.6em 0;
 }
 
-.form-element .btn{
+.form-element .btn {
     margin: 0.4em auto;
     width: 100%;
     max-width: 300px;
 }
 
 .form-element input,
-.form-element select{
+.form-element select {
     width: 100%;
     max-width: 300px;
 }
 
-.confirmation-form{
+.confirmation-form {
     display: flex;
     flex-direction: column;
 }
 
+
 /**********************/
+
+
 /*Gestione delle card*/
+
+
 /**********************/
-.new-card-button{
-    background: none ;
+
+.new-card-button {
+    background: none;
     border: none;
     width: 45px;
     margin-left: 0.6em;
     margin-bottom: 0.4em;
 }
 
-.card{
+.card {
     width: fit-content;
     margin-bottom: 0.7em;
     background-color: #222222 !important;
 }
 
-.card-title{
-    
+.card-title {
     color: #eedf69 !important;
     font-weight: 400;
     font-family: "TechFitFont-Azonix";
 }
 
+
 /*Per gestire bene il top-main*/
-@media (min-width:375px){
-    .top-main{
+
+@media (min-width:375px) {
+    .top-main {
         flex-direction: row;
     }
-
-    .top-main-button{
+    .top-main-button {
         margin: 0 0.4em;
         width: 30%;
         min-width: fit-content;
     }
 }
 
+
 /*Per la gestione delle flex fasce muscolari*/
-@media (min-width: 475px){
-    .flex-gruppo{
+
+@media (min-width: 475px) {
+    .flex-gruppo {
         flex-direction: row;
         flex-wrap: wrap;
     }
 }
 
+
 /*Per gestire bene la navbar*/
-@media (min-width: 768px){
-    .header-content{
+
+@media (min-width: 768px) {
+    .header-content {
         flex-direction: row;
     }
-
-    .d-flex{
+    .d-flex {
         margin: 0;
     }
-
-    .logout-button{
+    .logout-button {
         margin: 0 0.4em;
     }
 }
 
 
 /*Per gestire bene le modal*/
-@media (min-width: 615px){
-    
-    .form-element{
+
+@media (min-width: 615px) {
+    .form-element {
         align-items: center;
     }
-
-    .form-element .btn{
+    .form-element .btn {
         width: 40%;
     }
-
-    .modal-form{
+    .modal-form {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-
-    .form-element{
+    .form-element {
         grid-column: 1/2;
     }
-
-    .numero-ripetizioni-element{
+    .numero-ripetizioni-element {
         grid-column: 2/3;
-		grid-row: 1/11;
+        grid-row: 1/11;
     }
 }
