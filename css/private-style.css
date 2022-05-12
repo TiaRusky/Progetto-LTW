@@ -1,444 +1,426 @@
-/*Colori:
+    /*Colori:
 
 - black: #222222
 - steal: #d7d7d7
 - gold: #eedf69
 */
-
-
-/***************************************************************************************************************
+    /***************************************************************************************************************
  FONT
 ***************************************************************************************************************/
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Roboto:wght@300&display=swap');
-@font-face {
-    font-family: "TechFitFont-Azonix";
-    src: url(../fonts/Azonix.otf) format("truetype");
-}
-
-@font-face {
-    font-family: "TechFitFont-Monserrat";
-    src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
-}
-
-
-/***************************************************************************************************************
+    
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Roboto:wght@300&display=swap');
+    @font-face {
+        font-family: "TechFitFont-Azonix";
+        src: url(../fonts/Azonix.otf) format("truetype");
+    }
+    
+    @font-face {
+        font-family: "TechFitFont-Monserrat";
+        src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+    }
+    /***************************************************************************************************************
 HTML & BODY
 ***************************************************************************************************************/
-
-html {
-    font-size: 20px !important;
-}
-
-body {
-    width: 100%;
-    margin: 0px;
-    /*background-color: #9a9a9a;*/
-    background-image: url("../pic/cool-background.png");
-}
-
-
-/***************************************************************************************************************
+    
+    html {
+        font-size: 20px !important;
+    }
+    
+    body {
+        width: 100%;
+        margin: 0px;
+        /*background-color: #9a9a9a;*/
+        background-image: url("../pic/cool-background.png");
+    }
+    /***************************************************************************************************************
 Gestione nav
 ***************************************************************************************************************/
-
-.home-logo {
-    width: 40%;
-    height: auto;
-}
-
-.header-content {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.4em;
-    justify-content: space-between;
-}
-
-.d-flex {
-    max-width: 400px;
-    margin: 0 auto;
-    margin-bottom: 0.6em;
-}
-
-.logout-button {
-    font-family: "TechFitFont-Azonix";
-    text-decoration: none;
-    color: #222222;
-    max-width: 300px;
-    border: 0px;
-    border-radius: 9px;
-    padding-left: 1em;
-    padding-right: 1em;
-    text-align: center;
-    background-color: #eedf69;
-    transition: 0.5s ease-in-out;
-    margin: 0 auto;
-    height: fit-content;
-    align-self: center;
-}
-
-.logout-button:hover {
-    color: #9a9a9a;
-    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
-    transition: 0.3s;
-}
-
-
-/***************************************************************************************************************
+    
+    .home-logo {
+        width: 40%;
+        height: auto;
+    }
+    
+    .header-content {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.4em;
+        justify-content: space-between;
+    }
+    
+    .d-flex {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 0.6em;
+    }
+    
+    .logout-button {
+        font-family: "TechFitFont-Azonix";
+        text-decoration: none;
+        color: #222222;
+        max-width: 300px;
+        border: 0px;
+        border-radius: 9px;
+        padding-left: 1em;
+        padding-right: 1em;
+        text-align: center;
+        background-color: #eedf69;
+        transition: 0.5s ease-in-out;
+        margin: 0 auto;
+        height: fit-content;
+        align-self: center;
+    }
+    
+    .logout-button:hover {
+        color: #9a9a9a;
+        box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+        transition: 0.3s;
+    }
+    /***************************************************************************************************************
 Gestione main
 ***************************************************************************************************************/
-
-.main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-/***************************************************************************************************************
+    
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /***************************************************************************************************************
 Gestione pulsante add card
 ***************************************************************************************************************/
-
-.new-card-button {
-    font-family: "TechFitFont-Azonix";
-    font-size: 4.5em;
-    height: 100%;
-    width: 50%;
-    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-    margin-bottom: 0px;
-    padding: 10% 5% 10% 5%;
-    /*padding-left: 10%;*/
-    /*padding-right: 10%;*/
-    align-items: center;
-    appearance: none;
-    border-radius: 50px;
-    /*border-radius: 25px;*/
-    border: 3px solid #222222;
-    /*border: 0px;*/
-    box-shadow: rgba(45, 35, 66, 0.4) 0 20px 40px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
-    box-sizing: border-box;
-    color: #222222;
-    text-decoration: none;
-    transition: box-shadow .15s, transform .15s;
-}
-
-.new-card-button:focus {
-    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
-}
-
-.new-card-button:hover {
-    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
-    transform: translateY(-2px);
-}
-
-.new-card-button:active {
-    transform: translateY(2px);
-}
-
-@media screen and (max-width: 480px) {
+    
     .new-card-button {
+        font-family: "TechFitFont-Azonix";
+        font-size: 4.5em;
+        height: 100%;
         width: 50%;
-        font-size: 2.5em;
+        background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+        margin-bottom: 0px;
+        padding: 10% 5% 10% 5%;
+        /*padding-left: 10%;*/
+        /*padding-right: 10%;*/
+        align-items: center;
+        appearance: none;
+        border-radius: 50px;
+        /*border-radius: 25px;*/
+        border: 3px solid #222222;
+        /*border: 0px;*/
+        box-shadow: rgba(45, 35, 66, 0.4) 0 20px 40px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
+        box-sizing: border-box;
+        color: #222222;
+        text-decoration: none;
+        transition: box-shadow .15s, transform .15s;
     }
-}
-
-@media screen and (max-width: 250px) {
-    .new-card-button {
-        width: 40%;
-        font-size: 1.5em;
+    
+    .new-card-button:focus {
+        box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
     }
-}
-
-@media screen and (max-width: 210px) {
-    .new-card-button {
-        font-size: 1em;
+    
+    .new-card-button:hover {
+        box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
+        transform: translateY(-2px);
     }
-}
-
-.dropdown-divider{
-    background-color: red !important;
-}
-
-.new-card-button .dropdown-divider {
-    background-color: #e0e0d1 !important;
-}
-
-
-/***************************************/
-
-
-/*Gestione  searchbar*/
-
-
-/***************************************/
-
-.form-control:focus {
-    box-shadow: 0px 0px 4px 4px #eedf69 !important;
-}
-
-.btn-outline-success {
-    border: 1px solid #eedf69 !important;
-    color: #eedf69 !important;
-    font-family: "TechFitFont-Azonix";
-}
-
-.btn-outline-success:hover {
-    background-color: #e0e0d1 !important;
-    color: #222222 !important;
-    transition: 0.5s;
-}
-
-.btn-outline-success:focus {
-    box-shadow: none !important;
-}
-
-.error-box {
-    animation: shake 0.2s ease-in-out 0s 2;
-}
-
-@keyframes shake {
-    0% {
-        margin-left: 0rem;
-        box-shadow: 0 0 0.5em red;
+    
+    .new-card-button:active {
+        transform: translateY(2px);
     }
-    25% {
-        margin-left: 0.5rem;
-        box-shadow: 0 0 0.5em red;
+    
+    @media screen and (max-width: 480px) {
+        .new-card-button {
+            width: 50%;
+            font-size: 2.5em;
+        }
     }
-    75% {
-        margin-left: -0.5rem;
-        box-shadow: 0 0 0.5em red;
+    
+    @media screen and (max-width: 250px) {
+        .new-card-button {
+            width: 40%;
+            font-size: 1.5em;
+        }
     }
-    100% {
-        margin-left: 0rem;
-        box-shadow: 0 0 0.5em red;
+    
+    @media screen and (max-width: 210px) {
+        .new-card-button {
+            font-size: 1em;
+        }
     }
-}
-
-
-/***************************************************************************************************************
+    
+    .dropdown-divider {
+        background-color: red !important;
+    }
+    
+    .new-card-button .dropdown-divider {
+        background-color: #e0e0d1 !important;
+    }
+    /***************************************/
+    /*Gestione  searchbar*/
+    /***************************************/
+    
+    .form-control:focus {
+        box-shadow: 0px 0px 4px 4px #eedf69 !important;
+    }
+    
+    .btn-outline-success {
+        border: 1px solid #eedf69 !important;
+        color: #eedf69 !important;
+        font-family: "TechFitFont-Azonix";
+    }
+    
+    .btn-outline-success:hover {
+        background-color: #e0e0d1 !important;
+        color: #222222 !important;
+        transition: 0.5s;
+    }
+    
+    .btn-outline-success:focus {
+        box-shadow: none !important;
+    }
+    
+    .error-box {
+        animation: shake 0.2s ease-in-out 0s 2;
+    }
+    
+    @keyframes shake {
+        0% {
+            margin-left: 0rem;
+            box-shadow: 0 0 0.5em red;
+        }
+        25% {
+            margin-left: 0.5rem;
+            box-shadow: 0 0 0.5em red;
+        }
+        75% {
+            margin-left: -0.5rem;
+            box-shadow: 0 0 0.5em red;
+        }
+        100% {
+            margin-left: 0rem;
+            box-shadow: 0 0 0.5em red;
+        }
+    }
+    /***************************************************************************************************************
 Gestione card
 ***************************************************************************************************************/
-
-.card {
-    width: 88%;
-    text-align: center;
-    max-width: 290px;
-    margin: 2em 1.5em 0em 1.5em;
-    text-align: center;
-    border: none !important;
-}
-
-.card-style {
-    box-shadow: 0px 0px 10px 7px #222222;
-}
-
-.new-card {
-    background-color: transparent !important;
-    border: none !important;
-    /*width: 100px;*/
-}
-
-.new-card-pic {
-    width: 100%;
-    height: 175px;
-}
-
-.card-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #222222 !important;
-    border: 0px !important;
-}
-
-.card-title {
-    width: 70%;
-    color: #eedf69 !important;
-    font-weight: 400;
-    font-family: "TechFitFont-Azonix";
-}
-
-.card-body {
-    background-color: #222222;
-    font-weight: 800;
-    color: white;
-    font-family: "TechFitFont-Monserrat";
-}
-
-.card-body p {
-    text-align: center;
-}
-
-.dropdown {
-    width: 5%;
-}
-
-.tDots {
-    color: white !important;
-    background-color: transparent !important;
-    border: none !important;
-}
-
-.card .btn {
-    width: 85%;
-    background: transparent;
-    background-color: #eedf69;
-    border: 2px solid #eedf69 !important;
-    color: #222222;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 15px;
-    border: 0px;
-    font-size: 1.2em;
-    padding: 0.2em 1em 0.2em 1em;
-    font-weight: 900;
-    font-family: "TechFitFont-Azonix";
-    transition: 0.5s;
-}
-
-.card .btn:hover {
-    background-color: #222222;
-    color: #eedf69;
-    font-weight: 900;
-}
-
-.card .btn:focus,
-.card .btn:active {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-.dropdown-menu {
-    background-color: #222222 !important;
-}
-
-.dropdown-item {
-    color: #eedf69 !important;
-    font-family: "TechFitFont-Azonix";
-}
-
-.dropdown-item:hover {
-    color: #222222 !important;
-}
-
-/*******************************************/
-/*Gestione delle card nella zona visualizza*/
-/*******************************************/
-.exc {
-    width: 97%;
-    /*max-width: 310px;*/
-    margin-bottom: 0.7em;
-    background-color: #222222 !important;
-    border-radius: 15px 50px !important;
-    text-align: left;
-    margin-bottom: 0.5em;
-    margin-top: 0.1em;
-}
-
-.exc .card-body{
-    background: none !important;
-    font-family: unset;
-}
-
-.exc .card-title{
-    width: 100%;
-    color: #eedf69 !important;
-    font-weight: 400;
-    font-family: "TechFitFont-Azonix";
-    max-width: 250px;
-}
-
-.exc .list-group-item{
-
-    width: 100%;
-    height: fit-content;
-    background-color: #eedf69 !important;
-    margin: 0.3em 0 !important;
-    border-radius: 10px 10px 10px 10px !important;
-    background: rgb(244,188,6);
-    background: linear-gradient(186deg, rgba(244,188,6,1) 1%, rgba(203,200,200,1) 54%, rgba(246,188,0,1) 98%);
-}
-
-.exc .list-group-item label{
-    font-size: 1rem;
-}
-
-.exc label{
-    font-weight: 800 !important;
-    color: #222222 ;
-}
-/*******************************************
+    
+    .card {
+        width: 88%;
+        text-align: center;
+        max-width: 290px;
+        margin: 2em 1.5em 1em 1.5em !important;
+        text-align: center;
+        border: none !important;
+    }
+    
+    .card-style {
+        box-shadow: 0px 0px 10px 7px #222222;
+    }
+    
+    .new-card {
+        background-color: transparent !important;
+        border: none !important;
+        /*width: 100px;*/
+    }
+    
+    .new-card-pic {
+        width: 100%;
+        height: 175px;
+    }
+    
+    .card-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #222222 !important;
+        border: 0px !important;
+    }
+    
+    .card-title {
+        width: 70%;
+        color: #eedf69 !important;
+        font-weight: 400;
+        font-family: "TechFitFont-Azonix";
+    }
+    
+    .card-body {
+        background-color: #222222;
+        font-weight: 800;
+        color: white;
+        font-family: "TechFitFont-Monserrat";
+    }
+    
+    .card-body p {
+        text-align: center;
+    }
+    
+    .dropdown {
+        width: 5%;
+    }
+    
+    .tDots {
+        color: white !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    
+    .card .btn {
+        width: 85%;
+        background: transparent;
+        background-color: #eedf69;
+        border: 2px solid #eedf69 !important;
+        color: #222222;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 15px;
+        border: 0px;
+        font-size: 1.2em;
+        padding: 0.2em 1em 0.2em 1em;
+        font-weight: 900;
+        font-family: "TechFitFont-Azonix";
+        transition: 0.5s;
+    }
+    
+    .card .btn:hover {
+        background-color: #222222;
+        color: #eedf69;
+        font-weight: 900;
+    }
+    
+    .card .btn:focus,
+    .card .btn:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    .dropdown-menu {
+        background-color: #222222 !important;
+    }
+    
+    .dropdown-item {
+        color: #eedf69 !important;
+        font-family: "TechFitFont-Azonix";
+    }
+    
+    .dropdown-item:hover {
+        color: #222222 !important;
+    }
+    /*******************************************/
+    /*Gestione delle card nella zona visualizza*/
+    /*******************************************/
+    
+    .exc {
+        width: 97%;
+        /*max-width: 310px;*/
+        margin-bottom: 0.7em;
+        background-color: #222222 !important;
+        border-radius: 15px 50px !important;
+        text-align: left;
+        margin-bottom: 0.5em;
+        margin-top: 0.1em;
+    }
+    
+    .exc .card-body {
+        background: none !important;
+        font-family: unset;
+    }
+    
+    .exc .card-title {
+        width: 100%;
+        color: #eedf69 !important;
+        font-weight: 400;
+        font-family: "TechFitFont-Azonix";
+        max-width: 250px;
+    }
+    
+    .exc .list-group-item {
+        width: 100%;
+        height: fit-content;
+        background-color: #eedf69 !important;
+        margin: 0.3em 0 !important;
+        border-radius: 10px 10px 10px 10px !important;
+        background: rgb(244, 188, 6);
+        background: linear-gradient(186deg, rgba(244, 188, 6, 1) 1%, rgba(203, 200, 200, 1) 54%, rgba(246, 188, 0, 1) 98%);
+    }
+    
+    .exc .list-group-item label {
+        font-size: 1rem;
+    }
+    
+    .exc label {
+        font-weight: 800 !important;
+        color: #222222;
+    }
+    /*******************************************
 Gestione MODAL per visualizzare le schede
 *******************************************/
-.modal-content {
-    background-color: #d7d7d7 !important;
-}
-
-.modal-header {
-    background-color: #222222 !important;
-    color: #eedf69 !important;
-    font-weight: 700;
-    font-family: "TechFitFont-Azonix";
-}
-
-.modal-body {
-    color: #222222 !important;
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-gruppo {
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid #222222;
-    justify-content: center;
-    align-items: center;
-}
-
-.legend-wrapper {
-    display: flex;
-    flex-direction: row;
-}
-
-/*Gestione dell'info esercizi*/
-.info-button{
-    background:transparent !important;
-    border:none !important;
-}
-
-@media (min-width:700px) {
-    .main {
-        flex-direction: row;
-        flex-wrap: wrap;
+    
+    .modal-content {
+        background-color: #d7d7d7 !important;
     }
-}
-
-/*Gestione navbar*/
-@media (min-width: 768px) {
-    .header-content {
-        flex-direction: row;
+    
+    .modal-header {
+        background-color: #222222 !important;
+        color: #eedf69 !important;
+        font-weight: 700;
+        font-family: "TechFitFont-Azonix";
     }
-    .d-flex {
-        margin: 0;
+    
+    .modal-body {
+        color: #222222 !important;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
     }
-    .logout-button {
-        margin: 0;
-    }
-}
-
-@media (min-width: 675px) {
+    
     .flex-gruppo {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid #222222;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .legend-wrapper {
+        display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: left;
     }
-    .card{
-        margin: 0.7em 0.5em;
+    /*Gestione dell'info esercizi*/
+    
+    .info-button {
+        background: transparent !important;
+        border: none !important;
     }
-}
+    
+    @media (min-width:700px) {
+        .main {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+    /*Gestione navbar*/
+    
+    @media (min-width: 768px) {
+        .header-content {
+            flex-direction: row;
+        }
+        .d-flex {
+            margin: 0;
+        }
+        .logout-button {
+            margin: 0;
+        }
+    }
+    
+    @media (min-width: 675px) {
+        .flex-gruppo {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: left;
+        }
+        .card {
+            margin: 0.7em 0.5em;
+        }
+    }
