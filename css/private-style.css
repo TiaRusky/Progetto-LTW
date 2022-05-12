@@ -21,6 +21,7 @@
     src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
 }
 
+
 /***************************************************************************************************************
 HTML & BODY
 ***************************************************************************************************************/
@@ -36,15 +37,17 @@ body {
     background-image: url("../pic/cool-background.png");
 }
 
+
 /***************************************************************************************************************
 Gestione nav
 ***************************************************************************************************************/
-.home-logo{
+
+.home-logo {
     width: 40%;
     height: auto;
 }
 
-.header-content{
+.header-content {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -53,7 +56,7 @@ Gestione nav
     justify-content: space-between;
 }
 
-.d-flex{
+.d-flex {
     max-width: 400px;
     margin: 0 auto;
     margin-bottom: 0.6em;
@@ -72,7 +75,7 @@ Gestione nav
     background-color: rgb(240, 240, 48);
     transition: 0.5s ease-in-out;
     margin: 0 auto;
-    height: fit-content; 
+    height: fit-content;
 }
 
 .logout-button:hover {
@@ -80,6 +83,7 @@ Gestione nav
     box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
     transition: 0.3s;
 }
+
 
 /***************************************************************************************************************
 Gestione main
@@ -155,39 +159,58 @@ Gestione pulsante add card
     background-color: #e0e0d1 !important;
 }
 
+
 /***************************************/
+
+
 /*Gestione  searchbar*/
+
+
 /***************************************/
-.form-control:focus{
+
+.form-control:focus {
     box-shadow: 0px 0px 4px 4px #eedf69 !important;
 }
 
-.btn-outline-success{
+.btn-outline-success {
     border: 1px solid #eedf69 !important;
     color: #eedf69 !important;
     font-family: "TechFitFont-Azonix";
 }
 
-.btn-outline-success:hover{
+.btn-outline-success:hover {
     background-color: #e0e0d1 !important;
     color: #222222 !important;
     transition: 0.5s;
 }
 
-.btn-outline-success:focus{
+.btn-outline-success:focus {
     box-shadow: none !important;
 }
 
-.error-box{
+.error-box {
     animation: shake 0.2s ease-in-out 0s 2;
 }
 
 @keyframes shake {
-    0% { margin-left: 0rem; box-shadow: 0 0 0.5em red;}
-    25% { margin-left: 0.5rem; box-shadow: 0 0 0.5em red;}
-    75% { margin-left: -0.5rem; box-shadow: 0 0 0.5em red;}
-    100% { margin-left: 0rem; box-shadow: 0 0 0.5em red;}
+    0% {
+        margin-left: 0rem;
+        box-shadow: 0 0 0.5em red;
+    }
+    25% {
+        margin-left: 0.5rem;
+        box-shadow: 0 0 0.5em red;
+    }
+    75% {
+        margin-left: -0.5rem;
+        box-shadow: 0 0 0.5em red;
+    }
+    100% {
+        margin-left: 0rem;
+        box-shadow: 0 0 0.5em red;
+    }
 }
+
 
 /***************************************************************************************************************
 Gestione card
