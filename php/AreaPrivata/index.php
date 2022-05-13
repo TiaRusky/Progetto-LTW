@@ -135,7 +135,7 @@
                         <h5 class="modal-title" id="modalSchedaLabel"></h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body corpo-modal">
                         <fieldset class="flex-dorsali flex-gruppo" id="dorsali">
                             <legend class="float-none w-auto px-1">
                                 

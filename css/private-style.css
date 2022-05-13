@@ -355,7 +355,6 @@ Gestione card
     /*******************************************
 Gestione MODAL per visualizzare le schede
 *******************************************/
-    
     .modal-content {
         background-color: #d7d7d7 !important;
     }
@@ -365,6 +364,7 @@ Gestione MODAL per visualizzare le schede
         color: #eedf69 !important;
         font-weight: 700;
         font-family: "TechFitFont-Azonix";
+        border-bottom: 2px solid #222222 !important;
     }
     
     .modal-body {
@@ -372,6 +372,25 @@ Gestione MODAL per visualizzare le schede
         font-size: 1.2rem;
         display: flex;
         flex-direction: column;
+    }
+
+    .corpo-modal{
+        background: linear-gradient(-45deg, #d7d7d7, #a6a6a6, #5c5c3d, #eedf69);
+        background-size: 400% 400%;
+        animation: gradient 13s ease infinite;
+        height: 100vh;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }
     
     .flex-gruppo {
