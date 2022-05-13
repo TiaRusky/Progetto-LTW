@@ -421,6 +421,21 @@ Gestione MODAL per visualizzare le schede
         gap : 6px;
     }
 
+    #modalTrain .group-btn{
+        background: transparent;
+        border: none;
+    }
+
+    #modalTrain .group-btn:hover,
+    #modalTrain .group-btn:hover{
+        animation: pulse 0.8s;
+        box-shadow: 0 0 0 0.5em rgba(230, 206, 25, 0);
+    }
+
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 #9a9a9a; }
+    }
+
     @media (min-width:700px) {
         .main {
             flex-direction: row;
