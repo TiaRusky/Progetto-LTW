@@ -44,9 +44,7 @@
                         </form>
 
                         <!-- Bottone di logout -->
-                        <a class="logout-button" type="button" href="logout.php">
-                            Logout
-                        </a>
+                        <a class="logout-button" type="button" href="logout.php">Logout</a>
 
                     </div>
 
@@ -92,7 +90,7 @@
                             </div>
                                 <div class="card-body">
                                 <p class="card-text">'.$descrizione.'</p>
-                                <a href="../../html/train.html" class="btn btn-primary">train</a>
+                                <a href="./train.php" class="btn btn-primary">train</a>
                             </div>
                         </div>';  
                     }
