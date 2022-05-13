@@ -92,7 +92,7 @@
                             </div>
                                 <div class="card-body">
                                 <p class="card-text">'.$descrizione.'</p>
-                                <a href="../../html/train.html" class="btn btn-primary">train</a>
+                                <a class="btn btn-primary train-btn" data-bs-toggle="modal" data-bs-target="#modalTrain">train</a>
                             </div>
                         </div>';  
                     }
@@ -196,5 +196,49 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Modal per scegliere il gruppo muscolare da allenare-->
+        <div class="modal fade" id="modalTrain" tabindex="-1" aria-labelledby="modalTrainLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTrainLabel">Nome scheda</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Scegli quale gruppo allenare</h3>
+                        <div class="grid-gruppi">
+                            <button class="group-btn">
+                                <img src="../../pic/new/icons8-bodybuilder-96-text.png" alt="logo-dorsali">
+                            </button>
+
+                            <button class="group-btn">
+                                <img src="../../pic/new/icons8-triceps-96-text.png" alt="logo-tricipiti">
+                            </button>
+
+                            <button class="group-btn">
+                                <img src="../../pic/new/icons8-chest-96-text.png" alt="logo-petto">
+                            </button> 
+
+                            <button class="group-btn">
+                                <img src="../../pic/new/icons8-biceps-96-text.png" alt="logo-bicipiti">
+                            </button>
+
+                            <button class="group-btn">
+                                <img src="../../pic/new/icons8-quadriceps-96-text.png" alt="logo-gambe">
+                            </button>
+
+                            <button class="group-btn">
+                                <img src="../../pic/new/icons8-shoulders-96-text.png" alt="logo-spalle">
+                            </button>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>

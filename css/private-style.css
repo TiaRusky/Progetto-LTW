@@ -405,13 +405,22 @@ Gestione MODAL per visualizzare le schede
         display: flex;
         flex-direction: row;
     }
+
     /*Gestione dell'info esercizi*/
-    
     .info-button {
         background: transparent !important;
         border: none !important;
     }
     
+    /**********************************************/
+    /*Gestione della modal per scegliere il gruppo muscolare da allenare*/
+    /**********************************************/
+    #modalTrain .grid-gruppi{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap : 6px;
+    }
+
     @media (min-width:700px) {
         .main {
             flex-direction: row;
@@ -441,5 +450,18 @@ Gestione MODAL per visualizzare le schede
         }
         .card {
             margin: 0.7em 0.5em;
+        }
+    }
+
+    /*Gestione modal train*/
+    @media (min-width: 350px){
+        #modalTrain .grid-gruppi{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    @media (min-width: 700px){
+        #modalTrain .grid-gruppi{
+            grid-template-columns: repeat(3,1fr);
         }
     }

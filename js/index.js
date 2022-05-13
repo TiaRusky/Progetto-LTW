@@ -2,6 +2,12 @@ $(document).ready(function() {
     //Menu hambuger
     $navbar = $(".navbar-toggler");
 
+    //Modal per scegliere gruppo muscolare da allenare
+    $modalTrain = $("#modalTrain");
+
+    //Bottoni train
+    $trainBtn = $(".train-btn");
+
     //Le varie zone della modal
     var $flexDorsali = $(".flex-dorsali");
     var $flexTricipiti = $(".flex-tricipiti");
@@ -20,7 +26,9 @@ $(document).ready(function() {
     //Tutti i link per visualizzare una scheda
     $viewItem = $(".view-item");
 
+    /*******************************/
     //Gestione eliminazione scheda
+    /*******************************/
     $deleteItem.on("click", function(e) {
         //Devo prelevare la scheda che si vuole eliminare (il nome)
         var nomeScheda = $(e.target).closest(".card-header").find(".card-title").text();
@@ -36,6 +44,9 @@ $(document).ready(function() {
         });
     });
 
+    /************************************************/
+    //Pulizia della model ogni volta che viene aperta
+    /************************************************/
     $viewItem.on("click", function(e) {
         //Pulisco la modal
         $(".flex-gruppo .card").remove();
@@ -146,4 +157,9 @@ $(document).ready(function() {
         $searchIn.val("");
     });
 
+    //Gestione dei pulsanti train
+    $trainBtn.on("click",function(e){
+        var nomeScheda = $(e.target).closest(".card").find(".card-title").text();
+        $modalTrain.find(".modal-title").text(nomeScheda);
+    });
 });
