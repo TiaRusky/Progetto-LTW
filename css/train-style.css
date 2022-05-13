@@ -146,6 +146,10 @@ Gestione searchbar
 Gestione pagina
 ***************************************************************************************************************/
 
+.container-fluid {
+    justify-content: center !important;
+}
+
 .player {
     width: 100%;
     display: flex;
@@ -156,18 +160,18 @@ Gestione pagina
 }
 
 .timers {
-    width: 20%;
+    width: 50%;
     display: flex !important;
     flex-direction: row !important;
     gap: 5%;
 }
 
+
+/*Timer recupero*/
+
 .circle-wrap {
     width: 150px;
     height: 150px;
-    background: #d7d7d7;
-    border-radius: 50%;
-    border: 1px solid #eedf69;
 }
 
 .circle-wrap .circle .mask,
@@ -218,16 +222,62 @@ Gestione pagina
     font-size: 2em;
 }
 
-.buttons {
-    width: 30%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    gap: 1%;
+
+/*Dotted progress bar*/
+
+.progressbar {
+    margin: 50px 0 50px 0;
+    counter-reset: step;
 }
 
-.container-fluid {
-    justify-content: center !important;
+.progressbar li {
+    list-style-type: none;
+    width: 25%;
+    float: left;
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7d7d7d;
+}
+
+.progressbar li:before {
+    width: 15px;
+    height: 15px;
+    content: '';
+    line-height: 30px;
+    border: 2px solid #7d7d7d;
+    background-color: #7d7d7d;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    transition: all .8s;
+}
+
+.progressbar li:after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #7d7d7d;
+    top: 7px;
+    left: -50%;
+    z-index: -1;
+    transition: all .8s;
+}
+
+.progressbar li:first-child:after {
+    content: none;
+}
+
+.progressbar li.active:before {
+    border-color: #55b776;
+    background-color: #55b776;
+    transition: all .8s;
+}
+
+.progressbar li.active:after {
+    background-color: #55b776;
+    transition: all .8s;
 }
