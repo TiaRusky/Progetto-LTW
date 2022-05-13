@@ -44,9 +44,7 @@
                         </form>
 
                         <!-- Bottone di logout -->
-                        <a class="logout-button" type="button" href="logout.php">
-                            Logout
-                        </a>
+                        <a class="logout-button" type="button" href="logout.php">Logout</a>
 
                     </div>
 
