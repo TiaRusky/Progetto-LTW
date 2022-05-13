@@ -1,3 +1,10 @@
+<?php
+    session_start(); //Ricavo la sessione (se presente)
+
+    if(!isset($_SESSION['email'])){ //L'utente non ha effettuato il login
+        header("Location: ../SignInUp/login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="it">
 
@@ -13,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../../js/index.js"></script>
     
-    <title>TechFit - Level up your gym</title>
+    <title>TechFit - Train di <?php echo $_SESSION['username'];?></title>
 </head>
 
 <body>
@@ -45,8 +52,8 @@
 
     <div class="container-fluid">
         <div class="player">
-            <h1>Nome esercizio</h1>
-            <h2>- Modalità di esecuzione - </h2>
+            <h1 class="esercizio">Nome esercizio</h1>
+            <h2 class="modalita">- Modalità di esecuzione - </h2>
             <div class="timers">
                 <div class="container">
                     <div class="row">
@@ -74,7 +81,7 @@
             </div>
             <div class="buttons">
                 <a href="#" class="btn btn-primary btn-lg">Recupero</a>
-                <a href="#" class="btn btn-primary btn-lg">Termina</a>
+                <a href="./index.php" class="btn btn-primary btn-lg">Termina</a>
             </div>
         </div>
     </div>

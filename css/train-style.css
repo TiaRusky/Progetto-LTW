@@ -16,6 +16,11 @@ body {
     src: url(../fonts/Azonix.otf) format("truetype");
 }
 
+@font-face {
+    font-family: "TechFitFont-OpensSans";
+    src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf) format("truetype");
+}
+
 
 /***************************************************************************************************************
 Gestione nav
@@ -157,13 +162,58 @@ Gestione pagina
     justify-content: center;
     align-items: center;
     align-content: center;
+    padding-top: 5%;
 }
 
 .timers {
     width: 50%;
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 5%;
+}
+
+.esercizio {
+    font-family: "TechFitFont-Azonix";
+}
+
+.modalita {
+    font-family: "TechFitFont-OpensSans";
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 5%;
+    gap: 3%;
+}
+
+.buttons a {
+    width: 85%;
+    background: transparent;
+    background-color: #eedf69;
+    border: 2px solid #eedf69;
+    color: #222222;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: 0px;
+    font-size: 1.2em;
+    padding: 0.2em 1em 0.2em 1em;
+    font-weight: 900;
+    font-family: "TechFitFont-Azonix";
+    transition: 0.5s;
+}
+
+.buttons a:hover {
+    background-color: #222222;
+    color: #eedf69;
+    font-weight: 900;
 }
 
 
@@ -226,7 +276,7 @@ Gestione pagina
 /*Dotted progress bar*/
 
 .progressbar {
-    margin: 50px 0 50px 0;
+    margin: 5% 0 5% 0;
     counter-reset: step;
 }
 
@@ -234,25 +284,24 @@ Gestione pagina
     list-style-type: none;
     width: 25%;
     float: left;
-    font-size: 12px;
+    font-size: 16px;
     position: relative;
     text-align: center;
     text-transform: uppercase;
-    color: #7d7d7d;
+    color: #222222;
 }
 
 .progressbar li:before {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     content: '';
     line-height: 30px;
-    border: 2px solid #7d7d7d;
-    background-color: #7d7d7d;
+    border: 2px solid #222222;
+    background-color: #222222;
     display: block;
     text-align: center;
     margin: 0 auto 10px auto;
     border-radius: 50%;
-    transition: all .8s;
 }
 
 .progressbar li:after {
@@ -260,11 +309,10 @@ Gestione pagina
     height: 2px;
     content: '';
     position: absolute;
-    background-color: #7d7d7d;
-    top: 7px;
+    background-color: #222222;
+    top: 8px;
     left: -50%;
     z-index: -1;
-    transition: all .8s;
 }
 
 .progressbar li:first-child:after {
@@ -272,12 +320,29 @@ Gestione pagina
 }
 
 .progressbar li.active:before {
-    border-color: #55b776;
-    background-color: #55b776;
-    transition: all .8s;
+    border-color: #eedf69;
+    background-color: #eedf69;
 }
 
 .progressbar li.active:after {
-    background-color: #55b776;
-    transition: all .8s;
+    background-color: #eedf69;
+}
+
+@media screen and (max-width:960px) {
+    .timers {
+        flex-direction: column;
+    }
+    .circle-wrap {
+        padding-top: 5%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .progressbar li {
+        font-size: 0.8em;
+    }
+    .progressbar li:after {
+        width: 300%;
+        left: -150%;
+    }
 }
