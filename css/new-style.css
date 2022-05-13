@@ -177,6 +177,7 @@ body {
 .top-main-button a {
     text-decoration: none;
     color: #222222;
+    padding: 0.6em;
 }
 
 .top-main-button:hover a {
