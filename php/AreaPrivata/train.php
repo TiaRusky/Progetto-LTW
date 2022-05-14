@@ -71,8 +71,9 @@
                 <div id="countdown"></div>
 
                 <div class="buttons">
-                    <a class="btn btn-primary btn-lg">Recupero</a>
+                    <a class="btn btn-primary btn-lg" id="btn-recovery">Recupero</a>
                     <a href="./index.php" class="btn btn-primary btn-lg">Termina</a>
+                    <button id="advance">prova</button>
                 </div>
             </div>
         </div>
