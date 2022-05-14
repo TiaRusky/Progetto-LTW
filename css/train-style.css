@@ -1,0 +1,348 @@
+/***************************************************************************************************************
+*   Generali
+***************************************************************************************************************/
+
+html {
+    font-size: 20px !important;
+}
+
+body {
+    margin: 0px;
+    background-color: #d7d7d7;
+}
+
+@font-face {
+    font-family: "TechFitFont-Azonix";
+    src: url(../fonts/Azonix.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "TechFitFont-OpensSans";
+    src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf) format("truetype");
+}
+
+
+/***************************************************************************************************************
+Gestione nav
+***************************************************************************************************************/
+
+.home-logo {
+    width: 40%;
+    height: auto;
+}
+
+.header-content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4em;
+    justify-content: space-between;
+}
+
+.d-flex {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 0.6em;
+}
+
+.logout-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: #222222;
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    background-color: #eedf69;
+    transition: 0.5s ease-in-out;
+    margin: 0 auto;
+    height: fit-content;
+    align-self: center;
+}
+
+.logout-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
+
+/***************************************************************************************************************
+Gestione nav-anim
+***************************************************************************************************************/
+
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+    }
+    .d-flex {
+        margin: 0;
+    }
+    .logout-button {
+        margin: 0;
+    }
+}
+
+@media (min-width: 675px) {
+    .flex-gruppo {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: left;
+    }
+    .card {
+        margin: 0.7em 0.5em;
+    }
+}
+
+
+/***************************************
+Gestione searchbar 
+***************************************/
+
+.form-control:focus {
+    box-shadow: 0px 0px 4px 4px #eedf69 !important;
+}
+
+.btn-outline-success {
+    border: 1px solid #eedf69 !important;
+    color: #eedf69 !important;
+    font-family: "TechFitFont-Azonix";
+}
+
+.btn-outline-success:hover {
+    background-color: #e0e0d1 !important;
+    color: #222222 !important;
+    transition: 0.5s;
+}
+
+.btn-outline-success:focus {
+    box-shadow: none !important;
+}
+
+.error-box {
+    animation: shake 0.2s ease-in-out 0s 2;
+}
+
+@keyframes shake {
+    0% {
+        margin-left: 0rem;
+        box-shadow: 0 0 0.5em red !important;
+    }
+    25% {
+        margin-left: 0.5rem;
+        box-shadow: 0 0 0.5em red !important;
+    }
+    75% {
+        margin-left: -0.5rem;
+        box-shadow: 0 0 0.5em red !important;
+    }
+    100% {
+        margin-left: 0rem;
+        box-shadow: 0 0 0.5em red !important;
+    }
+}
+
+
+/***************************************************************************************************************
+Gestione pagina
+***************************************************************************************************************/
+
+.container-fluid {
+    justify-content: center !important;
+}
+
+.player {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 5%;
+}
+
+.timers {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 5%;
+}
+
+.esercizio {
+    font-family: "TechFitFont-Azonix";
+}
+
+.modalita {
+    font-family: "TechFitFont-OpensSans";
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 5%;
+    gap: 3%;
+}
+
+.buttons a {
+    width: 85%;
+    background: transparent;
+    background-color: #eedf69;
+    border: 2px solid #eedf69;
+    color: #222222;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: 0px;
+    font-size: 1.2em;
+    padding: 0.2em 1em 0.2em 1em;
+    font-weight: 900;
+    font-family: "TechFitFont-Azonix";
+    transition: 0.5s;
+}
+
+.buttons a:hover {
+    background-color: #222222;
+    color: #eedf69;
+    font-weight: 900;
+}
+
+
+/*Timer recupero*/
+
+.circle-wrap {
+    width: 150px;
+    height: 150px;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.mask .fill {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: #eedf69;
+}
+
+.circle-wrap .circle .mask {
+    clip: rect(0px, 150px, 150px, 75px);
+}
+
+.mask.full,
+.circle .fill {
+    animation: fill ease-in-out 3s;
+    transform: rotate(135deg);
+}
+
+@keyframes fill {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(135deg);
+    }
+}
+
+.circle-wrap .inside-circle {
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    background: #222222;
+    line-height: 120px;
+    text-align: center;
+    margin-top: 14px;
+    margin-left: 14px;
+    color: #d7d7d7;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+
+/*Dotted progress bar*/
+
+.progressbar {
+    margin: 5% 0 5% 0;
+    counter-reset: step;
+}
+
+.progressbar li {
+    list-style-type: none;
+    width: 25%;
+    float: left;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.progressbar li:before {
+    width: 20px;
+    height: 20px;
+    content: '';
+    line-height: 30px;
+    border: 2px solid #222222;
+    background-color: #222222;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+}
+
+.progressbar li:after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #222222;
+    top: 8px;
+    left: -50%;
+    z-index: -1;
+}
+
+.progressbar li:first-child:after {
+    content: none;
+}
+
+.progressbar li.active:before {
+    border-color: #eedf69;
+    background-color: #eedf69;
+}
+
+.progressbar li.active:after {
+    background-color: #eedf69;
+}
+
+@media screen and (max-width:960px) {
+    .timers {
+        flex-direction: column;
+    }
+    .circle-wrap {
+        padding-top: 5%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .progressbar li {
+        font-size: 0.8em;
+    }
+    .progressbar li:after {
+        width: 300%;
+        left: -150%;
+    }
+}
