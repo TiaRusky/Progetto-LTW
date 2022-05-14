@@ -3,7 +3,7 @@ $(document).ready(function(){
     var $recoveryBtn = $("#btn-recovery");
 
     //Barra di progresso
-    var $bar = $(".ProgressBar");
+    var $bar = $(".progressBar");
 
     //Creazione del timer
     var $countdown = $("#countdown").countdown360({
@@ -22,7 +22,7 @@ $(document).ready(function(){
     $recoveryBtn.on("click",function(){
         //Devo controllare che il timer non sia già stato attivato
         if($countdown.getTimeRemaining() <= 0){
-            $countdown.addSeconds(5);
+            $countdown.addSeconds(10);
         }
         
     });
@@ -34,19 +34,9 @@ $(document).ready(function(){
             $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
         } 
         else {
-            alert($bar.children().find("ProgressBar-stepLabel").text());
             $bar.children().first().addClass("is-current");
         }
     }
-
-    $("#advance").on("click", function() {
-        var $bar = $(".ProgressBar");
-        if ($bar.children(".is-current").length > 0) {
-          $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
-        } else {
-          $bar.children().first().addClass("is-current");
-        }
-    });
 
 });
 

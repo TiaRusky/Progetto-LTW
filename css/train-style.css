@@ -120,10 +120,10 @@ Gestione pagina
 
 /*Aggiungo effettivamente le barre*/
 .ProgressBar-step:before,
-.ProgressBar-step::after{
+.ProgressBar-step:after{
     content: "";
     height: 0.5em;
-    background-color: #9a9a9a;
+    background-color: #222222;
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -136,27 +136,27 @@ Gestione pagina
 /*Elimino le due barre di troppo*/
 .ProgressBar-step:first-child:before,
 .ProgressBar-step:first-child:after { 
-  display: none; 
+  display: none;
 }
 
 /*Barra di completamento*/
 .ProgressBar-step:after {
-    background-color: blue;
+    background-color: #eedf69;
     width: 0%;
 }
 
 /*Rendo visibile la barra di completamento quando termina un recupero*/
-.ProgressBar-step .is-complete + .ProgressBar-step .is-current:after,
-.ProgressBar-step .is-complete + .ProgressBar-step .is-complete:after {
-  width: 100%;
+.is-complete + .is-current:after,
+.is-complete + .is-complete:after{
+    width: 100%;
 }
 
 /*Rendo carini gli svg utilizzati*/
 .ProgressBar-icon {
     width: 1.5em;
     height: 1.5em;
-    background-color: #F2E7BF;
-    fill: gray;             /*Fill è una proprietà che riempie di un colore un svg*/
+    background-color: #222222;
+    fill: #222222;             /*Fill è una proprietà che riempie di un colore un svg*/
     border-radius: 50%;
     padding: 0.5em;
     max-width: 100%;
@@ -167,14 +167,14 @@ Gestione pagina
 
 /*Coloro il pallino attuale*/
 .is-current .ProgressBar-icon{
-    fill: blue;
-    background-color: blue;
+    fill: gray;
+    background-color: gray;
 }
 
-/* Coloro i link completati*/
+/* Coloro i pallini completati*/
 .is-complete .ProgressBar-icon{
-    fill: white;
-    background-color: blue;
+    fill: #222222;
+    background-color: #eedf69;
 }
 
 /*Stile per le label di ogni step*/
@@ -190,7 +190,7 @@ Gestione pagina
 
 .is-current > .ProgressBar-stepLabel,
 .is-complete > .ProgressBar-stepLabel {
-  color: blue;
+  color: #222222;
 }
 
 #countdown{
