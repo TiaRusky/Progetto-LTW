@@ -207,27 +207,27 @@
                     <div class="modal-body">
                         <h3>Scegli quale gruppo allenare</h3>
                         <div class="grid-gruppi">
-                            <button class="group-btn">
+                            <button class="group-btn" id="btn-dorsali">
                                 <img src="../../pic/new/icons8-bodybuilder-96-text.png" alt="logo-dorsali">
                             </button>
 
-                            <button class="group-btn">
+                            <button class="group-btn" id="btn-tricipiti">
                                 <img src="../../pic/new/icons8-triceps-96-text.png" alt="logo-tricipiti">
                             </button>
 
-                            <button class="group-btn">
+                            <button class="group-btn" id="btn-petto">
                                 <img src="../../pic/new/icons8-chest-96-text.png" alt="logo-petto">
                             </button> 
 
-                            <button class="group-btn">
+                            <button class="group-btn" id="btn-bicipiti">
                                 <img src="../../pic/new/icons8-biceps-96-text.png" alt="logo-bicipiti">
                             </button>
 
-                            <button class="group-btn">
+                            <button class="group-btn" id="btn-gambe">
                                 <img src="../../pic/new/icons8-quadriceps-96-text.png" alt="logo-gambe">
                             </button>
 
-                            <button class="group-btn">
+                            <button class="group-btn" id="btn-spalle">
                                 <img src="../../pic/new/icons8-shoulders-96-text.png" alt="logo-spalle">
                             </button>
                         </div>

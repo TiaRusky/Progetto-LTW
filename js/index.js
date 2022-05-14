@@ -7,6 +7,7 @@ $(document).ready(function() {
 
     //Bottoni train
     $trainBtn = $(".train-btn");
+    $groupBtn = $(".group-btn");
 
     //Le varie zone della modal
     var $flexDorsali = $(".flex-dorsali");
@@ -162,4 +163,12 @@ $(document).ready(function() {
         var nomeScheda = $(e.target).closest(".card").find(".card-title").text();
         $modalTrain.find(".modal-title").text(nomeScheda);
     });
+
+    //Reinderizzamento verso la pagina di allenamento dopo aver scelto il gruppo
+    $groupBtn.on("click",function(e){
+        var nomeScheda = $modalTrain.find(".modal-title").text();
+        var gruppoM = $(e.target).closest("button").attr("id").slice(4);
+        window.location.replace("train.php?nomeScheda="+nomeScheda+"&gruppoM="+gruppoM);
+    });
+
 });
