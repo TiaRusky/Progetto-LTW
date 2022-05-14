@@ -29,3 +29,5 @@ create table esercizio(
 	foreign key (nomeScheda,utenteScheda) references Scheda(nome,utente) on delete cascade
 );
 
+#Plugin Jquery usato per gestire il timer di recupero
+https://github.com/johnschult/jquery.countdown360
