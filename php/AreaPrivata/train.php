@@ -43,12 +43,13 @@
         <div class="main">
             <div class="player">
                 <div class="info-exc">
-                    <h1 id="exc-name">Nome esercizio</h1>
-                    <h2 id="exc-desc">Modalità di esecuzione</h2>
+                    <h1 id="exc-name"></h1>
+                    <h2 id="exc-desc"></h2>
                 </div>
                 
                 <div class="progress-wrapper">
                     <ol class="progressBar">
+                        <!--Placeholder
                         <li class="ProgressBar-step">
                             <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
                             <span class="ProgressBar-stepLabel">10</span>
@@ -65,6 +66,7 @@
                             <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
                             <span class="ProgressBar-stepLabel">8</span>
                         </li>
+                        -->
                     </ol>
                 </div>
                 
@@ -73,7 +75,6 @@
                 <div class="buttons">
                     <a class="btn btn-primary btn-lg" id="btn-recovery">Recupero</a>
                     <a href="./index.php" class="btn btn-primary btn-lg">Termina</a>
-                    <button id="advance">prova</button>
                 </div>
             </div>
         </div>
