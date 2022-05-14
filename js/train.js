@@ -74,15 +74,19 @@ $(document).ready(function(){
 		else {
 			$bar.children().first().addClass("is-current");
     	}
-		done++;	//Inizio recupero = serie terminata
+		done++;							//Inizio recupero = serie terminata
 		if(done == numSerie){			//Finito l'esercizio
 			count++;					//Aumento il numero di esercizi portati a termine
-			if(count == esercizi.length){
+			if(count == esercizi.length-1){
 				alert("Allenamento terminato");	
 			}
 			
-			else{		//Bisogna passare al prossimo esercizio
-				
+			else{						//Bisogna passare al prossimo esercizio
+				numSerie = esercizi[count+1].numserie;
+				descrizione = esercizi[count+1].descrizione;
+				nome = esercizi[count+1].nome;
+				done = 0;				//Resetto il numero di serie eseguite
+				setPage(nome,descrizione,numSerie,count+1);
 			}
 		}
   	}
@@ -94,6 +98,8 @@ $(document).ready(function(){
 		$excDesc.text(descrizione).hide().fadeIn(400);
 		let reps = esercizi[index].reps.split(";");	//Recupero le ripetizioni dell'esercizio per ogni serie
 		recupero = esercizi[index].recupero;
+		$bar.find(".ProgressBar-step").remove();		//Ripulisco la progress bar
+
 		for(let i = 0;i<numSerie;i++){
 			let currentReps = reps[i].split(":")[1];	//#Ripetizioni per la i-esima serie
 			var $newItem = $('<li class="ProgressBar-step"> \
@@ -101,7 +107,7 @@ $(document).ready(function(){
 							<span class="ProgressBar-stepLabel">'+currentReps+'</span>\
 							</li>');
 			if(i == 0)$newItem.addClass("is-current");
-			$bar.append($newItem).hide().fadeIn(400);
+			$bar.append($newItem).hide().fadeIn(400);	//Parto con il focus sulla prima serie
 		}
 	}
 
