@@ -450,40 +450,51 @@ Gestione MODAL per visualizzare le schede
 
 
 /*Gestione navbar*/
+
 @media (min-width: 768px) {
     .header-content {
         flex-direction: row;
     }
 }
 
+
 /*Gestione dell'info esercizi*/
+
 .info-button {
     background: transparent !important;
     border: none !important;
 }
-    
+
+
 /**********************************************/
+
+
 /*Gestione della modal per scegliere il gruppo muscolare da allenare*/
+
+
 /**********************************************/
-#modalTrain .grid-gruppi{
+
+#modalTrain .grid-gruppi {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
-    gap : 6px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 6px;
 }
 
-#modalTrain .group-btn{
+#modalTrain .group-btn {
     background: transparent;
     border: none;
 }
 
 #modalTrain .group-btn:hover,
-#modalTrain .group-btn:hover{
+#modalTrain .group-btn:hover {
     animation: pulse 0.8s;
     box-shadow: 0 0 0 0.5em rgba(230, 206, 25, 0);
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 #9a9a9a; }
+    0% {
+        box-shadow: 0 0 0 0 #9a9a9a;
+    }
 }
 
 @media (min-width:700px) {
@@ -507,7 +518,7 @@ Gestione MODAL per visualizzare le schede
         justify-content: left;
     }
 }
-    
+
 @media (min-width: 675px) {
     .flex-gruppo {
         flex-direction: row;
@@ -520,15 +531,17 @@ Gestione MODAL per visualizzare le schede
     }
 }
 
+
 /*Gestione modal train*/
-@media (min-width: 350px){
-    #modalTrain .grid-gruppi{
-        grid-template-columns: repeat(2,1fr);
+
+@media (min-width: 350px) {
+    #modalTrain .grid-gruppi {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 700px){
-    #modalTrain .grid-gruppi{
-        grid-template-columns: repeat(3,1fr);
+@media (min-width: 700px) {
+    #modalTrain .grid-gruppi {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
