@@ -345,4 +345,7 @@ Gestione pagina
         width: 300%;
         left: -150%;
     }
+    .progressbar li:first-child::after {
+        padding-left: 5%;
+    }
 }
