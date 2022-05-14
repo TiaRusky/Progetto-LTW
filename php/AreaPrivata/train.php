@@ -41,8 +41,11 @@
 
         <div class="container-fluid">
             <div class="player">
-                <h1 class="esercizio">Nome esercizio</h1>
-                <h2 class="modalita">- Modalità di esecuzione - </h2>
+                <div class="info-exc">
+                    <h1 id="exc-name">Nome esercizio</h1>
+                    <h2 id="exc-desc">Modalità di esecuzione</h2>
+                </div>
+                
                 <div class="timers">
                     <div class="container">
                         <div class="row">

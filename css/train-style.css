@@ -58,8 +58,6 @@ Gestione nav
 /***************************************************************************************************************
 Gestione pagina
 ***************************************************************************************************************/
-
-
 .player {
     width: 100%;
     display: flex;
@@ -68,6 +66,14 @@ Gestione pagina
     align-items: center;
     align-content: center;
     padding-top: 5%;
+}
+
+.info-exc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .timers {
@@ -80,11 +86,11 @@ Gestione pagina
     padding-top: 5%;
 }
 
-.esercizio {
+#exc-name {
     font-family: "TechFitFont-Azonix";
 }
 
-.modalita {
+#exc-desc {
     font-family: "TechFitFont-OpensSans";
 }
 
@@ -249,5 +255,16 @@ Gestione pagina
     .progressbar li:after {
         width: 300%;
         left: -150%;
+    }
+}
+
+/*Gestione exc-info su schermi larghi*/
+@media (min-width: 900px){
+    .info-exc{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #exc-desc{
+        align-self: center;
     }
 }
