@@ -8,6 +8,9 @@ html {
 
 body {
     margin: 0px;
+    width: 100%;
+    height: 100%;
+    /*background: url("../pic/—Pngtree—black\ yellow\ stripes\ background_1283502.png");*/
 }
 
 @font-face {
@@ -44,7 +47,6 @@ Gestione nav
     transition: 0.5s ease-in-out;
     margin: 0 auto;
     height: fit-content;
-    padding: 0.2em;
     align-self: center;
 }
 
@@ -59,12 +61,23 @@ Gestione nav
 Gestione pagina
 ***************************************************************************************************************/
 
+.container-fluid#play {
+    width: 90%;
+    height: 80%;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 2% !important;
+}
+
 .main {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #d7d7d7;
+    border-radius: 50px;
 }
 
 .player {

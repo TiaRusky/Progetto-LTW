@@ -39,41 +39,42 @@
         </header>
 
         <!-- Sicuramente ogni pallina del progress delle serie dovrà essere gestita con un echo, le scrivo comunque statiche come modello -->
+        <div class="container-fluid" id="play">
+            <div class="main">
+                <div class="player">
+                    <div class="info-exc">
+                        <h1 id="exc-name">Nome esercizio</h1>
+                        <h2 id="exc-desc">Modalità di esecuzione</h2>
+                    </div>
+                    
+                    <div class="progress-wrapper">
+                        <ol class="progressBar">
+                            <li class="ProgressBar-step">
+                                <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
+                                <span class="ProgressBar-stepLabel">10</span>
+                            </li>
+                            <li class="ProgressBar-step">
+                                <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
+                                <span class="ProgressBar-stepLabel">10</span>
+                            </li>
+                            <li class="ProgressBar-step">
+                                <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
+                                <span class="ProgressBar-stepLabel">8</span>
+                            </li>
+                            <li class="ProgressBar-step">
+                                <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
+                                <span class="ProgressBar-stepLabel">8</span>
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <div id="countdown"></div>
 
-        <div class="main">
-            <div class="player">
-                <div class="info-exc">
-                    <h1 id="exc-name">Nome esercizio</h1>
-                    <h2 id="exc-desc">Modalità di esecuzione</h2>
-                </div>
-                
-                <div class="progress-wrapper">
-                    <ol class="progressBar">
-                        <li class="ProgressBar-step">
-                            <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
-                            <span class="ProgressBar-stepLabel">10</span>
-                        </li>
-                        <li class="ProgressBar-step">
-                            <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
-                            <span class="ProgressBar-stepLabel">10</span>
-                        </li>
-                        <li class="ProgressBar-step">
-                            <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
-                            <span class="ProgressBar-stepLabel">8</span>
-                        </li>
-                        <li class="ProgressBar-step">
-                            <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
-                            <span class="ProgressBar-stepLabel">8</span>
-                        </li>
-                    </ol>
-                </div>
-                
-                <div id="countdown"></div>
-
-                <div class="buttons">
-                    <a class="btn btn-primary btn-lg" id="btn-recovery">Recupero</a>
-                    <a href="./index.php" class="btn btn-primary btn-lg">Termina</a>
-                    <button id="advance">prova</button>
+                    <div class="buttons">
+                        <a class="btn btn-primary btn-lg" id="btn-recovery">Recupero</a>
+                        <a href="./index.php" class="btn btn-primary btn-lg">Termina</a>
+                        <!--<button id="advance">prova</button>-->
+                    </div>
                 </div>
             </div>
         </div>
