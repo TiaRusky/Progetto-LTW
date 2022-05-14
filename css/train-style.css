@@ -8,7 +8,6 @@ html {
 
 body {
     margin: 0px;
-    background-color: #d7d7d7;
 }
 
 @font-face {
@@ -20,25 +19,9 @@ body {
 /***************************************************************************************************************
 Gestione nav
 ***************************************************************************************************************/
-
 .home-logo {
     width: 40%;
     height: auto;
-}
-
-.header-content {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.4em;
-    justify-content: space-between;
-}
-
-.d-flex {
-    max-width: 400px;
-    margin: 0 auto;
-    margin-bottom: 0.6em;
 }
 
 .logout-button {
@@ -54,8 +37,8 @@ Gestione nav
     background-color: #eedf69;
     transition: 0.5s ease-in-out;
     margin: 0 auto;
-    height: fit-content;
-    align-self: center;
+    padding-top: 0.30em;
+    padding-bottom: 0.30em;
 }
 
 .logout-button:hover {
@@ -64,92 +47,84 @@ Gestione nav
     transition: 0.3s;
 }
 
-
-/***************************************************************************************************************
-Gestione nav-anim
-***************************************************************************************************************/
-
-@media (min-width: 768px) {
-    .header-content {
-        flex-direction: row;
-    }
-    .d-flex {
-        margin: 0;
-    }
-    .logout-button {
-        margin: 0;
-    }
-}
-
-@media (min-width: 675px) {
-    .flex-gruppo {
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: left;
-    }
-    .card {
-        margin: 0.7em 0.5em;
-    }
-}
-
-
-/***************************************
-Gestione searchbar 
-***************************************/
-
-.form-control:focus {
-    box-shadow: 0px 0px 4px 4px #eedf69 !important;
-}
-
-.btn-outline-success {
-    border: 1px solid #eedf69 !important;
-    color: #eedf69 !important;
-    font-family: "TechFitFont-Azonix";
-}
-
-.btn-outline-success:hover {
-    background-color: #e0e0d1 !important;
-    color: #222222 !important;
-    transition: 0.5s;
-}
-
-.btn-outline-success:focus {
-    box-shadow: none !important;
-}
-
-.error-box {
-    animation: shake 0.2s ease-in-out 0s 2;
-}
-
-@keyframes shake {
-    0% {
-        margin-left: 0rem;
-        box-shadow: 0 0 0.5em red !important;
-    }
-    25% {
-        margin-left: 0.5rem;
-        box-shadow: 0 0 0.5em red !important;
-    }
-    75% {
-        margin-left: -0.5rem;
-        box-shadow: 0 0 0.5em red !important;
-    }
-    100% {
-        margin-left: 0rem;
-        box-shadow: 0 0 0.5em red !important;
-    }
-}
-
-
 /***************************************************************************************************************
 Gestione pagina
 ***************************************************************************************************************/
-
-.container-fluid {
-    justify-content: center !important;
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.exc-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.exc-esecution{
+    width: 100%;
+    border: 2px solid red;
+    margin-top:1.8em;
+}
+
+
+.progressbar{
+    margin: 0.7em auto;
+    counter-reset: step;
+}
+
+.li-container{
+    border: 2px solid green;
+    width: 100%;
+}
+
+.progressbar li {
+    list-style-type: none;
+    width: 20%;
+    float: left;
+    font-size: 12px;
+    position: relative;
+    text-transform: uppercase;
+    color: #7d7d7d;
+}
+
+.progressbar li:before {        /*Aggiungo le palline*/
+    width: 15px;
+    height: 15px;
+    content: '';
+    line-height: 30px;
+    border: 2px solid #222222;
+    background-color: #222222;
+    display: block;
+    text-align: center;
+    margin:0 ;
+    border-radius: 50%;
+    transition: all .8s;
+}
+
+.progressbar li:after {     /*Aggiungo la barra tra le palline*/
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #7d7d7d;
+    top: 7px;
+    float:left;
+    z-index: -1;
+    transition: all .8s;
+}
+
+.progressbar li:last-child:after {      /*Elimino l'ultima barra*/
+    content: none;
+    width: 0%;
+}
+
+/*
 .player {
     width: 100%;
     display: flex;
@@ -168,7 +143,7 @@ Gestione pagina
 
 
 /*Timer recupero*/
-
+/*
 .circle-wrap {
     width: 150px;
     height: 150px;
@@ -224,9 +199,8 @@ Gestione pagina
 
 
 /*Dotted progress bar*/
-
+/*
 .progressbar {
-    margin: 50px 0 50px 0;
     counter-reset: step;
 }
 
@@ -280,4 +254,15 @@ Gestione pagina
 .progressbar li.active:after {
     background-color: #55b776;
     transition: all .8s;
+}
+*/
+/*Gestione info esercizio*/
+@media (min-width:675px){
+    .exc-info{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #exc-desc{
+        align-self: flex-end;
+    }
 }
