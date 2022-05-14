@@ -18,6 +18,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="../../js/train.js"></script>
+        <script src="../../js/jquery.countdown360.js"></script>
         <title>TechFit - Train di <?php echo $_SESSION['username'];?></title>
     </head>
 
@@ -39,14 +40,53 @@
 
         <!-- Sicuramente ogni pallina del progress delle serie dovrà essere gestita con un echo, le scrivo comunque statiche come modello -->
 
-        <div class="container-fluid">
+        <div class="main">
             <div class="player">
                 <div class="info-exc">
                     <h1 id="exc-name">Nome esercizio</h1>
                     <h2 id="exc-desc">Modalità di esecuzione</h2>
                 </div>
                 
-                <div class="timers">
+                <div class="progress-wrapper">
+                    <ol class="progressBar">
+                        <li class="ProgressBar-step">
+                            <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
+                            <span class="ProgressBar-stepLabel">10</span>
+                        </li>
+                        <li class="ProgressBar-step">
+                            <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
+                            <span class="ProgressBar-stepLabel">10</span>
+                        </li>
+                        <li class="ProgressBar-step">
+                            <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
+                            <span class="ProgressBar-stepLabel">8</span>
+                        </li>
+                        <li class="ProgressBar-step">
+                            <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
+                            <span class="ProgressBar-stepLabel">8</span>
+                        </li>
+                    </ol>
+                </div>
+                
+                <div id="countdown"></div>
+
+                <div class="buttons">
+                    <a class="btn btn-primary btn-lg">Recupero</a>
+                    <a href="./index.php" class="btn btn-primary btn-lg">Termina</a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol id="checkmark-bold" viewBox="0 0 24 24">
+            <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/>
+        </symbol>
+    </svg>
+
+</html>
+
+<!--<div class="timers">
                     <div class="container">
                         <div class="row">
                             <div class="col">
@@ -75,8 +115,4 @@
                     <a href="#" class="btn btn-primary btn-lg">Recupero</a>
                     <a href="./index.php" class="btn btn-primary btn-lg">Termina</a>
                 </div>
-            </div>
-        </div>
-    </body>
-
-</html>
+-->
