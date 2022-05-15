@@ -10,7 +10,7 @@ body {
     margin: 0px;
     width: 100%;
     height: 100%;
-    /*background: url("../pic/—Pngtree—black\ yellow\ stripes\ background_1283502.png");*/
+    background: url("../pic/black_and_yellow.jpg");
 }
 
 @font-face {
@@ -61,18 +61,21 @@ Gestione nav
 Gestione pagina
 ***************************************************************************************************************/
 
-.container-fluid#play {
-    width: 90%;
-    height: 80%;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    padding-top: 2% !important;
+.container {
+    position: absolute;
+    overflow: hidden;
+    height: 750px;
+    margin-top: 2%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .main {
     width: 100%;
+    height: 98%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -257,7 +260,8 @@ Gestione pagina
 .buttons a {
     width: fit-content;
     background: transparent;
-    border: 2px solid #222222 !important;
+    background-color: #eedf69;
+    border: 2px solid #eedf69 !important;
     color: #222222;
     text-decoration: none;
     text-transform: uppercase;
@@ -267,16 +271,19 @@ Gestione pagina
     padding: 0.2em 1em 0.2em 1em;
     font-weight: 900;
     font-family: "TechFitFont-Azonix";
-    transition: 0.5s;
     margin: 0.3em auto;
+    transition: 0.5s;
 }
 
 .buttons a:hover,
 .buttons a:focus {
+    /*background-color: #222222;
+    color: #eedf69;
+    font-weight: 900;
+    box-shadow: none !important;*/
     background-color: #222222;
     color: #eedf69;
     font-weight: 900;
-    box-shadow: none !important;
 }
 
 
@@ -292,7 +299,6 @@ Gestione pagina
         gap: 1em;
     }
     .info-exc {
-        flex-direction: row;
         justify-content: space-between;
         grid-column: 1 / 3;
     }

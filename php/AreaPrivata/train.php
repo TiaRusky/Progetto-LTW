@@ -38,27 +38,29 @@
             </nav>
         </header>
 
-        <div class="main">
-            <div class="player">
-                <div class="info-exc">
-                    <h1 id="exc-name"></h1>
-                    <h2 id="exc-desc"></h2>
-                </div>
-                
-                <div class="progress-wrapper">
-                    <ol class="progressBar">
+        <div class="container">  
+            <div class="main">
+                <div class="player">
+                    <div class="info-exc">
+                        <h1 id="exc-name"></h1>
+                        <h2 id="exc-desc"></h2>
+                    </div>
+                    
+                    <div class="progress-wrapper">
+                        <ol class="progressBar">
 
-                    </ol>
-                </div>
-                
-                <div id="countdown"></div>
+                        </ol>
+                    </div>
+                    
+                    <div id="countdown"></div>
 
-                <div class="buttons">
-                    <a class="btn btn-primary btn-lg" id="btn-recovery">Recupero</a>
-                    <a href="./index.php" class="btn btn-primary btn-lg">Termina</a>
+                    <div class="buttons">
+                        <a class="btn btn-primary btn-lg" id="btn-recovery">Recupero</a>
+                        <a href="./index.php" class="btn btn-primary btn-lg">Termina</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div> 
 
 
 

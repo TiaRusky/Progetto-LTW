@@ -286,6 +286,7 @@ rendo nuovamente visibile le form-item
 /*********************
 Gestione degli alert
 *********************/
+
 .error {
     margin: 5px auto;
     width: 60%;
@@ -318,7 +319,7 @@ Gestione degli alert
     display: block;
 }
 
-.closebtn-fill{
+.closebtn-fill {
     color: #222222;
     font-weight: bold;
     float: right;
@@ -329,62 +330,3 @@ Gestione degli alert
     padding: 0.4em;
     display: block;
 }
-
-<<<<<<< HEAD
-@media screen and (max-width: 740px) {
-    .lng-err {
-        font-size: 1rem;
-    }
-    .closebtn {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .lng-err {
-        font-size: 0.8rem;
-    }
-    .closebtn {
-        font-size: 0.8rem;
-    }
-}
-
-@media screen and (max-width: 520px) {
-    .lng-err {
-        display: none;
-    }
-    .shrt-err {
-        display: block;
-    }
-}
-
-@media screen and (max-width: 380px) {
-    .closebtn {
-        font-size: 0.7rem;
-    }
-}
-
-@media screen and (max-width: 280px) {
-    .shrt-err {
-        font-size: 0.6rem;
-    }
-}
-
-
-/********************************
-Gestione autofill
-*****************************/
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    box-shadow: inset;
-    -webkit-box-shadow: 0 0 0 30px #222222 inset !important;
-}
-
-input:-webkit-autofill {
-    -webkit-text-fill-color: #fff !important;
-}
-=======
->>>>>>> 9f548885a876363a1443407e3af8317205ccf333
