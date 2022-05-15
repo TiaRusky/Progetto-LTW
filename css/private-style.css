@@ -497,6 +497,63 @@ Gestione MODAL per visualizzare le schede
     }
 }
 
+
+/*********************
+Gestione degli alert
+*********************/
+
+.error {
+    margin: 5px auto;
+    width: 60%;
+    max-width: 450px;
+    background-color: #222222;
+    border: 2px solid #f44336;
+    border-radius: 15px;
+    font-weight: 900;
+    color: #eedf69;
+    opacity: .99;
+    text-align: center;
+    padding: 0.4em;
+    position: absolute;
+    top:0;
+    left: 0; 
+    right: 0; 
+    margin: 1.5em auto;
+}
+
+.err-msg {
+    padding-top: 0.8em;
+    display: block;
+    font-size: 1rem;
+}
+
+.closebtn {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    float: left;
+    font-size: 1.2rem;
+    line-height: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0.4em;
+    display: block;
+}
+
+.closebtn-fill{
+    color: #222222;
+    font-weight: bold;
+    float: right;
+    font-size: 1.2rem;
+    line-height: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0.4em;
+    display: block;
+}
+
+/***********************/
+/*Media query*/
+/***********************/
 @media (min-width:700px) {
     .main {
         flex-direction: row;

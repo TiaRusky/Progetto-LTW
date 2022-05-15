@@ -237,6 +237,18 @@
                 </div>
             </div>
         </div>
-
+        <i class="fas fa-exclamation-triangle"></i>
+        <!--Alert-->
+        <?php
+            $fullUrl = "http://".$_SERVER['HTTP_HOST']."".$_SERVER["REQUEST_URI"];
+            //Gestione fallimenti registrazione
+            if(strpos($fullUrl,"err=noExc") == true){   //La scheda selezionata per l'allenamento,non ha esercizi per quel gruppo
+                echo "<div class='error'>
+                        <span class='closebtn'>&times;</span>
+                        <span class='closebtn-fill'>&times;</span>
+                        <p  class='err-msg'><i class='fas fa-exclamation-triangle'></i>Non ci sono esercizi per quel gruppo
+                        </p></div>";
+            }
+        ?>
     </body>
 </html>
