@@ -27,6 +27,9 @@ $(document).ready(function() {
     //Tutti i link per visualizzare una scheda
     $viewItem = $(".view-item");
 
+    //Bottone di chiusura messaggio di errore
+    var $closebtn = $(".closebtn");
+
     /*******************************/
     //Gestione eliminazione scheda
     /*******************************/
@@ -171,4 +174,11 @@ $(document).ready(function() {
         window.location.replace("train.php?nomeScheda="+nomeScheda+"&gruppoM="+gruppoM);
     });
 
+    //Chiusura del messaggio di errore
+    $closebtn.on("click",function(){
+        $(this).parent().fadeOut(500,function(){
+            $error.remove();
+        });
+    });
+    
 });
