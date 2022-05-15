@@ -55,9 +55,16 @@
                     <div id="countdown"></div>
 
                     <div class="buttons">
-                        <a class="btn btn-primary btn-lg" id="btn-recovery">Recupero</a>
-                        <a href="./index.php" class="btn btn-primary btn-lg">Termina</a>
+                        <a class="train-btn" id="btn-recovery">Recupero</a>
+                        <a href="./index.php" class="train-btn">Termina</a>
                     </div>
+                </div>
+                <div class="end-train">                
+                    <div class="end-msg">Complimenti!<br> Hai terminato l'allenamento!</div>
+                    <a href="./index.php" class="train-btn">Home</a>
+                    <div class="firework"></div>
+                    <div class="firework"></div>
+                    <div class="firework"></div>
                 </div>
             </div>
         </div> 

@@ -9,7 +9,9 @@ $(document).ready(function() {
     var done = -1; //serie portate a termine
     var count = -1; //Esercizi portati a termini
     var recupero;
-
+    var player = $(".player");
+    var final = $(".end-train");
+    final.hide();
     //Info sull'esercizio
     var $excName = $("#exc-name");
     var $excDesc = $("#exc-desc");
@@ -77,7 +79,9 @@ $(document).ready(function() {
         if (done == numSerie) { //Finito l'esercizio
             count++; //Aumento il numero di esercizi portati a termine
             if (count == esercizi.length - 1) {
-                alert("Allenamento terminato");
+                //alert("Allenamento terminato");
+                player.hide();
+                final.show();
             } else { //Bisogna passare al prossimo esercizio
                 numSerie = esercizi[count + 1].numserie; //Aggiorno le info relative all'esercizio corrente
                 descrizione = esercizi[count + 1].descrizione;
