@@ -8,7 +8,6 @@
     src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
 }
 
-
 html {
     font-size: 20px !important;
 }
@@ -16,28 +15,36 @@ html {
 body {
     width: 100%;
     margin: 0px;
-    background: linear-gradient(-45deg, #d7d7d7, #a6a6a6, #5c5c3d, #eedf69);
+    /*background: linear-gradient(-45deg, #d7d7d7, #a6a6a6, #5c5c3d, #eedf69);
     background-size: 400% 400%;
-	animation: gradient 13s ease infinite;
-	height: 100vh;
+	animation: gradient 13s ease infinite;*/
+    height: 100vh;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
+
 /************/
+
+
 /*<a href='https://www.freepik.com/photos/yellow-smoke'>Yellow smoke photo created by freepik - www.freepik.com</a>*/
+
+
 /* NAVBAR */
+
+
 /************/
+
 .home-logo {
     width: 40%;
     height: auto;
@@ -83,6 +90,7 @@ body {
 
 
 /*SearchBar*/
+
 .form-control:focus {
     box-shadow: 0px 0px 4px 4px #eedf69 !important;
 }
@@ -126,9 +134,15 @@ body {
     box-shadow: none !important;
 }
 
+
 /****************/
+
+
 /*Gestione MAIN*/
+
+
 /****************/
+
 .top-main {
     display: flex;
     flex-direction: column;
@@ -204,9 +218,16 @@ body {
 
 
 /**********************/
+
+
 /*Gestione delle modal*/
+
+
 /**********************/
+
+
 /*Gestione dell'info esercizi*/
+
 .info-button {
     background: transparent !important;
     border: none !important;
@@ -262,7 +283,10 @@ body {
 
 
 /*Per nascondere le frecce delle input*/
+
+
 /* Chrome, Safari, Edge, Opera */
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -271,6 +295,7 @@ input::-webkit-inner-spin-button {
 
 
 /* Firefox */
+
 input[type=number] {
     -moz-appearance: textfield;
 }
@@ -370,14 +395,14 @@ input[type=number] {
     border-radius: 15px 50px !important;
 }
 
-.card-title{
+.card-title {
     color: #eedf69 !important;
     font-weight: 400;
     font-family: "TechFitFont-Azonix";
     max-width: 250px;
 }
 
-.card .list-group-item{
+.card .list-group-item {
     width: fit-content;
     height: fit-content;
     background-color: #eedf69 !important;
@@ -387,28 +412,30 @@ input[type=number] {
     background: linear-gradient(186deg, rgba(241,221,66,1) 1%, rgba(172,171,171,1) 54%);*/
     /*background: rgb(212,175,55);
     background: linear-gradient(186deg, rgba(212,175,55,1) 1%, rgba(172,171,171,1) 54%, rgba(212,175,55,1) 98%);*/
-    background: rgb(244,188,6);
-    background: linear-gradient(186deg, rgba(244,188,6,1) 1%, rgba(203,200,200,1) 54%, rgba(246,188,0,1) 98%);
+    background: rgb(244, 188, 6);
+    background: linear-gradient(186deg, rgba(244, 188, 6, 1) 1%, rgba(203, 200, 200, 1) 54%, rgba(246, 188, 0, 1) 98%);
 }
 
-.card .popover-body{
+.card .popover-body {
     background-color: #e0e0d1 !important;
     color: #222222 !important;
 }
 
-.card label{
+.card label {
     font-weight: 800 !important;
-    color: #222222 ;
+    color: #222222;
 }
 
+
 /*Gestione messaggi di errore*/
-.error-msg{
+
+.error-msg {
     color: #f44336;
     font-weight: 700;
     text-shadow: 1px 1px #222222;
 }
 
-.active-err{
+.active-err {
     animation-name: shake2;
     animation-duration: 0.3s;
     animation-iteration-count: 2;
@@ -429,7 +456,9 @@ input[type=number] {
     }
 }
 
+
 /*Per gestire bene il top-main*/
+
 @media (min-width:375px) {
     .top-main {
         flex-direction: row;
@@ -451,7 +480,7 @@ input[type=number] {
         align-items: flex-start;
         justify-content: left;
     }
-    .card{
+    .card {
         margin: 0.7em 0.5em;
     }
 }

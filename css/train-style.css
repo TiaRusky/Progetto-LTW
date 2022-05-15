@@ -286,6 +286,12 @@ Gestione pagina
     font-weight: 900;
 }
 
+.buttons a:focus,
+.buttons a:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 
 /*Gestione exc-info su schermi larghi*/
 

@@ -52,6 +52,18 @@
         </nav>
 
         <div class="main">
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
             <!-- Contiene i bottoni per la gestione della scheda che si sta creando-->
             <div class="top-main">
                 <button class="top-main-button"  data-bs-toggle="modal" data-bs-target="#modalCreaScheda">
