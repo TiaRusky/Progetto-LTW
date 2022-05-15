@@ -238,7 +238,7 @@
                 </div>
             </div>
         </div>
-        <i class="fas fa-exclamation-triangle"></i>
+
         <!--Alert-->
         <?php
             $fullUrl = "http://".$_SERVER['HTTP_HOST']."".$_SERVER["REQUEST_URI"];

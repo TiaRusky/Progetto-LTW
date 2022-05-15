@@ -165,6 +165,7 @@ $(document).ready(function() {
         if ($esercizi.length == 0) { //Se non ci sono esercizi non creo la scheda
             //$("#modalCreaScheda").modal('toggle');
             $errorMsg.text("La scheda è vuota!");
+            $errorMsg.addClass("active-err");
         } else {
             //Costruire un array di oggetti da passare alla funzione php
             //Ogni oggetto sarà l'esercizio con le varie informazioni;
@@ -216,8 +217,10 @@ $(document).ready(function() {
 
                     if (result == "FAE") { //Form Already Exist
                         $errorMsg.text("Hai già una scheda con questo nome");
+                        $errorMsg.addClass("active-err");
                     } else if (result == "err") {
                         $errorMsg.text("Si è verificato un errore");
+                        $errorMsg.addClass("active-err");
                     } else { //La scheda è stata creata con successo
                         $("#modalCreaScheda").modal('toggle');
                         window.location.replace("../index.php"); //Redirico l'utente nella homePrivata
@@ -248,5 +251,6 @@ $(document).ready(function() {
     $('.modal').on('hidden.bs.modal', function() {
         $(this).find('form').trigger('reset');
         $(this).find('form .numero-ripetizioni-element').html("<label for='numRipetizioni'>Numero ripetizioni serie</label><input type='number' name='numRipetizioni' value='1' max='20' min='1' required>")
+        $errorMsg.removeClass("active-err");
     });
 });

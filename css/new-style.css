@@ -16,10 +16,6 @@ html {
 body {
     width: 100%;
     margin: 0px;
-    /*background-color: #d7d7d7 !important;*/
-    /*background: rgb(215,215,215);
-    background: linear-gradient(186deg, rgba(215,215,215,1) 1%, rgba(219,219,187,1) 28%, rgba(203,141,6,1) 52%, rgba(218,218,197,1) 71%, rgba(215,215,215,1) 97%); 
-    */
     background: linear-gradient(-45deg, #d7d7d7, #a6a6a6, #5c5c3d, #eedf69);
     background-size: 400% 400%;
 	animation: gradient 13s ease infinite;
@@ -38,18 +34,10 @@ body {
 	}
 }
 
-
 /************/
-
-
 /*<a href='https://www.freepik.com/photos/yellow-smoke'>Yellow smoke photo created by freepik - www.freepik.com</a>*/
-
-
 /* NAVBAR */
-
-
 /************/
-
 .home-logo {
     width: 40%;
     height: auto;
@@ -95,7 +83,6 @@ body {
 
 
 /*SearchBar*/
-
 .form-control:focus {
     box-shadow: 0px 0px 4px 4px #eedf69 !important;
 }
@@ -139,15 +126,9 @@ body {
     box-shadow: none !important;
 }
 
-
 /****************/
-
-
 /*Gestione MAIN*/
-
-
 /****************/
-
 .top-main {
     display: flex;
     flex-direction: column;
@@ -223,16 +204,9 @@ body {
 
 
 /**********************/
-
-
 /*Gestione delle modal*/
-
-
 /**********************/
-
-
 /*Gestione dell'info esercizi*/
-
 .info-button {
     background: transparent !important;
     border: none !important;
@@ -288,10 +262,7 @@ body {
 
 
 /*Per nascondere le frecce delle input*/
-
-
 /* Chrome, Safari, Edge, Opera */
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -430,9 +401,35 @@ input[type=number] {
     color: #222222 ;
 }
 
+/*Gestione messaggi di errore*/
+.error-msg{
+    color: #f44336;
+    font-weight: 700;
+    text-shadow: 1px 1px #222222;
+}
+
+.active-err{
+    animation-name: shake2;
+    animation-duration: 0.3s;
+    animation-iteration-count: 2;
+}
+
+@keyframes shake2 {
+    0% {
+        margin-left: 0rem;
+    }
+    25% {
+        margin-left: 0.5rem;
+    }
+    75% {
+        margin-left: -0.5rem;
+    }
+    100% {
+        margin-left: 0rem;
+    }
+}
 
 /*Per gestire bene il top-main*/
-
 @media (min-width:375px) {
     .top-main {
         flex-direction: row;
