@@ -38,8 +38,6 @@
             </nav>
         </header>
 
-        <!-- Sicuramente ogni pallina del progress delle serie dovrà essere gestita con un echo, le scrivo comunque statiche come modello -->
-
         <div class="main">
             <div class="player">
                 <div class="info-exc">
@@ -49,24 +47,7 @@
                 
                 <div class="progress-wrapper">
                     <ol class="progressBar">
-                        <!--Placeholder
-                        <li class="ProgressBar-step">
-                            <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
-                            <span class="ProgressBar-stepLabel">10</span>
-                        </li>
-                        <li class="ProgressBar-step">
-                            <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
-                            <span class="ProgressBar-stepLabel">10</span>
-                        </li>
-                        <li class="ProgressBar-step">
-                            <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
-                            <span class="ProgressBar-stepLabel">8</span>
-                        </li>
-                        <li class="ProgressBar-step">
-                            <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
-                            <span class="ProgressBar-stepLabel">8</span>
-                        </li>
-                        -->
+
                     </ol>
                 </div>
                 
@@ -87,34 +68,3 @@
     </svg>
 
 </html>
-
-<!--<div class="timers">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <ul id="progress-bar" class="progressbar">
-                                    <li class="active">Details</li>
-                                    <li>Address</li>
-                                    <li>add friends</li>
-                                    <li>Confirm</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="circle-wrap">
-                        <div class="circle">
-                            <div class="mask half">
-                                <div class="fill"></div>
-                            </div>
-                            <div class="mask full">
-                                <div class="fill"></div>
-                            </div>
-                            <div class="inside-circle"> 75% </div>
-                        </div>
-                    </div>   
-                </div>
-                <div class="buttons">
-                    <a href="#" class="btn btn-primary btn-lg">Recupero</a>
-                    <a href="./index.php" class="btn btn-primary btn-lg">Termina</a>
-                </div>
--->

@@ -74,9 +74,9 @@ $(document).ready(function(){
 		else {
 			$bar.children().first().addClass("is-current");
     	}
-		done++;							//Inizio recupero = serie terminata
-		if(done == numSerie){			//Finito l'esercizio
-			count++;					//Aumento il numero di esercizi portati a termine
+		done++;									//Inizio recupero = serie terminata
+		if(done == numSerie){					//Finito l'esercizio
+			count++;							//Aumento il numero di esercizi portati a termine
 			if(count == esercizi.length-1){
 				alert("Allenamento terminato");	
 			}
