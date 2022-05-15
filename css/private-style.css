@@ -551,6 +551,11 @@ Gestione degli alert
     display: block;
 }
 
+.fa-exclamation-triangle{
+    color: #f44336;
+}
+
+
 /***********************/
 /*Media query*/
 /***********************/
