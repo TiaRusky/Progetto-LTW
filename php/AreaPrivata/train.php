@@ -18,6 +18,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="../../js/train.js"></script>
+        <script src="../../js/redo.js"></script>
         <script src="../../js/jquery.countdown360.js"></script>
         <title>TechFit - Train di <?php echo $_SESSION['username'];?></title>
     </head>
@@ -62,15 +63,13 @@
                 <div class="end-train">                
                     <div class="end-msg">Complimenti!<br> Hai terminato l'allenamento!</div>
                     <a href="./index.php" class="train-btn">Home</a>
+                    <a href="./index.php" class="train-btn">Continua allenamento</a>
                     <div class="firework"></div>
                     <div class="firework"></div>
                     <div class="firework"></div>
                 </div>
             </div>
         </div> 
-
-
-
     </body>
 
     <svg xmlns="http://www.w3.org/2000/svg">
