@@ -80,8 +80,9 @@ Gestione pagina
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #d7d7d7;
+    /*background-color: #d7d7d7;*/
     border-radius: 50px;
+    background-color:rgba(215,215,215,0.7);
 }
 
 .player {
