@@ -9,9 +9,12 @@ $(document).ready(function() {
     var done = -1; //serie portate a termine
     var count = -1; //Esercizi portati a termini
     var recupero;
-    var player = $(".player");
-    var final = $(".end-train");
-    final.hide();
+
+    //I due container principali della pagine
+    var $player = $(".player");
+    var $final = $(".end-train");       //Il container mostrato alla fine degli allenamenti
+    $final.hide();
+
     //Info sull'esercizio
     var $excName = $("#exc-name");
     var $excDesc = $("#exc-desc");
@@ -73,21 +76,20 @@ $(document).ready(function() {
         if ($bar.children(".is-current").length > 0) { //Ogni volta che termina il timer passo alla serie successiva
             $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
         } else {
-            $bar.children().first().addClass("is-current"); //Questo else non si verifica mai
+            $bar.children().first().addClass("is-current");     //Questo else non si verifica mai
         }
-        done++; //Inizio recupero = serie terminata
-        if (done == numSerie) { //Finito l'esercizio
-            count++; //Aumento il numero di esercizi portati a termine
-            if (count == esercizi.length - 1) {
-                //alert("Allenamento terminato");
-                player.hide();
-                final.show();
-            } else { //Bisogna passare al prossimo esercizio
-                numSerie = esercizi[count + 1].numserie; //Aggiorno le info relative all'esercizio corrente
+        done++;                                                  //Inizio recupero = serie terminata
+        if (done == numSerie) {                                 //Finito l'esercizio
+            count++;                                            //Aumento il numero di esercizi portati a termine
+            if (count == esercizi.length - 1) {                 //Allenamento terminato
+                $player.hide();
+                $final.show();
+            } else {                                                //Bisogna passare al prossimo esercizio
+                numSerie = esercizi[count + 1].numserie;            //Aggiorno le info relative all'esercizio corrente
                 descrizione = esercizi[count + 1].descrizione;
                 nome = esercizi[count + 1].nome;
                 done = 0; //Resetto il numero di serie eseguite
-                setPage(nome, descrizione, numSerie, count + 1); //Preparo nuovamente la pagina per il nuovo esercizio
+                setPage(nome, descrizione, numSerie, count + 1);    //Preparo nuovamente la pagina per il nuovo esercizio
             }
         }
     }
