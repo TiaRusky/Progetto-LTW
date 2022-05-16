@@ -66,22 +66,11 @@ Gestione nav
 /***************************************************************************************************************
 Gestione pagina
 ***************************************************************************************************************/
-
-.container {
-    position: absolute;
-    overflow: hidden;
-    height: 750px;
-    margin-top: 2%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-
 .main {
-    width: 100%;
-    height: 98%;
+    margin: 0.5em auto;
+    width: 95%;
+    max-width: 975px;
+    /*height: 98%;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,6 +96,7 @@ Gestione pagina
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 0.4em;
 }
 
 #exc-name {
@@ -336,7 +326,6 @@ Gestione pagina
 /*************************
 Gestione schermata finale
 **************************/
-
 .end-train {
     width: 100%;
     display: flex;
@@ -345,6 +334,11 @@ Gestione schermata finale
     align-items: center;
     align-content: center;
     text-align: center;
+    margin-top: 1em;
+}
+
+.end-train .train-btn{
+    margin: 1em auto;
 }
 
 .end-msg {
@@ -352,13 +346,45 @@ Gestione schermata finale
     height: auto;
     font-family: "TechFitFont-Azonix";
     font-size: 2em;
+    /*
     border-radius: 50px;
     margin-bottom: 2%;
     animation-name: color;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    */
 }
 
+.continue-train{
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.grid-gruppi {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+}
+
+.group-btn {
+    background: transparent;
+    border: none;
+}
+
+.group-btn:hover,
+.group-btn:hover {
+    animation: pulse 0.8s;
+    box-shadow: 0 0 0 0.5em rgba(230, 206, 25, 0);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #9a9a9a;
+    }
+}
+
+/*
 @keyframes color {
     0% {
         background-color: #d7d7d7;
@@ -370,7 +396,7 @@ Gestione schermata finale
         background-color: #d7d7d7;
     }
 }
-
+*/
 @keyframes firework {
     0% {
         transform: translate(var(--x), var(--initialY));
@@ -483,61 +509,9 @@ Gestione schermata finale
 }
 
 
-/**********************************************/
-
-
-/*Gestione della modal per scegliere il gruppo muscolare da allenare*/
-
-
-/**********************************************/
-
-.modal-content {
-    background-color: #d7d7d7 !important;
-}
-
-.modal-header {
-    background-color: #222222 !important;
-    color: #eedf69 !important;
-    font-weight: 700;
-    font-family: "TechFitFont-Azonix";
-    border-bottom: 2px solid #222222 !important;
-}
-
-.modal-body {
-    color: #222222 !important;
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: column;
-}
-
-#modalTrain .grid-gruppi {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 6px;
-}
-
-#modalTrain .group-btn {
-    background: transparent;
-    border: none;
-}
-
-#modalTrain .group-btn:hover,
-#modalTrain .group-btn:hover {
-    animation: pulse 0.8s;
-    box-shadow: 0 0 0 0.5em rgba(230, 206, 25, 0);
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 #9a9a9a;
-    }
-}
-
-
 /*********************
 Gestione degli alert
 *********************/
-
 .error {
     margin: 5px auto;
     width: 60%;
@@ -591,17 +565,16 @@ Gestione degli alert
     color: #f44336;
 }
 
-
-/*Gestione modal train*/
-
+/*Gestione continua allenamento*/
 @media (min-width: 350px) {
-    #modalTrain .grid-gruppi {
+    .grid-gruppi {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 700px) {
-    #modalTrain .grid-gruppi {
+    .grid-gruppi {
         grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
 }
