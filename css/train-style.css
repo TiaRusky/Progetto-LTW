@@ -508,7 +508,50 @@ Gestione schermata finale
     animation-delay: -0.4s;
 }
 
+/**********************************/
+/*Gestione modal termina allenamento*/
+/**********************************/
+.modal-content {
+    background-color: #d7d7d7 !important;
+}
 
+.modal-header {
+    background-color: #222222 !important;
+    color: #eedf69 !important;
+    font-weight: 700;
+    font-family: "TechFitFont-Azonix";
+    border-bottom: 2px solid #222222 !important;
+}
+
+.modal-body {
+    color: #222222 !important;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+.modal-btn {
+    border: 2px solid #eedf69 !important;
+    color: #eedf69 !important;
+    background: transparent !important;
+    padding: 0.3em !important;
+    letter-spacing: 2px !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    border-radius: 15px !important;
+    font-weight: 900 !important;
+    background-image: none !important;
+}
+
+.modal-btn:hover {
+    background-color: #eedf69 !important;
+    color: #222222 !important;
+    transition: 1.7s;
+}
+
+.modal-footer {
+    background-color: #222222 !important;
+    color: #eedf69 !important;
+}
 /*********************
 Gestione degli alert
 *********************/

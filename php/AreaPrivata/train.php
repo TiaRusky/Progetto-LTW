@@ -57,7 +57,7 @@ if (!isset($_SESSION['email'])) { //L'utente non ha effettuato il login
 
             <div class="buttons">
                 <a class="train-btn" id="btn-recovery">Recupero</a>
-                <a href="./index.php" class="train-btn">Termina</a>
+                <a class="train-btn" data-bs-toggle="modal" data-bs-target="#modalStop">Termina</a>
             </div>
         </div>
         <div class="end-train">
@@ -98,11 +98,31 @@ if (!isset($_SESSION['email'])) { //L'utente non ha effettuato il login
         </div>
 
     </div>
+    <!-- Modal per chiedere la conferma di chiusura allenamento -->
+    <div class="modal fade" id="modalStop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalStopLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalStopLabel"><?php echo $_GET["nomeScheda"]?></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Terminare l'allenamento?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-btn" data-bs-dismiss="modal">Annulla</button>
+                    <button type="button" class="modal-btn" id="stop-btn">Confermo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--Alert-->
     <div class="error">
         <span class='closebtn'>&times;</span>
         <span class='closebtn-fill'>&times;</span>
-        <p  class='err-msg'><i class='fas fa-exclamation-triangle'></i> Non ci sono esercizi per quel gruppo</p></div>
+        <p class='err-msg'><i class='fas fa-exclamation-triangle'></i> Non ci sono esercizi per quel gruppo</p>
+    </div>
     </div>
 </body>
 

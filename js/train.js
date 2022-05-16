@@ -35,6 +35,9 @@ $(document).ready(function() {
     //Bottone di chiusura messaggio di errore
     var $closebtn = $(".closebtn");
     
+    //Bottone della form per confermare il termine dell'allenamento
+    var $stopBtn = $("#stop-btn");
+
     //Gli esercizi caricati
     var esercizi;
 
@@ -117,6 +120,11 @@ $(document).ready(function() {
             $divError.hide();
         });
     });
+
+    //Gestione del conferma termina allenamento
+    $stopBtn.on("click",function(){
+        window.location.replace("index.php");       //Allenamnto terminato; ritorna alla pagina iniziale
+    }); 
 
     //Funzione da chiamare quando il timer termina
     function timeOver() {
