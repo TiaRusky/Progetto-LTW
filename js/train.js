@@ -28,6 +28,13 @@ $(document).ready(function() {
     //Bottoni per scegliere un altro gruppo da allenare
     $groupBtn = $(".group-btn");
 
+    //Div di errore
+    $divError = $(".error");
+    $divError.hide();
+
+    //Bottone di chiusura messaggio di errore
+    var $closebtn = $(".closebtn");
+    
     //Gli esercizi caricati
     var esercizi;
 
@@ -98,9 +105,16 @@ $(document).ready(function() {
                     setPage(nome, descrizione, numSerie, 0);
                 } else { //In questa scheda non ci sono esercizi per questo gruppo muscolare
                     //window.location.replace("index.php?err=noExc");
-                    alert("Non ci sono esercizi per questo gruppo");
+                    $divError.show();
                 }
             }
+        });
+    });
+
+    //Chiusura del messaggio di errore
+    $closebtn.on("click", function () {
+        $(this).parent().fadeOut(500, function () {
+            $divError.hide();
         });
     });
 

@@ -19,6 +19,7 @@ if (!isset($_SESSION['email'])) { //L'utente non ha effettuato il login
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../../js/train.js"></script>
     <script src="../../js/jquery.countdown360.js"></script>
+    <script src="https://kit.fontawesome.com/d8697e016e.js" crossorigin="anonymous"></script>
     <title>TechFit - Train di <?php echo $_SESSION['username']; ?></title>
 </head>
 
@@ -97,9 +98,12 @@ if (!isset($_SESSION['email'])) { //L'utente non ha effettuato il login
         </div>
 
     </div>
-
-
-
+    <!--Alert-->
+    <div class="error">
+        <span class='closebtn'>&times;</span>
+        <span class='closebtn-fill'>&times;</span>
+        <p  class='err-msg'><i class='fas fa-exclamation-triangle'></i> Non ci sono esercizi per quel gruppo</p></div>
+    </div>
 </body>
 
 <svg xmlns="http://www.w3.org/2000/svg">

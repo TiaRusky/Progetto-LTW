@@ -142,7 +142,7 @@ $(document).ready(function() {
     });
 
     $searchIn.on("focus",function(){
-        $searchIn.removeClass("error-box");         //Ogni volta che cerco qualcosa rimuovo la classe erro
+        $searchIn.removeClass("error-box");         //Ogni volta che cerco qualcosa rimuovo la classe error
     });                                             //a cui è assocaita l'animazione
 
     $searchBtn.on("click", function(e) {

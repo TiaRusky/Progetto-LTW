@@ -513,7 +513,7 @@ Gestione schermata finale
 Gestione degli alert
 *********************/
 .error {
-    margin: 5px auto;
+    margin: 0 auto;
     width: 60%;
     max-width: 450px;
     background-color: #222222;
@@ -525,10 +525,10 @@ Gestione degli alert
     text-align: center;
     padding: 0.4em;
     position: absolute;
-    top: 0;
+    top: 1em;
     left: 0;
     right: 0;
-    margin: 1.5em auto;
+    margin: 3.5em auto;
 }
 
 .err-msg {
