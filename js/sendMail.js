@@ -9,9 +9,9 @@ function sendEmail() {
     console.log(obj);
     console.log(msg);
 
-    window.open('mailto:techfit.web@gmail.com?to=' + mail + '&subject=' + obj + '&body=' + msg);
+    window.open('mailto:techfit.web@gmail.com?from=' + mail + '&subject=' + obj + '&body=' + msg);
 
-    window.alert('Mail inviata!');
+    //window.alert('Mail inviata!');
 
     document.contactus.inputEmail.value = '';
     document.contactus.inputObject.value = '';
