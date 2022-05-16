@@ -47,14 +47,13 @@ Gestione nav
     max-width: 300px;
     border: 0px;
     border-radius: 9px;
-    padding-left: 1em;
-    padding-right: 1em;
     text-align: center;
     background-color: #eedf69;
     transition: 0.5s ease-in-out;
     margin: 0 auto;
     height: fit-content;
     align-self: center;
+    padding: 0.35em;
 }
 
 .logout-button:hover {
@@ -87,8 +86,9 @@ Gestione pagina
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #d7d7d7;
+    /*background-color: #d7d7d7;*/
     border-radius: 50px;
+    background-color: rgba(215, 215, 215, 0.7);
 }
 
 .player {
@@ -216,6 +216,7 @@ Gestione pagina
 .is-current .ProgressBar-icon {
     fill: gray;
     background-color: gray;
+    box-shadow: 0 0px 8px 8px #eedf69;
 }
 
 
@@ -237,6 +238,7 @@ Gestione pagina
     padding-top: 0.5em;
     width: 100%;
     transition: all .25s ease-out;
+    font-size: 2em;
 }
 
 .is-current>.ProgressBar-stepLabel,
