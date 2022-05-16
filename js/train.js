@@ -2,7 +2,7 @@ $(document).ready(function() {
     //Ricavo nome della scheda e gruppo muscolare
     const urlParams = new URLSearchParams(window.location.search);
     const nomeScheda = urlParams.get('nomeScheda');
-    const gruppoM = urlParams.get("gruppoM");
+    var gruppoM = urlParams.get("gruppoM");
     var numSerie = -1; //Per evitare problemi di asincronia iniziali
     var nome;
     var descrizione; //Parte tutto da -1 perchè avviato il timer all'inizio partendo con 0s
@@ -25,7 +25,12 @@ $(document).ready(function() {
     //Barra di progresso
     var $bar = $(".progressBar");
 
+    //Bottoni per scegliere un altro gruppo da allenare
+    $groupBtn = $(".group-btn");
+
+    //Gli esercizi caricati
     var esercizi;
+
     //Come prima cosa recupero gli esercizi
     $.ajax({
         url: "getExcTrain.php",
@@ -69,6 +74,34 @@ $(document).ready(function() {
             $countdown.start();
         }
 
+    });
+
+    //Gestione del continua allenamento
+    $groupBtn.on("click",function(e){            //L'utente ha deciso di continuare l'allenamento
+        gruppoM = $(e.target).closest("button").attr("id").slice(4);        //Modifico il gruppoM con il nuovo selezionato
+        //Resetto le varibili
+        count = -1;
+        done = 0;
+        $.ajax({                                //Recupero gli esercizi relativi al nuovo gruppo
+            url: "getExcTrain.php",
+            type: "POST",
+            data: { "nome": nomeScheda, "gruppoM": gruppoM },
+            success: function(result) {
+                if (result != "err") {
+                    esercizi = JSON.parse(result);
+                    //Preparo la barra per il primo esercizio
+                    numSerie = esercizi[0].numserie;
+                    descrizione = esercizi[0].descrizione;
+                    nome = esercizi[0].nome;
+                    $player.show();
+                    $final.hide();
+                    setPage(nome, descrizione, numSerie, 0);
+                } else { //In questa scheda non ci sono esercizi per questo gruppo muscolare
+                    //window.location.replace("index.php?err=noExc");
+                    alert("Non ci sono esercizi per questo gruppo");
+                }
+            }
+        });
     });
 
     //Funzione da chiamare quando il timer termina
