@@ -23,6 +23,8 @@ $(document).ready(function() {
 
     //Tutti i link per eliminare schede
     $deleteItem = $(".delete-item");
+    $modalDelete = $("#modalDelete");   //La modal che chiede conferma dell'eliminazione
+    $deleteBtn = $("#delete-btn");      //Bottone di conferma della modal di eliminazione
 
     //Tutti i link per visualizzare una scheda
     $viewItem = $(".view-item");
@@ -33,16 +35,23 @@ $(document).ready(function() {
     /*******************************/
     //Gestione eliminazione scheda
     /*******************************/
+    //Questa funzione modifica il titolo della modal chiamata per confermare l'eliminazione
     $deleteItem.on("click", function(e) {
-        //Devo prelevare la scheda che si vuole eliminare (il nome)
-        var nomeScheda = $(e.target).closest(".card-header").find(".card-title").text();
+        var nomeScheda = $(e.target).closest(".card-header").find(".card-title").text();    //Prelevo il nome della scheda
+        $modalDelete.find(".modal-title").text(nomeScheda);
+    });
+
+    //Eliminazione effettiva della scheda
+    $deleteBtn.on("click",function(e){
+        var nomeScheda = $(e.target).closest(".modal").find(".modal-title").text();
         $.ajax({
             url: "deleteForm.php",
             type: "POST",
             data: { "nome": nomeScheda },
-            success: function(result) {
+            success: function(result) {         //Scheda eliminata dal db
                 if (result) {
-                    $(e.target).closest(".card").remove();
+                    $(".card-header:contains("+nomeScheda+")").closest(".card").remove();  //Elimino dal dom la scheda
+                    $modalDelete.modal('hide');        //Nascondo la modal di confermaEliminazione
                 }
             }
         });

@@ -85,7 +85,7 @@
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton'.$i.'">
                                         <li><a class="dropdown-item view-item" href="#" data-bs-toggle="modal" data-bs-target="#modalScheda">Visualizza</a></li>
                                         <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item delete-item" href="#">Elimina</a></li>
+                                        <li><a class="dropdown-item delete-item" href="#" data-bs-toggle="modal" data-bs-target="#modalDelete">Elimina</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -235,6 +235,25 @@
                         
                     </div>
 
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal per confermare eliminazione della scheda -->
+        <div class="modal fade" id="modalDelete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalDeleteLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDeleteLabel"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Eliminare la scheda?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-btn" data-bs-dismiss="modal">Annulla</button>
+                    <button type="button" class="modal-btn" id="delete-btn">Confermo</button>
+                </div>
                 </div>
             </div>
         </div>
