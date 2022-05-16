@@ -10,7 +10,14 @@ body {
     margin: 0px;
     width: 100%;
     height: 100%;
-    background: url("../pic/black_and_yellow.jpg");
+    /*background-image: url("../pic/train/orange-explosion-cosmetic-powder-dark-background\ \(1\).jpg");*/
+    /*background-image: url("../pic/train/24783.jpg");*/
+    background-image: url("../pic/train/26684.jpg");
+    /*background-image: url("../pic/train/golden_hexa_1_generated.jpg");*/
+    /*background-image: url("../pic/train/v704-aew-73-neonbackground.jpg");*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 @font-face {
