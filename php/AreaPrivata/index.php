@@ -142,7 +142,7 @@
                                     <img src="../../pic/new/icons8-bodybuilder-96-text.png" alt="logo-dorsali">
                                 </div>
                             </legend>
-                        
+                            <div class="lds-dual-ring"></div>   <!--Div che permette di mostrare il caricamento-->
                         </fieldset>
 
                         <fieldset class="flex-tricipiti flex-gruppo" id="tricipiti">
@@ -151,6 +151,7 @@
                                     <img src="../../pic/new/icons8-triceps-96-text.png" alt="logo-tricipiti">
                                 </div>
                             </legend>
+                            <div class="lds-dual-ring"></div>   <!--Div che permette di mostrare il caricamento-->
                         </fieldset>
 
                         <fieldset class="flex-petto flex-gruppo" id="petto">
@@ -160,6 +161,7 @@
                                     <img src="../../pic/new/icons8-chest-96-text.png" alt="logo-petto">
                                 </div>
                             </legend>
+                            <div class="lds-dual-ring"></div>   <!--Div che permette di mostrare il caricamento-->
                         </fieldset>
 
                         <fieldset class="flex-bicipiti flex-gruppo" id="bicipiti">
@@ -168,6 +170,7 @@
                                     <img src="../../pic/new/icons8-biceps-96-text.png" alt="logo-bicipiti">
                                 </div>
                             </legend>
+                            <div class="lds-dual-ring"></div>   <!--Div che permette di mostrare il caricamento-->
                         </fieldset>
 
                         <fieldset class="flex-gambe flex-gruppo" id="gambe">
@@ -176,6 +179,7 @@
                                     <img src="../../pic/new/icons8-quadriceps-96-text.png" alt="logo-gambe">
                                 </div>
                             </legend>
+                            <div class="lds-dual-ring"></div>   <!--Div che permette di mostrare il caricamento-->
                         </fieldset>
 
                         <fieldset class="flex-spalle flex-gruppo" id="spalle">
@@ -184,6 +188,7 @@
                                     <img src="../../pic/new/icons8-shoulders-96-text.png" alt="logo-spalle">
                                 </div>
                             </legend>
+                            <div class="lds-dual-ring"></div>   <!--Div che permette di mostrare il caricamento-->
                         </fieldset>
 
                     </div>

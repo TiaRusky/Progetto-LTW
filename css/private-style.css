@@ -459,6 +459,34 @@ Gestione MODAL per visualizzare le schede
     background-color: #222222 !important;
     color: #eedf69 !important;
 }
+/*Animazione di caricamento che poi viene stoppata da jquery*/
+.lds-dual-ring {            /*Questo è il div che contiene il cerchio*/
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.lds-dual-ring:after {      /*Aggiungo il cerchio con solo 2 su 4 bordi visibili*/
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid;
+    border-color: #222222 transparent #eedf69 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {  /*L'animazione fa semplicemente ruotare il div*/
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
 
 /*Gestione dell'info esercizi*/
 .info-button {

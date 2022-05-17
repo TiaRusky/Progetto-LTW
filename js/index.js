@@ -32,6 +32,9 @@ $(document).ready(function() {
     //Bottone di chiusura messaggio di errore
     var $closebtn = $(".closebtn");
 
+    //Div per l'animazione di caricamento
+    var $loadingDiv = $(".lds-dual-ring");
+
     /*******************************/
     //Gestione eliminazione scheda
     /*******************************/
@@ -58,11 +61,13 @@ $(document).ready(function() {
     });
 
     /************************************************/
-    //Pulizia della model ogni volta che viene aperta
+    //Chiamata al db per la visualizzazione di una scheda
     /************************************************/
     $viewItem.on("click", function(e) {
         //Pulisco la modal
         $(".flex-gruppo .card").remove();
+        //Rendo visibili i div con il caricamento
+        $loadingDiv.show();
         //Ricavo il nome della scheda
         var nomeScheda = $(e.target).closest(".card-header").find(".card-title").text();
         $("#modalSchedaLabel").text(nomeScheda);
@@ -137,6 +142,7 @@ $(document).ready(function() {
                                 break;
                         }
                     }
+                    $loadingDiv.hide();     //Una volta scaricati gli esercizi nascondo il caricamento
                 }
             }
         });
