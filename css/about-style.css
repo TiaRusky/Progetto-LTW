@@ -1,13 +1,117 @@
+/*Colori:
+
+- black: #222222
+- steal: #d7d7d7
+- gold: #eedf69
+- navbar: #212529
+*/
+
+
+/***************************************************************************************************************
+*   Generali
+***************************************************************************************************************/
+
 html {
     font-size: 20px !important;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
 }
 
 body {
+    width: 100%;
+    height: 100%;
     margin: 0px;
-    background-color: #d7d7d7;
+    background-image: url("https://source.unsplash.com/uXQVNkam3hE/2400x1600");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 @font-face {
     font-family: "TechFitFont-Azonix";
     src: url(../fonts/Azonix.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "TechFitFont-OpenSans";
+    src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf) format("truetype");
+}
+
+
+/***************************************************************************************************************
+*   Gestione pagina
+***************************************************************************************************************/
+
+.container#main-cont {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    overflow: hidden;
+}
+
+.col p {
+    background-color: #d7d7dd;
+    padding: 2% 2% 2% 2%;
+    border-radius: 30px;
+}
+
+.col img {
+    padding: 1% 1% 1% 1%;
+    border-radius: 30px;
+    width: 90%;
+    height: 90%;
+}
+
+.col#left img {
+    background-color: #eedf69;
+}
+
+.col#right img {
+    background-color: #222222;
+}
+
+
+/*
+.row {
+    align-items: center !important;
+    align-content: center !important;
+    justify-content: center !important;
+}
+
+.text-box {
+    font-family: "TechFitFont-OpenSans";
+    font-size: 1em;
+    background-color: #d7d7d7;
+    padding: 1% 1% 1% 1%;
+    border-radius: 50px;
+}
+
+.pic-box {
+    background-color: #d7d7d7;
+    padding: 1% 1% 1% 1%;
+    border-radius: 50px;
+}
+
+.pic-box img {
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 100%;
+    border-radius: 50px;
+}*/
+
+footer {
+    width: 100% !important;
+    background-color: #212529;
+    color: white;
+    text-align: center;
+}
+
+.fot-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2%;
 }
