@@ -49,56 +49,94 @@ body {
     overflow: hidden;
 }
 
-.col p {
+.txt {
+    text-align: center;
     background-color: #d7d7dd;
     padding: 2% 2% 2% 2%;
     border-radius: 30px;
 }
 
-.col img {
+.col {
+    padding-bottom: 5%;
+}
+
+.col h1 {
+    font-family: "TechFitFont-Azonix";
+    font-size: 1.5em;
+}
+
+.img-width {
+    display: block;
     padding: 1% 1% 1% 1%;
     border-radius: 30px;
     width: 90%;
     height: 90%;
 }
 
+.img-height {
+    display: none;
+    padding: 1% 1% 1% 1%;
+    border-radius: 30px;
+    width: 90%;
+    height: 90%
+}
+
 .col#left img {
-    background-color: #eedf69;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 }
 
 .col#right img {
-    background-color: #222222;
+    background: linear-gradient(to right, #656565, #040404, #000000, #656565);
 }
 
-
-/*
-.row {
-    align-items: center !important;
-    align-content: center !important;
-    justify-content: center !important;
+@media (max-width: 990px) {
+    .img-height {
+        display: block;
+    }
+    .img-width {
+        display: none;
+    }
 }
 
-.text-box {
-    font-family: "TechFitFont-OpenSans";
-    font-size: 1em;
-    background-color: #d7d7d7;
-    padding: 1% 1% 1% 1%;
-    border-radius: 50px;
+@media (max-width: 575px) {
+    .row {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        align-content: center !important;
+    }
+    .img-height {
+        margin: auto;
+    }
 }
 
-.pic-box {
-    background-color: #d7d7d7;
-    padding: 1% 1% 1% 1%;
-    border-radius: 50px;
+@media (max-width: 521px) {
+    .col h1 {
+        font-size: 1em;
+    }
+    .col {
+        font-size: 0.9em;
+    }
 }
 
-.pic-box img {
-    display: block;
-    margin: auto;
-    width: 90%;
-    height: 100%;
-    border-radius: 50px;
-}*/
+@media (max-width: 342px) {
+    .col h1 {
+        font-size: 0.8em;
+    }
+    .col {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 283px) {
+    .col h1 {
+        font-size: 0.7em;
+    }
+    .col {
+        font-size: 0.6em;
+    }
+}
 
 footer {
     width: 100% !important;
