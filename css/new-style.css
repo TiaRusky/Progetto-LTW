@@ -429,6 +429,7 @@ input[type=number] {
     border-radius: 15px !important;
     font-weight: 900 !important;
     background-image: none !important;
+    cursor: pointer !important;
 }
 
 .modal-btn:hover {
