@@ -85,6 +85,7 @@ Gestione nav
 /***************************************************************************************************************
 Gestione pagina
 ***************************************************************************************************************/
+
 .main {
     margin: 0.5em auto;
     width: 95%;
@@ -292,6 +293,7 @@ Gestione pagina
     font-family: "TechFitFont-Azonix";
     margin: 0.3em auto;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .train-btn:hover,
@@ -345,6 +347,7 @@ Gestione pagina
 /*************************
 Gestione schermata finale
 **************************/
+
 .end-train {
     width: 100%;
     display: flex;
@@ -356,7 +359,7 @@ Gestione schermata finale
     margin-top: 1em;
 }
 
-.end-train .train-btn{
+.end-train .train-btn {
     margin: 1em auto;
 }
 
@@ -374,7 +377,19 @@ Gestione schermata finale
     */
 }
 
-.continue-train{
+@media (max-width:336px) {
+    .end-msg {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width:307px) {
+    .end-msg {
+        font-size: 1.2em;
+    }
+}
+
+.continue-train {
     width: 100%;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -403,6 +418,7 @@ Gestione schermata finale
     }
 }
 
+
 /*
 @keyframes color {
     0% {
@@ -416,6 +432,7 @@ Gestione schermata finale
     }
 }
 */
+
 @keyframes firework {
     0% {
         transform: translate(var(--x), var(--initialY));
@@ -450,7 +467,7 @@ Gestione schermata finale
     content: "";
     animation: firework 2s infinite;
     position: absolute;
-    top: 50%;
+    /*top: 50%;*/
     left: 50%;
     transform: translate(-50%, var(--y));
     width: var(--initialSize);
@@ -527,9 +544,15 @@ Gestione schermata finale
     animation-delay: -0.4s;
 }
 
+
 /**********************************/
+
+
 /*Gestione modal termina allenamento*/
+
+
 /**********************************/
+
 .modal-content {
     background-color: #d7d7d7 !important;
 }
@@ -548,6 +571,7 @@ Gestione schermata finale
     display: flex;
     flex-direction: column;
 }
+
 .modal-btn {
     border: 2px solid #eedf69 !important;
     color: #eedf69 !important;
@@ -571,9 +595,12 @@ Gestione schermata finale
     background-color: #222222 !important;
     color: #eedf69 !important;
 }
+
+
 /*********************
 Gestione degli alert
 *********************/
+
 .error {
     margin: 0 auto;
     width: 60%;
@@ -627,7 +654,9 @@ Gestione degli alert
     color: #f44336;
 }
 
+
 /*Gestione continua allenamento*/
+
 @media (min-width: 350px) {
     .grid-gruppi {
         grid-template-columns: repeat(2, 1fr);

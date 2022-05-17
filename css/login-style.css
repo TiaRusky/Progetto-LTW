@@ -13,6 +13,7 @@ body {
     margin: 0px;
     position: relative;
     background: url("https://source.unsplash.com/FLpV4VJqBrw/1980x1600") no-repeat center center/cover;
+    background-color: #222222;
 }
 
 @font-face {
