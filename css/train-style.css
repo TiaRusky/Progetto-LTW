@@ -25,13 +25,19 @@ body {
     background-size:100% 100vh;
 }
 
- @media (max-width: 780px){
+@media (max-width: 780px){
      body{
         background-image: url("../pic/train/train-md.jpg");
         background-size:100% 100vh;
      }
- }
+}
 
+@media (max-width: 500px){
+    body{
+       background-image: url("../pic/train/train-sm.jpg");
+       background-size:100% 100vh;
+    }
+}
 
 @font-face {
     font-family: "TechFitFont-Azonix";
