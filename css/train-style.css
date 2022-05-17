@@ -12,13 +12,26 @@ body {
     height: 100%;
     /*background-image: url("../pic/train/orange-explosion-cosmetic-powder-dark-background\ \(1\).jpg");*/
     /*background-image: url("../pic/train/24783.jpg");*/
-    background-image: url("../pic/train/26684.jpg");
+    /*background-image: url("../pic/train/26684.jpg");*/
     /*background-image: url("../pic/train/golden_hexa_1_generated.jpg");*/
     /*background-image: url("../pic/train/v704-aew-73-neonbackground.jpg");*/
+    background-image: url("../pic/train/train.jpg");
+    background-image: url("../pic/train/804836.webp");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center center;
+    background-size: cover;
+    background-color: #222222 !important;
+    background-size:100% 100vh;
 }
+
+ @media (max-width: 780px){
+     body{
+        background-image: url("../pic/train/train-md.jpg");
+        background-size:100% 100vh;
+     }
+ }
+
 
 @font-face {
     font-family: "TechFitFont-Azonix";

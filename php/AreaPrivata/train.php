@@ -118,7 +118,7 @@ if (!isset($_SESSION['email'])) { //L'utente non ha effettuato il login
     </div>
 
     <!--Alert-->
-    <div class="error">
+    <div class="error" style="display:none">
         <span class='closebtn'>&times;</span>
         <span class='closebtn-fill'>&times;</span>
         <p class='err-msg'><i class='fas fa-exclamation-triangle'></i> Non ci sono esercizi per quel gruppo</p>
