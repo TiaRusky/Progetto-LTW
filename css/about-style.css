@@ -57,6 +57,7 @@ body {
 }
 
 .col {
+    display: none;
     padding-bottom: 5%;
 }
 
