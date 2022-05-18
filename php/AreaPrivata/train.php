@@ -61,12 +61,13 @@ if (!isset($_SESSION['email'])) { //L'utente non ha effettuato il login
             </div>
         </div>
         <div class="end-train">
-            <div class="end-msg">Training completato!</div>
+            <div class="end-msg">
+                <div class="fw"><img src="../../pic/train/ezgif.com-gif-maker.gif"></div>
+                Training completato!
+                <div class="fw"><img src="../../pic/train/ezgif.com-gif-maker.gif" id="fw2"></div>
+            </div>            
             <a href="./index.php" class="train-btn">Home</a>
             <p class="end-msg">Oppure allenati ancora</p>
-            <div class="firework"></div>
-            <div class="firework"></div>
-            <div class="firework"></div>
             
             <div class="continue-train">
                 <div class="grid-gruppi">

@@ -42,6 +42,8 @@ body {
     background-repeat: no-repeat;
     background-color: #9a9a9a !important;
 }
+
+
 /***************************************************************************************************************
 Gestione nav
 ***************************************************************************************************************/
@@ -257,6 +259,7 @@ Gestione card
     justify-content: space-between;
     background-color: #222222 !important;
     border: 0px !important;
+    border-bottom: 1px solid #eedf69 !important;
 }
 
 .card-title {
@@ -385,6 +388,7 @@ Gestione card
 /*******************************************
 Gestione MODAL per visualizzare le schede
 *******************************************/
+
 .modal-content {
     background-color: #d7d7d7 !important;
 }
@@ -459,15 +463,20 @@ Gestione MODAL per visualizzare le schede
     background-color: #222222 !important;
     color: #eedf69 !important;
 }
+
+
 /*Animazione di caricamento che poi viene stoppata da jquery*/
-.lds-dual-ring {            /*Questo è il div che contiene il cerchio*/
+
+.lds-dual-ring {
+    /*Questo è il div che contiene il cerchio*/
     display: inline-block;
     width: 80px;
     height: 80px;
     margin: 0 auto;
 }
 
-.lds-dual-ring:after {      /*Aggiungo il cerchio con solo 2 su 4 bordi visibili*/
+.lds-dual-ring:after {
+    /*Aggiungo il cerchio con solo 2 su 4 bordi visibili*/
     content: " ";
     display: block;
     width: 64px;
@@ -479,16 +488,19 @@ Gestione MODAL per visualizzare le schede
     animation: lds-dual-ring 1.2s linear infinite;
 }
 
-@keyframes lds-dual-ring {  /*L'animazione fa semplicemente ruotare il div*/
+@keyframes lds-dual-ring {
+    /*L'animazione fa semplicemente ruotare il div*/
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
+
 /*Gestione dell'info esercizi*/
+
 .info-button {
     background: transparent !important;
     border: none !important;
@@ -568,9 +580,9 @@ Gestione degli alert
     text-align: center;
     padding: 0.4em;
     position: absolute;
-    top:0;
-    left: 0; 
-    right: 0; 
+    top: 0;
+    left: 0;
+    right: 0;
     margin: 1.5em auto;
 }
 
@@ -592,7 +604,7 @@ Gestione degli alert
     display: block;
 }
 
-.closebtn-fill{
+.closebtn-fill {
     color: #222222;
     font-weight: bold;
     float: right;
@@ -604,14 +616,19 @@ Gestione degli alert
     display: block;
 }
 
-.fa-exclamation-triangle{
+.fa-exclamation-triangle {
     color: #f44336;
 }
 
 
 /***********************/
+
+
 /*Media query*/
+
+
 /***********************/
+
 @media (min-width:700px) {
     .main {
         flex-direction: row;

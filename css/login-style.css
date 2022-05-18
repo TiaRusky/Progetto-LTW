@@ -1,6 +1,6 @@
 html,
 body {
-    margin: 0;
+    margin: 0px;
     height: 100%;
 }
 
@@ -12,8 +12,11 @@ body {
     width: 100%;
     margin: 0px;
     position: relative;
-    background: url("https://source.unsplash.com/FLpV4VJqBrw/1980x1600") no-repeat center center/cover;
-    background-color: #222222;
+    background-image: url("https://source.unsplash.com/FLpV4VJqBrw/1980x1600") !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #363422;
 }
 
 @font-face {
