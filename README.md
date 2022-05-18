@@ -1,4 +1,5 @@
 # Progetto-LTW
+Versione 1.0.
 Progetto relativo al corso Linguaggi e Tecnologie per il Web , ingegneria informatica Sapienza; anno 2021/2022
 Partecipanti: Claudio Schiavella, Mattia Russo
 # Costruzione del db
