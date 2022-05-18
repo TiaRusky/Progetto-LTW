@@ -16,7 +16,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-color: #363422;
+    background-color: #363422 !important;
 }
 
 @font-face {
@@ -333,4 +333,9 @@ Gestione degli alert
     transition: 0.3s;
     padding: 0.4em;
     display: block;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
 }
