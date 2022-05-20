@@ -25,7 +25,7 @@
         <!-- Solito menù -->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="../../../html/index.html">
                     <img src="../../../pic/logo/10_crypto/small_logo.png" class="home-logo">
                 </a>
 

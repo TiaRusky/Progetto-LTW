@@ -261,6 +261,24 @@ body {
     }
 }
 
+@media (max-width:1550px) {
+    .animated-bg {
+        bottom: -110px;
+    }
+}
+
+@media (max-width:1400px) {
+    .animated-bg {
+        bottom: -175px;
+    }
+}
+
+@media (max-width:375px) {
+    .animated-bg {
+        bottom: -300px;
+    }
+}
+
 .top-main {
     display: flex;
     flex-direction: column;
