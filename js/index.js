@@ -80,7 +80,7 @@ $(document).ready(function() {
                     var esercizi = JSON.parse(result);
                     var length = esercizi.length;
 
-                    console.log(esercizi);
+                    //console.log(esercizi);
 
                     var nome;
                     var gruppoM;
@@ -100,7 +100,7 @@ $(document).ready(function() {
                         ripetizioni = esercizi[i].reps;
                         recupero = esercizi[i].recupero;
 
-                        console.log(nome, gruppoM, numSerie, numOrdine, descrizione, ripetizioni, recupero);
+                        //console.log(nome, gruppoM, numSerie, numOrdine, descrizione, ripetizioni, recupero);
 
                         var $card = $('<div class="card exc"> \
                             <div class="card-body"> \
