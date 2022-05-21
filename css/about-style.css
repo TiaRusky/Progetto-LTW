@@ -66,6 +66,10 @@ body {
     font-size: 1.5em;
 }
 
+.col#left-sm {
+    display: none !important;
+}
+
 .img-width {
     display: block;
     padding: 1% 1% 1% 1%;
@@ -110,6 +114,21 @@ body {
     .img-height {
         margin: auto;
     }
+    .txt {
+        padding: 2% 8% 2% 8%;
+    }
+    .col {
+        width: 90% !important;
+    }
+    .col#left-sm {
+        display: block !important;
+    }
+    .col#left {
+        display: none !important;
+    }
+    .col#left-sm img {
+        background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    }
 }
 
 @media (max-width: 521px) {
@@ -117,6 +136,7 @@ body {
         font-size: 1em;
     }
     .col {
+        width: 90% !important;
         font-size: 0.9em;
     }
 }
