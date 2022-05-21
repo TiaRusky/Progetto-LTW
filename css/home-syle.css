@@ -155,8 +155,17 @@
         background-color: #d7d7d7;
     }
     
+    .band#about h1 {
+        font-size: 2em;
+    }
+    
+    .band#about p {
+        font-size: 1.5em;
+    }
+    
     .about-button {
         font-family: "TechFitFont-Azonix";
+        font-size: 1.5em;
         text-decoration: none;
         color: rgb(0, 0, 0);
         max-width: 300px;
@@ -413,6 +422,14 @@
             flex-direction: column;
             align-items: center;
         }
+        .makers {
+            flex-direction: column;
+            align-items: center;
+        }
+        .prods-links {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     
     @media screen and (max-width: 942px) {
@@ -458,15 +475,18 @@
     }
     
     @media screen and (max-width: 360px) {
-        .band#about p {
-            font-size: 14px;
-        }
-        .band#about h1 {
-            font-size: 15px;
+        .band#about {
+            font-size: 1.1em;
         }
         .about-img img {
             width: 20%;
             padding-bottom: 4%;
+        }
+    }
+    
+    @media screen and (max-width: 278px) {
+        .band#about {
+            font-size: 0.8em !important;
         }
     }
     
