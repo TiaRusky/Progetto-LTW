@@ -136,6 +136,7 @@
                 <p class='err-msg'><i class='fas fa-exclamation-triangle'></i> Credenziali errate!
                 </p></div>";
             }
+<<<<<<< HEAD
 
             elseif(strpos($fullUrl,"login=nu")){
                 echo "<div class='error'>
@@ -144,6 +145,8 @@
                 <p class='err-msg'><i class='fas fa-exclamation-triangle'></i> Email non registrata!
                 </p></div>";
             }
+=======
+>>>>>>> bbfa7c7dcf9d3227524bd5f16605c4c07f527e76
         ?>
         
     </body>
