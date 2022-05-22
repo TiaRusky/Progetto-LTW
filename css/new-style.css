@@ -1,0 +1,661 @@
+@font-face {
+    font-family: "TechFitFont-Azonix";
+    src: url(../fonts/Azonix.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "TechFitFont-Monserrat";
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+html {
+    font-size: 20px !important;
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+    /*background: linear-gradient(-45deg, #d7d7d7, #a6a6a6, #5c5c3d, #eedf69);
+    background-size: 400% 400%;
+	animation: gradient 13s ease infinite;*/
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/************/
+
+
+/*<a href='https://www.freepik.com/photos/yellow-smoke'>Yellow smoke photo created by freepik - www.freepik.com</a>*/
+
+
+/* NAVBAR */
+
+
+/************/
+
+.home-logo {
+    width: 40%;
+    height: auto;
+}
+
+.header-content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4em;
+    justify-content: space-between;
+}
+
+.d-flex {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 0.6em;
+}
+
+.logout-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: #222222;
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    background-color: #eedf69;
+    transition: 0.5s ease-in-out;
+    margin: 0 auto;
+    height: fit-content;
+    align-self: center;
+}
+
+.logout-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
+
+/*SearchBar*/
+
+.form-control:focus {
+    box-shadow: 0px 0px 4px 4px #eedf69 !important;
+}
+
+.error-box {
+    animation: shake 0.2s ease-in-out 0s 2;
+}
+
+@keyframes shake {
+    0% {
+        margin-left: 0rem;
+        box-shadow: 0 0 0.5em red;
+    }
+    25% {
+        margin-left: 0.5rem;
+        box-shadow: 0 0 0.5em red;
+    }
+    75% {
+        margin-left: -0.5rem;
+        box-shadow: 0 0 0.5em red;
+    }
+    100% {
+        margin-left: 0rem;
+        box-shadow: 0 0 0.5em red;
+    }
+}
+
+.btn-outline-success {
+    border: 1px solid #eedf69 !important;
+    color: #eedf69 !important;
+    font-family: "TechFitFont-Azonix";
+}
+
+.btn-outline-success:hover {
+    background-color: #e0e0d1 !important;
+    color: #222222 !important;
+    transition: 0.5s;
+}
+
+.btn-outline-success:focus {
+    box-shadow: none !important;
+}
+
+
+/****************/
+
+
+/*Gestione MAIN*/
+
+
+/****************/
+
+.animated-bg {
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 91%;
+    overflow: hidden;
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: #eede6971;
+    animation: animate 25s linear infinite;
+    z-index: 1 !important;
+    bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width:1550px) {
+    .animated-bg {
+        bottom: -110px;
+    }
+}
+
+@media (max-width:1400px) {
+    .animated-bg {
+        bottom: -175px;
+    }
+}
+
+@media (max-width:375px) {
+    .animated-bg {
+        bottom: -300px;
+    }
+}
+
+.top-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.top-main-button {
+    width: fit-content;
+    max-width: 170px;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+    font-family: "TechFitFont-Azonix";
+    background-color: transparent;
+    border: 2px solid #222222;
+    color: #222222;
+    padding: 0.5em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 15px;
+    font-weight: 900;
+}
+
+.top-main-button a {
+    text-decoration: none;
+    color: #222222;
+    padding: 0.6em;
+}
+
+.top-main-button:hover a {
+    text-decoration: none;
+    color: #eedf69;
+}
+
+.top-main-button:hover {
+    animation-name: colorfullbutton;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorfullbutton {
+    100% {
+        background-color: #222222;
+        color: #eedf69;
+        font-weight: 900;
+    }
+}
+
+.body-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-gruppo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid #222222;
+    /*Da vedere se garba*/
+    align-items: center;
+    /*min-height: 300px;*/
+}
+
+.legend-wrapper {
+    display: flex;
+    flex-direction: row;
+    font-family: "TechFitFont-Azonix";
+    font-weight: 900;
+}
+
+
+/**********************/
+
+
+/*Gestione delle modal*/
+
+
+/**********************/
+
+
+/*Gestione dell'info esercizi*/
+
+.info-button {
+    background: transparent !important;
+    border: none !important;
+}
+
+.popover {
+    /*border: 2px solid #eedf69 !important;*/
+    border-radius: 15% !important;
+}
+
+.popover-body {
+    color: #e0e0d1 !important;
+    background-color: #222222 !important;
+    font-weight: 600 !important;
+    border-radius: 15% !important;
+}
+
+.modal-content {
+    background-color: #d7d7d7 !important;
+}
+
+.modal-header {
+    background-color: #222222 !important;
+    color: #eedf69 !important;
+    font-weight: 700;
+    font-family: "TechFitFont-Azonix";
+}
+
+.modal-body {
+    color: #222222 !important;
+    font-size: 1.2rem;
+}
+
+.modal-footer {
+    background-color: #222222 !important;
+    color: #eedf69 !important;
+}
+
+.modal-body input {
+    color: #222222;
+    text-align: center;
+}
+
+.modal-body input[type="number"] {
+    width: 75px;
+}
+
+.modal-body input:focus,
+.modal-body select:focus {
+    box-shadow: 0 4px 2px -2px #eedf69;
+    outline: none;
+}
+
+
+/*Per nascondere le frecce delle input*/
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.modal-btn {
+    border: 2px solid #eedf69 !important;
+    color: #eedf69 !important;
+    background: transparent !important;
+    padding: 0.3em !important;
+    letter-spacing: 2px !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    border-radius: 15px !important;
+    font-weight: 900 !important;
+    background-image: none !important;
+    cursor: pointer !important;
+}
+
+.modal-btn:hover {
+    background-color: #eedf69 !important;
+    color: #222222 !important;
+    transition: 1.7s;
+}
+
+.confirmation-form label,
+.modal-form label {
+    color: #222222;
+    font-weight: bold;
+}
+
+.confirmation-form input,
+.modal-form select,
+.modal-form input {
+    border: none;
+    border-bottom: 1px solid #222222;
+    outline: none;
+    background: transparent;
+}
+
+.modal-form select option {
+    background-color: #222222;
+    color: #d7d7d7;
+}
+
+
+/*Gestione delle form nelle model*/
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+    margin: 0.6em 0;
+}
+
+.form-element .btn {
+    margin: 0.4em auto;
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-element input,
+.form-element select {
+    width: 100%;
+    max-width: 300px;
+}
+
+.confirmation-form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/**********************/
+
+
+/*Gestione delle card*/
+
+
+/**********************/
+
+.new-card-button {
+    background: none;
+    border: none;
+    width: 45px;
+    margin-left: 0.6em;
+    margin-bottom: 0.4em;
+}
+
+.card {
+    width: fit-content;
+    /*max-width: 310px;*/
+    margin-bottom: 0.7em;
+    background-color: #222222 !important;
+    border-radius: 15px 50px !important;
+}
+
+.card-title {
+    color: #eedf69 !important;
+    font-weight: 400;
+    font-family: "TechFitFont-Azonix";
+    max-width: 250px;
+}
+
+.card .list-group-item {
+    width: fit-content;
+    height: fit-content;
+    background-color: #eedf69 !important;
+    margin: 0.3em 0 !important;
+    border-radius: 10px 10px 10px 10px !important;
+    /*background: rgb(241,221,66);
+    background: linear-gradient(186deg, rgba(241,221,66,1) 1%, rgba(172,171,171,1) 54%);*/
+    /*background: rgb(212,175,55);
+    background: linear-gradient(186deg, rgba(212,175,55,1) 1%, rgba(172,171,171,1) 54%, rgba(212,175,55,1) 98%);*/
+    background: rgb(244, 188, 6);
+    background: linear-gradient(186deg, rgba(244, 188, 6, 1) 1%, rgba(203, 200, 200, 1) 54%, rgba(246, 188, 0, 1) 98%);
+}
+
+.card .popover-body {
+    background-color: #e0e0d1 !important;
+    color: #222222 !important;
+}
+
+.card label {
+    font-weight: 800 !important;
+    color: #222222;
+}
+
+
+/*Gestione messaggi di errore*/
+
+.error-msg {
+    color: #f44336;
+    font-weight: 700;
+    text-shadow: 1px 1px #222222;
+}
+
+.active-err {
+    animation-name: shake2;
+    animation-duration: 0.3s;
+    animation-iteration-count: 2;
+}
+
+@keyframes shake2 {
+    0% {
+        margin-left: 0rem;
+    }
+    25% {
+        margin-left: 0.5rem;
+    }
+    75% {
+        margin-left: -0.5rem;
+    }
+    100% {
+        margin-left: 0rem;
+    }
+}
+
+
+/*Per gestire bene il top-main*/
+
+@media (min-width:375px) {
+    .top-main {
+        flex-direction: row;
+    }
+    .top-main-button {
+        margin: 0 0.4em;
+        width: 30%;
+        min-width: fit-content;
+    }
+}
+
+
+/*Per la gestione delle flex fasce muscolari*/
+
+@media (min-width: 475px) {
+    .flex-gruppo {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: left;
+    }
+    .card {
+        margin: 0.7em 0.5em;
+    }
+}
+
+
+/*Per gestire bene la navbar*/
+
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+    }
+    .d-flex {
+        margin: 0;
+    }
+    .logout-button {
+        margin: 0 0.4em;
+    }
+}
+
+
+/*Per gestire bene le modal*/
+
+@media (min-width: 615px) {
+    .form-element {
+        align-items: center;
+    }
+    .form-element .btn {
+        width: 40%;
+    }
+    .modal-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .form-element {
+        grid-column: 1/2;
+    }
+    .numero-ripetizioni-element {
+        grid-column: 2/3;
+        grid-row: 1/11;
+    }
+}

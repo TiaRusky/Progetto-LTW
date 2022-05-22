@@ -1,0 +1,341 @@
+html,
+body {
+    margin: 0px;
+    height: 100%;
+}
+
+html {
+    font-size: 20px !important;
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+    position: relative;
+    background-image: url("https://source.unsplash.com/FLpV4VJqBrw/1980x1600") !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #363422 !important;
+}
+
+@font-face {
+    font-family: "TechFitFont-Azonix";
+    src: url(../fonts/Azonix.otf) format("truetype");
+}
+
+
+/********************
+Gestione delle form
+********************/
+
+.container {
+    position: absolute;
+    overflow: hidden;
+    height: 550px;
+    margin-top: 2%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.form-container {
+    background: #222222;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 0px auto;
+    border: 1px solid;
+}
+
+.form-container-flex {
+    width: 100%;
+    height: 100%;
+}
+
+.flex-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-item {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4em;
+    margin-top: 0.1em;
+}
+
+.form-container .form-item input {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 25px;
+    border: none;
+    border-bottom: 1px solid #eedf69;
+    outline: none;
+    background: transparent;
+    font-size: 1.2rem;
+}
+
+.form-container .form-item label {
+    font-size: 1.2rem;
+    position: relative;
+    bottom: 62px;
+    color: #eedf69;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.submit-form {
+    font-family: "TechFitFont-Azonix";
+    margin-bottom: 1em;
+    background: transparent;
+    color: #eedf69;
+    padding: 0.3em 0.5em 0.3em 0.5em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #eedf69;
+    border-radius: 15px;
+    font-weight: 900;
+}
+
+.submit-form:hover {
+    animation-name: colorfullbutton;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+.form-item input:focus~label {
+    animation-name: floatingLabel;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+input:not(:placeholder-shown)~label {
+    top: -110px;
+}
+
+@keyframes floatingLabel {
+    100% {
+        bottom: 110px;
+    }
+}
+
+@keyframes colorfullbutton {
+    100% {
+        background-color: #eedf69;
+        color: #222222;
+        font-weight: 900;
+    }
+}
+
+
+/***********************
+Stile della form di signin
+************************/
+
+#chk {
+    display: none;
+}
+
+.form-label {
+    font-family: "TechFitFont-Azonix";
+    color: #eedf69;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.sign-up-container {
+    position: relative;
+    width: 90%;
+    height: 100%;
+}
+
+.sign-in-container {
+    height: 100%;
+    width: 90%;
+}
+
+
+/*Nascondo inizialmente la form per iscriversi, mostrando solo la label collegata alla checkbox*/
+
+.sign-in-container {
+    transform: translateY(-100px);
+    max-height: 100px;
+    transition: .8s ease-in-out;
+    border-radius: 40% / 10%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: #d7d7d7;
+    margin-bottom: 1%;
+}
+
+
+/*Per nascondere meglio le label*/
+
+.sign-in-container .form-item {
+    visibility: hidden;
+}
+
+.sign-in-container .flex-form .form-item-label {
+    color: #222222;
+}
+
+.sign-in-container .flex-form .submit-form {
+    color: #222222;
+    border: 2px solid #222222;
+}
+
+.sign-in-container .form-item input {
+    border-bottom: 1px solid #222222;
+    color: #222222;
+}
+
+.sign-in-container .flex-form .submit-form:hover {
+    animation-name: colorfullbutton2;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorfullbutton2 {
+    100% {
+        background-color: #222222;
+        color: #eedf69;
+        font-weight: 900;
+    }
+}
+
+.sign-in-container .form-label {
+    color: #222222;
+    transform: scale(.6);
+    margin: 10px;
+}
+
+
+/*Quando metto il check sulla checkbox faccio scorrere verso l'alto la form e
+rendo nuovamente visibile le form-item
+*/
+
+#chk:checked~.sign-in-container {
+    transform: translateY(-585px);
+    max-height: 585px;
+}
+
+#chk:checked~.sign-in-container .form-item {
+    visibility: visible;
+}
+
+#chk:checked~.sign-in-container .form-label {
+    transform: scale(1);
+}
+
+#chk:checked~.sign-up-container .form-label {
+    transform: scale(.6);
+}
+
+#chk:checked~.sign-up-container {
+    padding-bottom: 5%;
+}
+
+@media screen and (max-width: 460px) {
+    #chk:checked~.sign-in-container .form-label {
+        font-size: 26px;
+    }
+    #chk:checked~.sign-up-container .form-label {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #chk:checked~.sign-in-container .form-label {
+        font-size: 18px;
+    }
+    #chk:checked~.sign-up-container .form-label {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 255px) {
+    .sign-in-container .form-label {
+        font-size: 32px;
+    }
+    .sign-up-container .form-label {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    #chk:checked~.sign-in-container .form-label {
+        font-size: 12px;
+    }
+    #chk:checked~.sign-up-container .form-label {
+        font-size: 30px;
+    }
+}
+
+
+/*********************
+Gestione degli alert
+*********************/
+
+.error {
+    margin: 5px auto;
+    width: 60%;
+    max-width: 450px;
+    background-color: #222222;
+    border: 2px solid #f44336;
+    border-radius: 15px;
+    font-weight: 900;
+    color: #eedf69;
+    opacity: .99;
+    text-align: center;
+    padding: 0.4em;
+}
+
+.err-msg {
+    padding-top: 0.8em;
+    display: block;
+    font-size: 1rem;
+}
+
+.closebtn {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    float: left;
+    font-size: 1.2rem;
+    line-height: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0.4em;
+    display: block;
+}
+
+.closebtn-fill {
+    color: #222222;
+    font-weight: bold;
+    float: right;
+    font-size: 1.2rem;
+    line-height: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0.4em;
+    display: block;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}

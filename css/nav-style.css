@@ -1,0 +1,184 @@
+.navbar {
+    position: absolute;
+}
+
+.active {
+    text-decoration: underline !important;
+}
+
+.navbar-nav {
+    text-align: center !important;
+}
+
+.nav-item {
+    font-family: "TechFitFont-Azonix" !important;
+}
+
+.home-logo {
+    width: 50%;
+    height: auto;
+}
+
+.login-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    background-color: #eedf69;
+    transition: 0.5s ease-in-out;
+}
+
+.login-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
+.logout-button {
+    font-family: "TechFitFont-Azonix";
+    text-decoration: none;
+    color: #222222;
+    max-width: 300px;
+    border: 0px;
+    border-radius: 9px;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    background-color: #eedf69;
+    transition: 0.5s ease-in-out;
+    height: fit-content;
+    margin-top: 0.4em;
+}
+
+.logout-button:hover {
+    color: #9a9a9a;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    animation-name: colorfulLink !important;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorfulLink {
+    0% {
+        font-size: 1rem;
+    }
+    50% {
+        font-size: 1.1rem;
+        color: rgb(215, 221, 151);
+    }
+    100% {
+        font-size: 1.2rem;
+        color: rgb(214, 228, 53);
+    }
+}
+
+.header-content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-control {
+    margin-top: 0px !important;
+}
+
+.form-control:focus {
+    box-shadow: 0px 0px 4px 4px #eedf69 !important;
+}
+
+.btn-src {
+    font-family: "TechFitFont-Azonix";
+    border: 1px solid #eedf69;
+    color: #eedf69;
+    background: transparent;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 9px;
+    font-weight: 900;
+}
+
+.btn-src:hover {
+    animation-name: colorfullbutton;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 600px) {
+    .header-content {
+        padding-top: 5%;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 1em;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .btn-src {
+        font-size: 0.5rem;
+        width: 30%;
+    }
+    .form-control {
+        font-size: 0.8rem;
+        width: 30%;
+    }
+    .form-control::placeholder {
+        font-size: 0.8rem;
+    }
+    .logout-button {
+        font-size: 0.8rem;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .btn-src {
+        font-size: 0.4rem;
+        width: 30%;
+    }
+    .form-control {
+        font-size: 0.7rem;
+        width: 30%;
+    }
+    .form-control::placeholder {
+        font-size: 0.7rem;
+    }
+    .logout-button {
+        font-size: 0.7rem;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .form-control {
+        font-size: 0.5rem;
+    }
+    .logout-button {
+        font-size: 0.5rem;
+    }
+}
+
+@keyframes colorfullbutton {
+    100% {
+        background-color: #eedf69;
+        color: #222222;
+        font-weight: 900;
+    }
+}
+
+.d-flex .login-button {
+    margin: 0 auto;
+}
