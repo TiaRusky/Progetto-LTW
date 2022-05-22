@@ -2,6 +2,7 @@ $(document).ready(function() {
     //Ricavo nome della scheda e gruppo muscolare
     const urlParams = new URLSearchParams(window.location.search);
     const nomeScheda = urlParams.get('nomeScheda');
+    const audio = new Audio("../../audio/time-out.mp3");       //L'audio per avvertire che è scaduto il recupero
     var gruppoM = urlParams.get("gruppoM");
     var numSerie = -1; //Per evitare problemi di asincronia iniziali
     var nome;
@@ -128,6 +129,7 @@ $(document).ready(function() {
 
     //Funzione da chiamare quando il timer termina
     function timeOver() {
+        if(done != -1) audio.play();
         if ($bar.children(".is-current").length > 0) { //Ogni volta che termina il timer passo alla serie successiva
             $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
         } else {
