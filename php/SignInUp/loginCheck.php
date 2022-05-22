@@ -14,7 +14,7 @@
 
             //Non esiste un utente registrato con tale email
             if(!$tupla = pg_fetch_array($result,NULL,PGSQL_ASSOC)){
-                header("Location: login.php?login=wd");     //wd = wrong data
+                header("Location: login.php?login=nu");     //nu = no user 
             }
 
             else{   //L'email inserita è registrata, devo verificare che la password corrisponda
