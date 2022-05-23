@@ -140,13 +140,14 @@ $(document).ready(function() {
         if (done == numSerie) { //Finito l'esercizio
             count++; //Aumento il numero di esercizi portati a termine
             if (count == esercizi.length - 1) { //Allenamento terminato
-                audio.pause();
-                audio.currentTime = 0;
-                var nopromise = {
-                    catch: new Function()
-                };
-                (finish.play() || nopromise).catch(function() {});;
-
+                try{
+                    audio.pause();
+                    audio.currentTime = 0;
+                }catch(error){
+                    
+                }
+                
+                finish.play();
                 $player.hide();
                 $final.show();
             } else { //Bisogna passare al prossimo esercizio
