@@ -2,7 +2,8 @@ $(document).ready(function() {
     //Ricavo nome della scheda e gruppo muscolare
     const urlParams = new URLSearchParams(window.location.search);
     const nomeScheda = urlParams.get('nomeScheda');
-    const audio = new Audio("../../audio/time-out.mp3");       //L'audio per avvertire che è scaduto il recupero
+    const audio = new Audio("../../audio/time-out.mp3"); //L'audio per avvertire che è scaduto il recupero
+    const finish = new Audio("../../audio/finish.mp3"); //L'audio per avvertire che è scaduto il recupero
     var gruppoM = urlParams.get("gruppoM");
     var numSerie = -1; //Per evitare problemi di asincronia iniziali
     var nome;
@@ -13,7 +14,7 @@ $(document).ready(function() {
 
     //I due container principali della pagine
     var $player = $(".player");
-    var $final = $(".end-train");       //Il container mostrato alla fine degli allenamenti
+    var $final = $(".end-train"); //Il container mostrato alla fine degli allenamenti
     $final.hide();
 
     //Info sull'esercizio
@@ -35,7 +36,7 @@ $(document).ready(function() {
 
     //Bottone di chiusura messaggio di errore
     var $closebtn = $(".closebtn");
-    
+
     //Bottone della form per confermare il termine dell'allenamento
     var $stopBtn = $("#stop-btn");
 
@@ -88,12 +89,12 @@ $(document).ready(function() {
     });
 
     //Gestione del continua allenamento
-    $groupBtn.on("click",function(e){            //L'utente ha deciso di continuare l'allenamento
-        gruppoM = $(e.target).closest("button").attr("id").slice(4);        //Modifico il gruppoM con il nuovo selezionato
+    $groupBtn.on("click", function(e) { //L'utente ha deciso di continuare l'allenamento
+        gruppoM = $(e.target).closest("button").attr("id").slice(4); //Modifico il gruppoM con il nuovo selezionato
         //Resetto le varibili
         count = -1;
         done = 0;
-        $.ajax({                                //Recupero gli esercizi relativi al nuovo gruppo
+        $.ajax({ //Recupero gli esercizi relativi al nuovo gruppo
             url: "getExcTrain.php",
             type: "POST",
             data: { "nome": nomeScheda, "gruppoM": gruppoM },
@@ -116,37 +117,44 @@ $(document).ready(function() {
     });
 
     //Chiusura del messaggio di errore
-    $closebtn.on("click", function () {
-        $(this).parent().fadeOut(500, function () {
+    $closebtn.on("click", function() {
+        $(this).parent().fadeOut(500, function() {
             $divError.hide();
         });
     });
 
     //Gestione del conferma termina allenamento
-    $stopBtn.on("click",function(){
-        window.location.replace("index.php");       //Allenamnto terminato; ritorna alla pagina iniziale
-    }); 
+    $stopBtn.on("click", function() {
+        window.location.replace("index.php"); //Allenamnto terminato; ritorna alla pagina iniziale
+    });
 
     //Funzione da chiamare quando il timer termina
     function timeOver() {
-        if(done != -1) audio.play();
+        if (done != -1) audio.play();
         if ($bar.children(".is-current").length > 0) { //Ogni volta che termina il timer passo alla serie successiva
             $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
         } else {
-            $bar.children().first().addClass("is-current");     //Questo else non si verifica mai
+            $bar.children().first().addClass("is-current"); //Questo else non si verifica mai
         }
-        done++;                                                  //Inizio recupero = serie terminata
-        if (done == numSerie) {                                 //Finito l'esercizio
-            count++;                                            //Aumento il numero di esercizi portati a termine
-            if (count == esercizi.length - 1) {                 //Allenamento terminato
+        done++; //Inizio recupero = serie terminata
+        if (done == numSerie) { //Finito l'esercizio
+            count++; //Aumento il numero di esercizi portati a termine
+            if (count == esercizi.length - 1) { //Allenamento terminato
+                audio.pause();
+                audio.currentTime = 0;
+                var nopromise = {
+                    catch: new Function()
+                };
+                (finish.play() || nopromise).catch(function() {});;
+
                 $player.hide();
                 $final.show();
-            } else {                                                //Bisogna passare al prossimo esercizio
-                numSerie = esercizi[count + 1].numserie;            //Aggiorno le info relative all'esercizio corrente
+            } else { //Bisogna passare al prossimo esercizio
+                numSerie = esercizi[count + 1].numserie; //Aggiorno le info relative all'esercizio corrente
                 descrizione = esercizi[count + 1].descrizione;
                 nome = esercizi[count + 1].nome;
                 done = 0; //Resetto il numero di serie eseguite
-                setPage(nome, descrizione, numSerie, count + 1);    //Preparo nuovamente la pagina per il nuovo esercizio
+                setPage(nome, descrizione, numSerie, count + 1); //Preparo nuovamente la pagina per il nuovo esercizio
             }
         }
     }
