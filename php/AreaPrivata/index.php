@@ -60,6 +60,7 @@
                 <a href="NewForm/new.php">
                     <button class="new-card-button">  +  </button>
                 </a>
+                <label id="new-card-label">Crea scheda</label>
             </div>
 
             <!--Dove andranno le schede scaricate dal database-->
