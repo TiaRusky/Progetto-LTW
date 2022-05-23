@@ -150,6 +150,7 @@ $(document).ready(function() {
                 finish.play();
                 $player.hide();
                 $final.show();
+                finish.play()
             } else { //Bisogna passare al prossimo esercizio
                 numSerie = esercizi[count + 1].numserie; //Aggiorno le info relative all'esercizio corrente
                 descrizione = esercizi[count + 1].descrizione;
