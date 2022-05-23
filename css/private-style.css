@@ -333,7 +333,8 @@ Gestione card
 /*******************************************/
 
 .exc {
-    width: 97%;
+    /*width: 97%;*/
+    width: fit-content;
     /*max-width: 310px;*/
     margin-bottom: 0.7em;
     background-color: #222222 !important;
@@ -357,13 +358,14 @@ Gestione card
 }
 
 .exc .list-group-item {
-    width: 100%;
+    /*width: 100%;*/
+    width: 250px;
     height: fit-content;
     background-color: #eedf69 !important;
     margin: 0.3em 0 !important;
     border-radius: 10px 10px 10px 10px !important;
-    background: rgb(244, 188, 6);
-    background: linear-gradient(186deg, rgba(244, 188, 6, 1) 1%, rgba(203, 200, 200, 1) 54%, rgba(246, 188, 0, 1) 98%);
+    background: rgb(230,234,235);
+    background: radial-gradient(circle, rgba(230,234,235,1) 0%, rgba(149,152,153,1) 57%, rgba(230,234,235,1) 100%); 
 }
 
 .exc .list-group-item label {

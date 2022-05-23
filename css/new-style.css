@@ -403,17 +403,14 @@ input[type=number] {
 }
 
 .card .list-group-item {
-    width: fit-content;
+    /*width: fit-content;*/
+    width: 250px;
     height: fit-content;
     background-color: #eedf69 !important;
     margin: 0.3em 0 !important;
     border-radius: 10px 10px 10px 10px !important;
-    /*background: rgb(241,221,66);
-    background: linear-gradient(186deg, rgba(241,221,66,1) 1%, rgba(172,171,171,1) 54%);*/
-    /*background: rgb(212,175,55);
-    background: linear-gradient(186deg, rgba(212,175,55,1) 1%, rgba(172,171,171,1) 54%, rgba(212,175,55,1) 98%);*/
-    background: rgb(244, 188, 6);
-    background: linear-gradient(186deg, rgba(244, 188, 6, 1) 1%, rgba(203, 200, 200, 1) 54%, rgba(246, 188, 0, 1) 98%);
+    background: rgb(230,234,235);
+    background: radial-gradient(circle, rgba(230,234,235,1) 0%, rgba(149,152,153,1) 57%, rgba(230,234,235,1) 100%); 
 }
 
 .card .popover-body {
