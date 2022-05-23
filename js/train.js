@@ -144,6 +144,7 @@ $(document).ready(function() {
                 audio.currentTime = 0;
                 $player.hide();
                 $final.show();
+                finish.volume = 0.1;
                 finish.play()
             } else { //Bisogna passare al prossimo esercizio
                 numSerie = esercizi[count + 1].numserie; //Aggiorno le info relative all'esercizio corrente
