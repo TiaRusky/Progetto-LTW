@@ -100,29 +100,6 @@
                 
                 pg_close($dbconn);
             ?>
-            <!--Placeholder di come devono essere composte le schede
-            <div class="card card-style">
-                <div class="card-header">
-                    <p class="card-title">Nome scheda</p>
-                    <div class="dropdown">
-                        <button class="tDots" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                            </svg>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalScheda">Visualizza</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Elimina</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text">Questa è una breve descrizione con caratteri</p>
-                    <a href="#" class="btn btn-primary">train</a>
-                </div>
-            </div>
-            -->
 
         </div>
 
