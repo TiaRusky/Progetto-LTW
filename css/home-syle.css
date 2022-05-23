@@ -499,8 +499,31 @@ footer {
     }
 }
 
-@media (max-height: 310px) {
-    /******************************/
+@media (max-height: 365px) {
+    .band#about {
+        font-size: 0.7em !important;
+    }
+    .band#about img {
+        width: 20%;
+    }
+    .makers {
+        flex-direction: row;
+    }
+    .makers img {
+        width: 50%;
+    }
+}
+
+@media (max-height:350px) {
+    .form-container {
+        font-size: 0.7em;
+    }
+    .band#contacts h1 {
+        font-size: 0.7em;
+    }
+    .band#contacts p {
+        font-size: 0.7em;
+    }
 }
 
 @media screen and (max-width: 380px) {
