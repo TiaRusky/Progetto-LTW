@@ -132,11 +132,12 @@ Gestione pulsante add card
     transition: box-shadow .15s, transform .15s;
 }
 
-#new-card-label{
+#new-card-label {
     font-size: 1.2em;
     margin-top: 0;
     background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-    background-clip:text;
+    background-clip: text;
+    -webkit-background-clip: text;
     font-weight: 700;
     color: transparent;
 }
