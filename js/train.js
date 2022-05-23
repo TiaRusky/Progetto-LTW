@@ -142,13 +142,9 @@ $(document).ready(function() {
             if (count == esercizi.length - 1) { //Allenamento terminato
                 audio.pause();
                 audio.currentTime = 0;
-                var nopromise = {
-                    catch: new Function()
-                };
-                (finish.play() || nopromise).catch(function() {});;
-
                 $player.hide();
                 $final.show();
+                finish.play()
             } else { //Bisogna passare al prossimo esercizio
                 numSerie = esercizi[count + 1].numserie; //Aggiorno le info relative all'esercizio corrente
                 descrizione = esercizi[count + 1].descrizione;
