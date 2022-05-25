@@ -1,5 +1,3 @@
-//Non uso CSS, Jquery è cross platform
-//Con il menù hamburger, non si ottiene la fascia piena
 $(document).ready(function() {
     let sameValue = 1500;
     var nav_h = $('.navbar').height() + 10;
